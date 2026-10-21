@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "library:build": "node scripts/build-library.mjs",
+    "library:build": "node scripts/build-library.mjs && node scripts/write-route-index.mjs",
     "vault:upload": "bash scripts/upload-vault.sh",
-    "demos:build": "node scripts/build-demos.mjs",
+    "demos:build": "node scripts/build-demos.mjs && node scripts/write-route-index.mjs",
     "demos:serve": "node scripts/demo-server.mjs --port=3100",
     "demos:deploy": "bash scripts/deploy-demos.sh",
     "demos:report": "node scripts/demo-report.mjs"
