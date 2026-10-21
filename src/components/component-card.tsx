@@ -21,7 +21,7 @@ export function ComponentCard({ c, categoryName, eager }: { c: Component; catego
       onPointerMove={trackSpotlight}
       className="glass spotlight group relative rounded-[28px] p-3 transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-1"
     >
-      <Link href={`/c/${c.id}`} className="block rounded-[20px] outline-none" aria-label={`Open ${c.title}`}>
+      <Link href={`/c/${c.id}`} className="relative block rounded-[20px] outline-none" aria-label={`Open ${c.title}`}>
         <VideoPreview
           id={c.id}
           hasVideo={c.hasVideo}
@@ -30,7 +30,7 @@ export function ComponentCard({ c, categoryName, eager }: { c: Component; catego
           className="aspect-[16/10] rounded-[20px] ring-1 ring-white/5 transition duration-500 group-hover:ring-accent/25"
         />
         {c.live && (
-          <span className="absolute bottom-6 left-6 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-wider text-white/90 backdrop-blur transition duration-300 group-hover:opacity-0">
+          <span className="absolute bottom-3 left-3 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-wider text-white/90 backdrop-blur transition duration-300 group-hover:opacity-0">
             <span className="relative flex size-1.5">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-70" />
               <span className="relative inline-flex size-1.5 rounded-full bg-accent" />
@@ -38,7 +38,7 @@ export function ComponentCard({ c, categoryName, eager }: { c: Component; catego
             Live
           </span>
         )}
-        <span className="absolute inset-x-3 top-3 flex justify-between p-3 opacity-0 transition duration-300 group-hover:opacity-100">
+        <span className="absolute inset-x-0 top-0 flex justify-between p-3 opacity-0 transition duration-300 group-hover:opacity-100">
           <span className="rounded-full bg-black/55 px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-wider text-white/85 backdrop-blur">
             {categoryName ?? c.category} · {String(c.number).padStart(2, "0")}
           </span>

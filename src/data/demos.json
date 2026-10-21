@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T08:10:50.214Z",
+  "generatedAt": "2026-10-21T09:08:48.614Z",
   "demos": {
     "grid-2": {
       "id": "grid-2",
@@ -110,77 +110,56 @@
     },
     "scroll-5": {
       "id": "scroll-5",
-      "at": "2026-10-21T08:03:23.457Z",
+      "at": "2026-10-21T08:37:56.813Z",
       "kind": "vite",
+      "fixes": [
+        "restored 53 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1158669,
-      "status": "warn",
+      "bytes": 2415917,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-5/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-5/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-5/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-5/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "imagesLoaded is not defined"
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-5/js/gsap.min.js",
-        "ERR /scroll-5/js/gsap.min.js",
-        "404 /scroll-5/js/ScrollTrigger.min.js",
-        "ERR /scroll-5/js/ScrollTrigger.min.js",
-        "404 /scroll-5/js/lenis.min.js",
-        "ERR /scroll-5/js/lenis.min.js",
-        "404 /scroll-5/js/imagesloaded.pkgd.min.js",
-        "ERR /scroll-5/js/imagesloaded.pkgd.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-2": {
       "id": "scroll-2",
-      "at": "2026-10-21T08:03:23.455Z",
+      "at": "2026-10-21T08:37:56.810Z",
       "kind": "vite",
+      "fixes": [
+        "restored 27 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4614173,
-      "status": "warn",
+      "bytes": 10802456,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-2/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-2/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-2/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-2/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "imagesLoaded is not defined"
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-2/js/gsap.min.js",
-        "ERR /scroll-2/js/gsap.min.js",
-        "404 /scroll-2/js/ScrollTrigger.min.js",
-        "ERR /scroll-2/js/ScrollTrigger.min.js",
-        "404 /scroll-2/js/imagesloaded.pkgd.min.js",
-        "ERR /scroll-2/js/imagesloaded.pkgd.min.js",
-        "404 /scroll-2/js/lenis.min.js",
-        "ERR /scroll-2/js/lenis.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-3": {
       "id": "scroll-3",
-      "at": "2026-10-21T08:03:23.457Z",
+      "at": "2026-10-21T08:44:01.394Z",
       "kind": "vite",
+      "fixes": [
+        "restored 11 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": false,
-      "bytes": 1393129,
+      "bytes": 1907751,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "warn",
       "blank": false,
       "errors": [
-        "Failure loading font http://127.0.0.1:3199/fonts/Humane-Bold.ttf Error: Not Found\n    at c.onload (blob:http://127.0.0.1:3199/4b0bf63a-3538-472e-9ef6-a3e2a6c71643:5:260)",
-        "Failure loading font http://127.0.0.1:3199/fonts/Humane-Regular.ttf Error: Not Found\n    at c.onload (blob:http://127.0.0.1:3199/4b0bf63a-3538-472e-9ef6-a3e2a6c71643:5:260)"
+        "Failure loading font http://127.0.0.1:3199/fonts/Humane-Bold.ttf Error: Not Found\n    at c.onload (blob:http://127.0.0.1:3199/5d78fc2b-b1c4-4934-b3db-68c8440f9b1b:5:260)",
+        "Failure loading font http://127.0.0.1:3199/fonts/Humane-Regular.ttf Error: Not Found\n    at c.onload (blob:http://127.0.0.1:3199/5d78fc2b-b1c4-4934-b3db-68c8440f9b1b:5:260)"
       ],
       "external": [],
       "failed": [
@@ -207,70 +186,57 @@
     },
     "scroll-6": {
       "id": "scroll-6",
-      "at": "2026-10-21T08:03:47.289Z",
+      "at": "2026-10-21T08:44:01.453Z",
       "kind": "vite",
-      "obfuscatedFiles": 1,
+      "fixes": [
+        "restored 26 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 2,
       "obfuscated": true,
-      "bytes": 1958812,
-      "status": "warn",
+      "bytes": 4021807,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/smoothscroll.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-6/js/gsap.min.js",
-        "ERR /scroll-6/js/gsap.min.js",
-        "404 /scroll-6/js/ScrollTrigger.min.js",
-        "ERR /scroll-6/js/ScrollTrigger.min.js",
-        "404 /scroll-6/js/imagesloaded.pkgd.min.js",
-        "ERR /scroll-6/js/imagesloaded.pkgd.min.js",
-        "404 /scroll-6/js/lenis.min.js",
-        "ERR /scroll-6/js/lenis.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-9": {
       "id": "scroll-9",
-      "at": "2026-10-21T08:03:54.481Z",
+      "at": "2026-10-21T08:44:01.454Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 511497,
-      "status": "warn",
+      "fixes": [
+        "restored 14 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2833415,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-9/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-9/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-9/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-9/js/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-9/js/gsap.min.js",
-        "ERR /scroll-9/js/gsap.min.js",
-        "404 /scroll-9/js/lenis.min.js",
-        "ERR /scroll-9/js/lenis.min.js",
-        "404 /scroll-9/js/ScrollTrigger.min.js",
-        "ERR /scroll-9/js/ScrollTrigger.min.js",
-        "404 /scroll-9/js/script.js",
-        "ERR /scroll-9/js/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-12": {
       "id": "scroll-12",
-      "at": "2026-10-21T08:04:06.465Z",
+      "at": "2026-10-21T08:43:00.309Z",
       "kind": "vite",
-      "status": "fail",
-      "stage": "build",
-      "error": ":///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-12/webgl-progressive-blur-main/node_modules/vite/dist/node/chunks/dep-827b23df.js:37524:11)\n    at Parser.onParseError (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-12/webgl-progressive-blur-main/node_modules/vite/dist/node/chunks/dep-827b23df.js:37450:13)\n    at Tokenizer._err (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-12/webgl-progressive-blur-main/node_modules/vite/dist/node/chunks/dep-f0c7dae0.js:1125:89)"
+      "fixes": [
+        "installed undeclared dependency: @rollup/pluginutils"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 987351,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "scroll-13": {
       "id": "scroll-13",
@@ -289,11 +255,14 @@
     },
     "scroll-10": {
       "id": "scroll-10",
-      "at": "2026-10-21T08:03:56.777Z",
+      "at": "2026-10-21T08:44:01.454Z",
       "kind": "vite",
+      "fixes": [
+        "restored 12 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1781233,
+      "bytes": 3381139,
       "status": "warn",
       "blank": false,
       "errors": [],
@@ -321,9 +290,18 @@
     },
     "scroll-16": {
       "id": "scroll-16",
-      "status": "fail",
-      "stage": "crash",
-      "error": "ENOENT: no such file or directory, scandir '/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/scroll-16/sticky-grid-scroll-main/__kq_dist'"
+      "at": "2026-10-21T08:37:56.813Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1723674,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "scroll-14": {
       "id": "scroll-14",
@@ -342,11 +320,12 @@
     },
     "scroll-15": {
       "id": "scroll-15",
-      "at": "2026-10-21T08:04:44.746Z",
+      "at": "2026-10-21T08:44:23.793Z",
       "kind": "static",
       "obfuscatedFiles": 1,
-      "obfuscated": true,
-      "bytes": 4253,
+      "obfuscated": false,
+      "bytes": 4112,
+      "note": "obfuscation broke this demo; serving minified build",
       "status": "warn",
       "blank": false,
       "errors": [
@@ -375,112 +354,75 @@
     },
     "scroll-17": {
       "id": "scroll-17",
-      "at": "2026-10-21T08:04:57.319Z",
+      "at": "2026-10-21T08:44:32.794Z",
       "kind": "vite",
-      "obfuscatedFiles": 1,
-      "obfuscated": true,
-      "bytes": 1182424,
-      "status": "warn",
+      "fixes": [
+        "restored 20 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 3,
+      "obfuscated": false,
+      "bytes": 2551937,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/Flip.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/lenis.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-17/js/ScrollTrigger.min.js",
-        "ERR /scroll-17/js/ScrollTrigger.min.js",
-        "404 /scroll-17/js/Flip.min.js",
-        "ERR /scroll-17/js/Flip.min.js",
-        "404 /scroll-17/js/imagesloaded.pkgd.min.js",
-        "ERR /scroll-17/js/imagesloaded.pkgd.min.js",
-        "404 /scroll-17/js/gsap.min.js",
-        "ERR /scroll-17/js/gsap.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-18": {
       "id": "scroll-18",
-      "at": "2026-10-21T08:04:57.419Z",
+      "at": "2026-10-21T08:44:57.085Z",
       "kind": "vite",
-      "obfuscatedFiles": 1,
+      "fixes": [
+        "restored 16 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 3,
       "obfuscated": false,
-      "bytes": 403694,
+      "bytes": 953077,
       "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/lenis.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/smoothscroll.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-18/js/gsap.min.js",
-        "ERR /scroll-18/js/gsap.min.js",
-        "404 /scroll-18/js/ScrollTrigger.min.js",
-        "ERR /scroll-18/js/ScrollTrigger.min.js",
-        "404 /scroll-18/js/imagesloaded.pkgd.min.js",
-        "ERR /scroll-18/js/imagesloaded.pkgd.min.js",
-        "404 /scroll-18/js/smoothscroll.js",
-        "ERR /scroll-18/js/smoothscroll.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-20": {
       "id": "scroll-20",
-      "at": "2026-10-21T08:05:14.346Z",
+      "at": "2026-10-21T08:45:03.094Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 117228,
-      "status": "warn",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 231038,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-20/js/index.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-20/js/index.js",
-        "ERR /scroll-20/js/index.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-19": {
       "id": "scroll-19",
-      "at": "2026-10-21T08:05:07.851Z",
+      "at": "2026-10-21T08:45:00.118Z",
       "kind": "vite",
+      "fixes": [
+        "restored 58 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1296462,
-      "status": "warn",
+      "bytes": 6517688,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-19/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-19/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-19/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-19/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "imagesLoaded is not defined"
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-19/js/gsap.min.js",
-        "ERR /scroll-19/js/gsap.min.js",
-        "404 /scroll-19/js/ScrollTrigger.min.js",
-        "ERR /scroll-19/js/ScrollTrigger.min.js",
-        "404 /scroll-19/js/lenis.min.js",
-        "ERR /scroll-19/js/lenis.min.js",
-        "404 /scroll-19/js/imagesloaded.pkgd.min.js",
-        "ERR /scroll-19/js/imagesloaded.pkgd.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -501,77 +443,56 @@
     },
     "scroll-21": {
       "id": "scroll-21",
-      "at": "2026-10-21T08:05:15.196Z",
+      "at": "2026-10-21T08:45:04.782Z",
       "kind": "vite",
+      "fixes": [
+        "restored 75 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
-      "obfuscated": false,
-      "bytes": 2746029,
-      "note": "obfuscation broke this demo; serving minified build",
+      "obfuscated": true,
+      "bytes": 6108362,
       "status": "warn",
       "blank": false,
       "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/Flip.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+        "Cannot read properties of null (reading 'querySelector')"
       ],
       "external": [],
-      "failed": [
-        "404 /scroll-21/js/gsap.min.js",
-        "ERR /scroll-21/js/gsap.min.js",
-        "404 /scroll-21/js/ScrollTrigger.min.js",
-        "ERR /scroll-21/js/ScrollTrigger.min.js",
-        "404 /scroll-21/js/imagesloaded.pkgd.min.js",
-        "ERR /scroll-21/js/imagesloaded.pkgd.min.js",
-        "404 /scroll-21/js/Flip.min.js",
-        "ERR /scroll-21/js/Flip.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-22": {
       "id": "scroll-22",
-      "at": "2026-10-21T08:05:17.904Z",
+      "at": "2026-10-21T08:45:12.600Z",
       "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1426615,
-      "status": "warn",
+      "bytes": 2963267,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-22/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-22/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-22/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-22/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Lenis is not defined"
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-22/js/imagesloaded.pkgd.min.js",
-        "ERR /scroll-22/js/imagesloaded.pkgd.min.js",
-        "404 /scroll-22/js/gsap.min.js",
-        "ERR /scroll-22/js/gsap.min.js",
-        "404 /scroll-22/js/ScrollTrigger.min.js",
-        "ERR /scroll-22/js/ScrollTrigger.min.js",
-        "404 /scroll-22/js/lenis.min.js",
-        "ERR /scroll-22/js/lenis.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-23": {
       "id": "scroll-23",
-      "at": "2026-10-21T08:05:23.991Z",
-      "kind": "static",
-      "obfuscatedFiles": 11,
-      "obfuscated": true,
-      "bytes": 383330,
-      "status": "warn",
-      "blank": false,
-      "errors": [
-        "Failed to load module script: Expected a JavaScript-or-Wasm module script but the server responded with a MIME type of \"text/html\". Strict MIME type checking is enforced for module scripts per HTML sp"
+      "at": "2026-10-21T08:45:13.326Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap",
+        "restored 2 file(s) the original build left out"
       ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 441502,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -579,35 +500,39 @@
     },
     "scroll-26": {
       "id": "scroll-26",
-      "at": "2026-10-21T08:05:33.081Z",
+      "at": "2026-10-21T08:45:23.556Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 11467,
-      "status": "warn",
+      "fixes": [
+        "restored 22 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2636687,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-26/js/default.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-26/js/default.js",
-        "ERR /scroll-26/js/default.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-25": {
       "id": "scroll-25",
-      "at": "2026-10-21T08:05:32.553Z",
-      "kind": "static",
-      "obfuscatedFiles": 2,
-      "obfuscated": true,
-      "bytes": 556432,
+      "at": "2026-10-21T08:45:20.171Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: locomotive-scroll",
+        "installed undeclared dependency: imagesloaded",
+        "restored 7 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 1118730,
+      "note": "obfuscation broke this demo; serving minified build",
       "status": "warn",
       "blank": false,
       "errors": [
-        "Failed to resolve module specifier \"locomotive-scroll\". Relative references must start with either \"/\", \"./\", or \"../\"."
+        "$.on is not a function"
       ],
       "external": [],
       "failed": [],
@@ -631,16 +556,19 @@
     },
     "scroll-28": {
       "id": "scroll-28",
-      "at": "2026-10-21T08:05:37.710Z",
-      "kind": "static",
-      "obfuscatedFiles": 4,
-      "obfuscated": true,
-      "bytes": 982236,
-      "status": "warn",
-      "blank": false,
-      "errors": [
-        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
+      "at": "2026-10-21T08:45:24.445Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, splitting",
+        "installed undeclared dependency: imagesloaded",
+        "restored 5 file(s) the original build left out"
       ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2067608,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -648,61 +576,50 @@
     },
     "scroll-32": {
       "id": "scroll-32",
-      "at": "2026-10-21T08:05:51.411Z",
+      "at": "2026-10-21T08:45:44.567Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 3193915,
-      "status": "warn",
+      "fixes": [
+        "restored 16 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6385808,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-32/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-32/script.js",
-        "ERR /scroll-32/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-30": {
       "id": "scroll-30",
-      "at": "2026-10-21T08:05:47.809Z",
+      "at": "2026-10-21T08:45:27.512Z",
       "kind": "vite",
-      "obfuscatedFiles": 1,
+      "fixes": [
+        "restored 21 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 2,
       "obfuscated": true,
-      "bytes": 1833687,
-      "status": "warn",
+      "bytes": 3805349,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/Flip.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-30/js/ScrollTrigger.min.js",
-        "ERR /scroll-30/js/ScrollTrigger.min.js",
-        "404 /scroll-30/js/gsap.min.js",
-        "ERR /scroll-30/js/gsap.min.js",
-        "404 /scroll-30/js/Flip.min.js",
-        "ERR /scroll-30/js/Flip.min.js",
-        "404 /scroll-30/js/lenis.min.js",
-        "ERR /scroll-30/js/lenis.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-31": {
       "id": "scroll-31",
-      "at": "2026-10-21T08:05:49.076Z",
+      "at": "2026-10-21T08:45:42.308Z",
       "kind": "vite",
+      "fixes": [
+        "restored 25 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 997033,
+      "bytes": 1813359,
       "status": "warn",
       "blank": false,
       "errors": [],
@@ -715,21 +632,19 @@
     },
     "scroll-33": {
       "id": "scroll-33",
-      "at": "2026-10-21T08:06:02.939Z",
+      "at": "2026-10-21T08:45:45.567Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 102205,
-      "status": "warn",
+      "fixes": [
+        "restored 5 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 201166,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-33/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-33/script.js",
-        "ERR /scroll-33/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -750,51 +665,58 @@
     },
     "scroll-35": {
       "id": "scroll-35",
-      "at": "2026-10-21T08:06:09.242Z",
+      "at": "2026-10-21T08:45:45.574Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 302854,
-      "status": "warn",
+      "fixes": [
+        "restored 6 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 607264,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-35/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-35/script.js",
-        "ERR /scroll-35/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-37": {
       "id": "scroll-37",
-      "at": "2026-10-21T08:06:16.648Z",
+      "at": "2026-10-21T08:46:00.422Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 4022719,
-      "status": "fail",
-      "blank": true,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-37/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      "fixes": [
+        "restored 16 file(s) the original build left out"
       ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8047009,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-37/script.js",
-        "ERR /scroll-37/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-27": {
       "id": "scroll-27",
-      "at": "2026-10-21T08:05:34.138Z",
+      "at": "2026-10-21T08:43:00.313Z",
       "kind": "parcel",
-      "status": "fail",
-      "stage": "build",
-      "error": "error: unknown option `--dist-dir'"
+      "fixes": [
+        "added placeholder for missing favicon.ico",
+        "restored 11 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1444552,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "scroll-38": {
       "id": "scroll-38",
@@ -813,41 +735,37 @@
     },
     "scroll-39": {
       "id": "scroll-39",
-      "at": "2026-10-21T08:06:27.272Z",
+      "at": "2026-10-21T08:46:00.466Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 1124796,
-      "status": "warn",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2247650,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-39/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-39/script.js",
-        "ERR /scroll-39/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-40": {
       "id": "scroll-40",
-      "at": "2026-10-21T08:06:27.277Z",
+      "at": "2026-10-21T08:46:03.259Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 760845,
-      "status": "warn",
+      "fixes": [
+        "restored 4 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1520826,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-40/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-40/script.js",
-        "ERR /scroll-40/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -868,105 +786,116 @@
     },
     "scroll-43": {
       "id": "scroll-43",
-      "at": "2026-10-21T08:06:35.568Z",
+      "at": "2026-10-21T08:46:14.331Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
+      "fixes": [
+        "restored 5 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
       "obfuscated": false,
-      "bytes": 24790430,
-      "status": "warn",
+      "bytes": 49581593,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-43/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-43/script.js",
-        "ERR /scroll-43/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-44": {
       "id": "scroll-44",
-      "at": "2026-10-21T08:06:40.384Z",
+      "at": "2026-10-21T08:46:17.333Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 288068,
-      "status": "warn",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 573988,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-44/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-44/script.js",
-        "ERR /scroll-44/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-42": {
       "id": "scroll-42",
-      "at": "2026-10-21T08:06:35.320Z",
-      "kind": "static",
-      "obfuscatedFiles": 2,
+      "at": "2026-10-21T08:46:08.229Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "restored 33 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4865045,
+      "bytes": 4865207,
       "status": "warn",
       "blank": false,
       "errors": [],
       "external": [],
       "failed": [
         "404 /scroll-42/assets/img34.jpeg",
-        "404 /scroll-42/assets/img35.jpeg",
-        "404 /scroll-42/assets/img36.jpeg"
+        "404 /scroll-42/assets/img36.jpeg",
+        "404 /scroll-42/assets/img35.jpeg"
       ],
       "navError": null,
       "stage": "verify"
     },
     "scroll-45": {
       "id": "scroll-45",
-      "at": "2026-10-21T08:06:59.419Z",
+      "at": "2026-10-21T08:43:00.313Z",
       "kind": "vite",
-      "status": "fail",
-      "stage": "build",
-      "error": "ed with 1 error:\nError: [vite]: Rolldown failed to resolve import \"gsap\" from \"/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/scroll-45/files/script.js\".\n    at aggregateBindingErrorsIntoJsError (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-45/files/node_modules/rolldown/dist/shared/error-BlQ0-ek7.mjs:48:18)\n    at unwrapBindingResult (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-45/files/node_modules/rolldown/dist/shared/error-BlQ0-ek7.mjs:18:128)\n  errors: [Getter/Setter]"
+      "fixes": [
+        "installed undeclared dependency: gsap",
+        "installed undeclared dependency: lenis",
+        "restored 5 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2832164,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "scroll-47": {
       "id": "scroll-47",
-      "at": "2026-10-21T08:06:59.432Z",
-      "kind": "static",
+      "at": "2026-10-21T08:46:35.967Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, lenis",
+        "restored 4 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 791852,
-      "status": "warn",
+      "bytes": 1760088,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-47/img_1.jpg",
-        "404 /scroll-47/img_2.jpg",
-        "404 /scroll-47/img_3.jpg",
-        "404 /scroll-47/img_4.jpg"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-46": {
       "id": "scroll-46",
-      "at": "2026-10-21T08:06:59.420Z",
-      "kind": "static",
+      "at": "2026-10-21T08:46:28.992Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, lenis",
+        "restored 12 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 16869819,
-      "status": "warn",
+      "bytes": 33915177,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -992,20 +921,20 @@
     },
     "scroll-48": {
       "id": "scroll-48",
-      "at": "2026-10-21T08:07:04.385Z",
-      "kind": "static",
+      "at": "2026-10-21T08:46:35.987Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, lenis, lottie-web",
+        "restored 2 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2720021,
-      "status": "warn",
+      "bytes": 6001061,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-48/hero-img.jpg"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1026,21 +955,19 @@
     },
     "scroll-50": {
       "id": "scroll-50",
-      "at": "2026-10-21T08:07:13.187Z",
+      "at": "2026-10-21T08:46:46.995Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 5704122,
-      "status": "warn",
+      "fixes": [
+        "restored 19 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 22956488,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-50/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-50/script.js",
-        "ERR /scroll-50/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1061,44 +988,38 @@
     },
     "scroll-53": {
       "id": "scroll-53",
-      "at": "2026-10-21T08:07:18.805Z",
+      "at": "2026-10-21T08:46:48.366Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 4216173,
-      "status": "warn",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8843753,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-53/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-53/script.js",
-        "ERR /scroll-53/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-51": {
       "id": "scroll-51",
-      "at": "2026-10-21T08:07:15.627Z",
-      "kind": "static",
+      "at": "2026-10-21T08:46:47.012Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, lenis",
+        "restored 5 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1782415,
-      "status": "warn",
+      "bytes": 3749810,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-51/work_01.jpg",
-        "404 /scroll-51/work_02.jpg",
-        "404 /scroll-51/work_03.jpg",
-        "404 /scroll-51/work_04.jpg",
-        "404 /scroll-51/work_05.jpg"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1201,21 +1122,19 @@
     },
     "scroll-62": {
       "id": "scroll-62",
-      "at": "2026-10-21T08:09:28.566Z",
+      "at": "2026-10-21T08:46:52.535Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 2256589,
-      "status": "warn",
+      "fixes": [
+        "restored 8 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4513315,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-62/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-62/script.js",
-        "ERR /scroll-62/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1251,41 +1170,39 @@
     },
     "scroll-65": {
       "id": "scroll-65",
-      "at": "2026-10-21T08:09:36.325Z",
+      "at": "2026-10-21T08:46:56.123Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 2846,
-      "status": "fail",
-      "blank": true,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-65/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      "fixes": [
+        "restored 1 file(s) the original build left out"
       ],
-      "external": [],
-      "failed": [
-        "404 /scroll-65/script.js",
-        "ERR /scroll-65/script.js"
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6253,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/feature/6662647093133312"
       ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-66": {
       "id": "scroll-66",
-      "at": "2026-10-21T08:09:42.395Z",
+      "at": "2026-10-21T08:46:56.318Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 3987,
-      "status": "warn",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5467,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/scroll-66/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-66/script.js",
-        "ERR /scroll-66/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1336,26 +1253,19 @@
     },
     "scroll-67": {
       "id": "scroll-67",
-      "at": "2026-10-21T08:09:46.892Z",
+      "at": "2026-10-21T08:46:57.965Z",
       "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
-      "obfuscated": false,
-      "bytes": 7199,
-      "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "obfuscated": true,
+      "bytes": 35251543,
+      "status": "pass",
       "blank": false,
       "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-67/assets/slide_img_left_4.jpg",
-        "404 /scroll-67/assets/slide_img_left_5.jpg",
-        "404 /scroll-67/assets/slide_img_right_5.jpg",
-        "404 /scroll-67/assets/slide_img_left_3.jpg",
-        "404 /scroll-67/assets/slide_img_left_2.jpg",
-        "404 /scroll-67/assets/slide_img_left_1.jpg",
-        "404 /scroll-67/assets/slide_img_right_4.jpg",
-        "404 /scroll-67/assets/slide_img_right_1.jpg"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1376,21 +1286,19 @@
     },
     "mouse-2": {
       "id": "mouse-2",
-      "at": "2026-10-21T08:10:11.185Z",
+      "at": "2026-10-21T08:47:04.444Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 4879937,
-      "status": "warn",
+      "fixes": [
+        "restored 13 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 9758005,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/mouse-2/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /mouse-2/script.js",
-        "ERR /mouse-2/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1426,41 +1334,37 @@
     },
     "mouse-3": {
       "id": "mouse-3",
-      "at": "2026-10-21T08:10:23.741Z",
+      "at": "2026-10-21T08:47:11.564Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 2335,
-      "status": "warn",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4527,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/mouse-3/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /mouse-3/script.js",
-        "ERR /mouse-3/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "mouse-6": {
       "id": "mouse-6",
-      "at": "2026-10-21T08:10:29.454Z",
+      "at": "2026-10-21T08:47:14.891Z",
       "kind": "vite",
-      "obfuscatedFiles": 0,
-      "obfuscated": false,
-      "bytes": 1801,
-      "status": "warn",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3959,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/mouse-6/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /mouse-6/script.js",
-        "ERR /mouse-6/script.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1481,21 +1385,3719 @@
     },
     "mouse-7": {
       "id": "mouse-7",
-      "at": "2026-10-21T08:10:37.078Z",
+      "at": "2026-10-21T08:47:14.936Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4408,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-8": {
+      "id": "mouse-8",
+      "at": "2026-10-21T08:47:22.157Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3434,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-9": {
+      "id": "mouse-9",
+      "at": "2026-10-21T08:47:22.619Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6220,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-4": {
+      "id": "mouse-4",
+      "at": "2026-10-21T08:10:25.742Z",
       "kind": "vite",
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 1759,
+      "bytes": 1298071,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-10": {
+      "id": "mouse-10",
+      "at": "2026-10-21T08:47:26.600Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6883,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-13": {
+      "id": "mouse-13",
+      "at": "2026-10-21T08:11:23.425Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3190,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-11": {
+      "id": "mouse-11",
+      "at": "2026-10-21T08:10:57.984Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 840032,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-14": {
+      "id": "mouse-14",
+      "at": "2026-10-21T08:11:25.770Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 261,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-16": {
+      "id": "mouse-16",
+      "at": "2026-10-21T08:11:34.559Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 32689,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-18": {
+      "id": "mouse-18",
+      "at": "2026-10-21T08:47:33.910Z",
+      "kind": "vite",
+      "fixes": [
+        "installed undeclared dependency: gsap",
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 16171067,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-17": {
+      "id": "mouse-17",
+      "at": "2026-10-21T08:11:38.721Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 195,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-19": {
+      "id": "mouse-19",
+      "at": "2026-10-21T08:11:47.071Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 672484,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-15": {
+      "id": "mouse-15",
+      "at": "2026-10-21T08:47:30.935Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 37568,
       "status": "warn",
       "blank": false,
       "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/mouse-7/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+        "parcelRequire is not defined"
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-20": {
+      "id": "mouse-20",
+      "at": "2026-10-21T08:11:50.608Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 375130,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-1": {
+      "id": "page-transitions-1",
+      "at": "2026-10-21T08:12:14.372Z",
+      "kind": "vite",
+      "obfuscatedFiles": 4,
+      "obfuscated": true,
+      "bytes": 1190947,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-12": {
+      "id": "mouse-12",
+      "at": "2026-10-21T08:47:27.601Z",
+      "kind": "script",
+      "status": "fail",
+      "stage": "build",
+      "error": "install failed: nline=false --offline=false --no-progress --no-save --no-audit --include=dev --include=peer --include=optional --no-package-lock-only --no-dry-run\nnpm error npm error code EALLOWSCRIPTS\nnpm error npm error --allow-scripts is not allowed in project-scoped installs. Add the entries to the \"allowScripts\" field in package.json, or to .npmrc, instead.\nnpm error npm error A complete log of this run can be found in: /Users/meetchauhan/.npm/_logs/2026-10-21T08_48_20_102Z-debug-0.log\nnpm error A complete log of this run can be found in: /Users/meetchauhan/.npm/_logs/2026-10-21T08_47_28_176Z-debug-0.log"
+    },
+    "page-transitions-2": {
+      "id": "page-transitions-2",
+      "at": "2026-10-21T08:12:28.263Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 32113767,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-4": {
+      "id": "page-transitions-4",
+      "at": "2026-10-21T08:12:38.417Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1989481,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-3": {
+      "id": "page-transitions-3",
+      "at": "2026-10-21T08:47:41.383Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 14 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1118790,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-5": {
+      "id": "page-transitions-5",
+      "at": "2026-10-21T08:12:56.508Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6806,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-21": {
+      "id": "mouse-21",
+      "at": "2026-10-21T08:11:53.291Z",
+      "kind": "next",
+      "obfuscatedFiles": 9,
+      "obfuscated": false,
+      "bytes": 5442919,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-6": {
+      "id": "page-transitions-6",
+      "at": "2026-10-21T08:13:07.555Z",
+      "kind": "static",
+      "obfuscatedFiles": 6,
+      "obfuscated": false,
+      "bytes": 1403335,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-7": {
+      "id": "page-transitions-7",
+      "at": "2026-10-21T08:47:51.658Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 7 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 489225,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "SplitType is not defined"
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-10": {
+      "id": "page-transitions-10",
+      "at": "2026-10-21T08:48:07.032Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap",
+        "installed undeclared dependency: imagesloaded",
+        "restored 8 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 769745,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-11": {
+      "id": "page-transitions-11",
+      "at": "2026-10-21T08:13:41.892Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6860,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-8": {
+      "id": "page-transitions-8",
+      "at": "2026-10-21T08:13:14.135Z",
+      "kind": "astro",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 866913,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-13": {
+      "id": "page-transitions-13",
+      "at": "2026-10-21T08:48:15.369Z",
+      "kind": "next",
+      "obfuscatedFiles": 16,
+      "obfuscated": false,
+      "bytes": 30816799,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-9": {
+      "id": "page-transitions-9",
+      "at": "2026-10-21T08:47:52.645Z",
+      "kind": "next",
+      "obfuscatedFiles": 11,
+      "obfuscated": false,
+      "bytes": 3063672,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [
+        "ERR /page-transitions-9/about/"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-12": {
+      "id": "page-transitions-12",
+      "at": "2026-10-21T08:14:07.464Z",
+      "kind": "next",
+      "obfuscatedFiles": 11,
+      "obfuscated": false,
+      "bytes": 23763841,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-14": {
+      "id": "page-transitions-14",
+      "at": "2026-10-21T08:48:23.299Z",
+      "kind": "next",
+      "obfuscatedFiles": 10,
+      "obfuscated": false,
+      "bytes": 1223677,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [
+        "ERR /page-transitions-14/about/",
+        "ERR /page-transitions-14/"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-1": {
+      "id": "grid-1",
+      "at": "2026-10-21T08:17:08.967Z",
+      "kind": "static",
+      "obfuscatedFiles": 5,
+      "obfuscated": false,
+      "bytes": 1738901,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-4": {
+      "id": "grid-4",
+      "at": "2026-10-21T08:49:57.231Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1351857,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to apply style from 'http://127.0.0.1:3199/grid-4/css/base.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       ],
       "external": [],
       "failed": [
-        "404 /mouse-7/script.js",
-        "ERR /mouse-7/script.js"
+        "ERR /grid-4/css/base.css"
       ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-3": {
+      "id": "grid-3",
+      "at": "2026-10-21T08:49:10.873Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 44 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3862578,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-6": {
+      "id": "grid-6",
+      "at": "2026-10-21T08:50:28.475Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2903098,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-5": {
+      "id": "grid-5",
+      "at": "2026-10-21T08:50:04.883Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 36 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 2,
+      "obfuscated": true,
+      "bytes": 2515641,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/grid-5/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Lenis is not defined"
+      ],
+      "external": [],
+      "failed": [
+        "404 /grid-5/js/lenis.min.js",
+        "ERR /grid-5/js/lenis.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-7": {
+      "id": "grid-7",
+      "at": "2026-10-21T08:50:30.071Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 45 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5741572,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "page-transitions-15": {
+      "id": "page-transitions-15",
+      "at": "2026-10-21T08:48:25.142Z",
+      "kind": "next",
+      "obfuscatedFiles": 16,
+      "obfuscated": false,
+      "bytes": 1545747,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [
+        "ERR /page-transitions-15/",
+        "ERR /page-transitions-15/projects/",
+        "ERR /page-transitions-15/info/"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-8": {
+      "id": "grid-8",
+      "at": "2026-10-21T08:50:33.702Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 23 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 13231366,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-9": {
+      "id": "grid-9",
+      "at": "2026-10-21T08:18:16.023Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1347831,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-1": {
+      "id": "sliders-1",
+      "at": "2026-10-21T08:50:40.067Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 101 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7105679,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-2": {
+      "id": "sliders-2",
+      "at": "2026-10-21T08:50:43.715Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8389,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-3": {
+      "id": "sliders-3",
+      "at": "2026-10-21T08:50:45.727Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7537,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "grid-10": {
+      "id": "grid-10",
+      "at": "2026-10-21T08:50:33.925Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 53 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2303382,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-4": {
+      "id": "sliders-4",
+      "at": "2026-10-21T08:50:46.819Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 40218,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-6": {
+      "id": "sliders-6",
+      "at": "2026-10-21T08:50:48.021Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 9 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1522031,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-5": {
+      "id": "sliders-5",
+      "at": "2026-10-21T08:18:41.951Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 23585,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-8": {
+      "id": "sliders-8",
+      "at": "2026-10-21T08:18:52.205Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 760149,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-9": {
+      "id": "sliders-9",
+      "at": "2026-10-21T08:50:55.062Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7964,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-10": {
+      "id": "sliders-10",
+      "at": "2026-10-21T08:50:56.339Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 24246,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Unexpected token 'export'"
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-12": {
+      "id": "sliders-12",
+      "at": "2026-10-21T08:50:58.260Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 12 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 642888,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-15": {
+      "id": "sliders-15",
+      "at": "2026-10-21T08:51:09.858Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 8 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 22935729,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Cannot use import statement outside a module"
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-14": {
+      "id": "sliders-14",
+      "at": "2026-10-21T08:19:09.204Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 8210576,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-7": {
+      "id": "sliders-7",
+      "at": "2026-10-21T08:50:52.915Z",
+      "kind": "parcel",
+      "status": "fail",
+      "stage": "build",
+      "error": "  err = new Error(\nError: Could not locate the bindings file. Tried:"
+    },
+    "sliders-16": {
+      "id": "sliders-16",
+      "at": "2026-10-21T08:51:18.335Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 21 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3203972,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-17": {
+      "id": "sliders-17",
+      "at": "2026-10-21T08:51:24.696Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 7 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5908928,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-18": {
+      "id": "sliders-18",
+      "at": "2026-10-21T08:51:25.690Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap",
+        "restored 9 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8850139,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-19": {
+      "id": "sliders-19",
+      "at": "2026-10-21T08:51:27.054Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 9 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5696549,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-20": {
+      "id": "sliders-20",
+      "at": "2026-10-21T08:19:32.331Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8859504,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-22": {
+      "id": "sliders-22",
+      "at": "2026-10-21T08:19:40.115Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 32113513,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-23": {
+      "id": "sliders-23",
+      "at": "2026-10-21T08:51:35.834Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 21 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1600919,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-24": {
+      "id": "sliders-24",
+      "at": "2026-10-21T08:19:49.928Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 10976829,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-13": {
+      "id": "sliders-13",
+      "at": "2026-10-21T08:51:06.326Z",
+      "kind": "parcel",
+      "fixes": [
+        "added placeholder for missing favicon.ico",
+        "restored 10 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 4,
+      "obfuscated": true,
+      "bytes": 2672721,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-25": {
+      "id": "sliders-25",
+      "at": "2026-10-21T08:19:56.044Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1353901,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-1": {
+      "id": "hero-1",
+      "at": "2026-10-21T08:51:36.503Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 9388,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-26": {
+      "id": "sliders-26",
+      "at": "2026-10-21T08:20:01.063Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1436668,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-2": {
+      "id": "hero-2",
+      "at": "2026-10-21T08:51:37.160Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 6 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 879833,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-3": {
+      "id": "hero-3",
+      "at": "2026-10-21T08:51:43.174Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5681,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-21": {
+      "id": "sliders-21",
+      "at": "2026-10-21T08:19:37.120Z",
+      "kind": "next",
+      "obfuscatedFiles": 9,
+      "obfuscated": false,
+      "bytes": 1099433,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-5": {
+      "id": "hero-5",
+      "at": "2026-10-21T08:51:44.886Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4615,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-4": {
+      "id": "hero-4",
+      "at": "2026-10-21T08:51:44.558Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 152597,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-6": {
+      "id": "hero-6",
+      "at": "2026-10-21T08:20:39.504Z",
+      "kind": "static",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 4235,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-7": {
+      "id": "hero-7",
+      "at": "2026-10-21T09:07:35.925Z",
+      "kind": "static",
+      "fixes": [
+        "re-encoded smoke_final.mp4 to fit hosting limits"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4007100,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-8": {
+      "id": "hero-8",
+      "at": "2026-10-21T08:51:52.148Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 8 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6409690,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-9": {
+      "id": "hero-9",
+      "at": "2026-10-21T08:51:52.661Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1642548,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-10": {
+      "id": "hero-10",
+      "at": "2026-10-21T08:51:53.805Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 453346,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-11": {
+      "id": "hero-11",
+      "at": "2026-10-21T08:52:00.634Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 27 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3158034,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-13": {
+      "id": "hero-13",
+      "at": "2026-10-21T08:52:00.981Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1472810,
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [
+        "404 /hero-13/assets/img/preloader/preloader-7.png"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-14": {
+      "id": "hero-14",
+      "at": "2026-10-21T08:20:58.363Z",
+      "kind": "static",
+      "obfuscatedFiles": 7,
+      "obfuscated": false,
+      "bytes": 1334803,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-15": {
+      "id": "hero-15",
+      "at": "2026-10-21T08:52:04.252Z",
+      "kind": "vite",
+      "fixes": [
+        "installed undeclared dependency: gsap",
+        "installed undeclared dependency: imagesloaded",
+        "installed undeclared dependency: split-type",
+        "restored 4 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 720246,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-16": {
+      "id": "hero-16",
+      "at": "2026-10-21T08:52:15.191Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 9370,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Cannot use import statement outside a module"
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-17": {
+      "id": "hero-17",
+      "at": "2026-10-21T08:21:12.486Z",
+      "kind": "static",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 8165526,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-18": {
+      "id": "hero-18",
+      "at": "2026-10-21T08:52:15.505Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 25955900,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-22": {
+      "id": "hero-22",
+      "at": "2026-10-21T08:52:20.128Z",
+      "kind": "vite",
+      "fixes": [
+        "installed undeclared dependency: gsap",
+        "restored 5 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 31234346,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-19": {
+      "id": "hero-19",
+      "at": "2026-10-21T08:52:19.823Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 9 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 19128166,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-12": {
+      "id": "hero-12",
+      "at": "2026-10-21T08:20:53.702Z",
+      "kind": "parcel",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1724777,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-21": {
+      "id": "hero-21",
+      "at": "2026-10-21T08:21:19.879Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 2077934,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-23": {
+      "id": "hero-23",
+      "at": "2026-10-21T08:52:23.547Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 8 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8828842,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-26": {
+      "id": "hero-26",
+      "at": "2026-10-21T08:52:30.067Z",
+      "kind": "vite",
+      "fixes": [
+        "installed undeclared dependency: gsap",
+        "restored 6 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1408287,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-25": {
+      "id": "hero-25",
+      "at": "2026-10-21T08:21:29.604Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 816670,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-24": {
+      "id": "hero-24",
+      "at": "2026-10-21T08:21:27.531Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 2553624,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-1": {
+      "id": "webgl-1",
+      "at": "2026-10-21T08:52:32.766Z",
+      "kind": "vite",
+      "status": "fail",
+      "stage": "build",
+      "error": "meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/webgl-1/WebGPU-clair-obscur-gommage-codrops-master/node_modules/rollup/dist/es/shared/parseAst.js:337:41)\n    at error (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/webgl-1/WebGPU-clair-obscur-gommage-codrops-master/node_modules/rollup/dist/es/shared/parseAst.js:333:42)\n    at Module.error (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/webgl-1/WebGPU-clair-obscur-gommage-codrops-master/node_modules/rollup/dist/es/shared/node-entry.js:17920:16)"
+    },
+    "webgl-4": {
+      "id": "webgl-4",
+      "at": "2026-10-21T08:52:33.161Z",
+      "kind": "parcel",
+      "status": "fail",
+      "stage": "build",
+      "error": "  err = new Error('Could not locate the bindings file. Tried:\\n'\nError: Could not locate the bindings file. Tried:"
+    },
+    "webgl-5": {
+      "id": "webgl-5",
+      "at": "2026-10-21T08:21:49.618Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1014903,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-7": {
+      "id": "webgl-7",
+      "at": "2026-10-21T08:21:59.938Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3913,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-6": {
+      "id": "webgl-6",
+      "at": "2026-10-21T08:21:51.544Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 3094722,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-8": {
+      "id": "webgl-8",
+      "at": "2026-10-21T08:22:04.337Z",
+      "kind": "vite-adhoc",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 916585,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-10": {
+      "id": "webgl-10",
+      "at": "2026-10-21T08:22:23.513Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 626355,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-11": {
+      "id": "webgl-11",
+      "at": "2026-10-21T08:52:42.005Z",
+      "kind": "parcel",
+      "fixes": [
+        "added placeholder for missing favicon.ico",
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 3,
+      "obfuscated": true,
+      "bytes": 3219637,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-13": {
+      "id": "webgl-13",
+      "at": "2026-10-21T08:22:46.292Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 9172381,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-9": {
+      "id": "webgl-9",
+      "at": "2026-10-21T08:22:13.588Z",
+      "kind": "script",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 1287186,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-14": {
+      "id": "webgl-14",
+      "at": "2026-10-21T08:52:44.560Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8400,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-16": {
+      "id": "webgl-16",
+      "at": "2026-10-21T08:23:11.120Z",
+      "kind": "static",
+      "obfuscatedFiles": 2,
+      "obfuscated": true,
+      "bytes": 1384017,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-15": {
+      "id": "webgl-15",
+      "at": "2026-10-21T08:23:10.115Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2279932,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-17": {
+      "id": "webgl-17",
+      "at": "2026-10-21T08:52:46.567Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 6 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 6000984,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [
+        "404 /webgl-17/assets/fonts/PPWoodland-Ultralight.woff2",
+        "ERR /webgl-17/assets/fonts/PPWoodland-Ultralight.woff2"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-18": {
+      "id": "webgl-18",
+      "at": "2026-10-21T08:23:22.818Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3416527,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-1": {
+      "id": "background-1",
+      "at": "2026-10-21T08:23:51.586Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 13523,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-12": {
+      "id": "webgl-12",
+      "at": "2026-10-21T08:38:39.466Z",
+      "kind": "cra",
+      "obfuscatedFiles": 4,
+      "obfuscated": true,
+      "bytes": 3476593,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-19": {
+      "id": "webgl-19",
+      "at": "2026-10-21T08:52:55.439Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 5 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4946327,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-2": {
+      "id": "background-2",
+      "at": "2026-10-21T08:53:07.530Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: three",
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 730373,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-3": {
+      "id": "background-3",
+      "at": "2026-10-21T08:24:04.599Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 13133,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-4": {
+      "id": "background-4",
+      "at": "2026-10-21T08:24:06.670Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 13154,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-2": {
+      "id": "webgl-2",
+      "at": "2026-10-21T09:03:48.368Z",
+      "kind": "parcel",
+      "fixes": [
+        "re-resolved dependencies (lockfile pointed at a dead registry)"
+      ],
+      "status": "fail",
+      "stage": "build",
+      "error": ":25)\n    at async getBabelConfig (/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/webgl-2/webgl-mouseover-effects-master/node_modules/parcel/src/transforms/babel/config.js:32:19)\n    at async babelTransform (/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/webgl-2/webgl-mouseover-effects-master/node_modules/parcel/src/transforms/babel/transform.js:6:16)\n    at async JSAsset.pretransform (/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/webgl-2/webgl-mouseover-effects-master/node_modules/parcel/src/assets/JSAsset.js:83:5)\n"
+    },
+    "background-5": {
+      "id": "background-5",
+      "at": "2026-10-21T08:24:11.206Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 9887,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-6": {
+      "id": "background-6",
+      "at": "2026-10-21T08:24:12.071Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7941,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-7": {
+      "id": "background-7",
+      "at": "2026-10-21T08:24:14.520Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 14457,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-8": {
+      "id": "background-8",
+      "at": "2026-10-21T08:24:19.891Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 15733,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-9": {
+      "id": "background-9",
+      "at": "2026-10-21T08:24:23.387Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 17690,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-10": {
+      "id": "background-10",
+      "at": "2026-10-21T08:24:29.559Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7396,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-1": {
+      "id": "navigation-1",
+      "at": "2026-10-21T08:24:41.991Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6578746,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-2": {
+      "id": "navigation-2",
+      "at": "2026-10-21T08:24:50.826Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6141,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "background-11": {
+      "id": "background-11",
+      "at": "2026-10-21T08:24:32.276Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 823778,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-3": {
+      "id": "navigation-3",
+      "at": "2026-10-21T08:24:52.845Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6910,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-4": {
+      "id": "navigation-4",
+      "at": "2026-10-21T08:24:57.399Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3467588,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-6": {
+      "id": "navigation-6",
+      "at": "2026-10-21T08:24:58.402Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4630017,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-5": {
+      "id": "navigation-5",
+      "at": "2026-10-21T08:24:58.313Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 940798,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-7": {
+      "id": "navigation-7",
+      "at": "2026-10-21T08:25:00.365Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 376528,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-8": {
+      "id": "navigation-8",
+      "at": "2026-10-21T08:25:05.103Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7652534,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-9": {
+      "id": "navigation-9",
+      "at": "2026-10-21T08:25:05.548Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 12350,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-10": {
+      "id": "navigation-10",
+      "at": "2026-10-21T08:25:07.061Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 88839,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-11": {
+      "id": "navigation-11",
+      "at": "2026-10-21T08:25:08.004Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8393,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-12": {
+      "id": "navigation-12",
+      "at": "2026-10-21T08:25:12.887Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 16518,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-13": {
+      "id": "navigation-13",
+      "at": "2026-10-21T08:25:14.271Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1330704,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-14": {
+      "id": "navigation-14",
+      "at": "2026-10-21T08:25:15.563Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4851,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-15": {
+      "id": "navigation-15",
+      "at": "2026-10-21T08:25:16.747Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5119598,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-16": {
+      "id": "navigation-16",
+      "at": "2026-10-21T08:25:19.534Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 11743,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-17": {
+      "id": "navigation-17",
+      "at": "2026-10-21T08:25:21.150Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 425545,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-20": {
+      "id": "navigation-20",
+      "at": "2026-10-21T08:25:26.690Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1448567,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-19": {
+      "id": "navigation-19",
+      "at": "2026-10-21T08:25:26.277Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 198186,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-21": {
+      "id": "navigation-21",
+      "at": "2026-10-21T08:25:30.503Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2006459,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "navigation-18": {
+      "id": "navigation-18",
+      "at": "2026-10-21T08:53:17.955Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap",
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 23779226,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-2": {
+      "id": "hover-2",
+      "at": "2026-10-21T08:53:34.077Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4431,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-1": {
+      "id": "hover-1",
+      "at": "2026-10-21T08:53:24.930Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 9 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3459840,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-3": {
+      "id": "hover-3",
+      "at": "2026-10-21T08:53:42.016Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4881,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-4": {
+      "id": "hover-4",
+      "at": "2026-10-21T08:53:44.997Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 31 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 814698,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-5": {
+      "id": "hover-5",
+      "at": "2026-10-21T09:03:48.369Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, splitting",
+        "installed undeclared dependency: imagesloaded",
+        "restored 6 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 699266,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-6": {
+      "id": "hover-6",
+      "at": "2026-10-21T08:53:49.300Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, splitting",
+        "installed undeclared dependency: imagesloaded",
+        "restored 6 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 350068,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-7": {
+      "id": "hover-7",
+      "at": "2026-10-21T08:53:49.902Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap",
+        "installed undeclared dependency: imagesloaded",
+        "restored 15 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2072895,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-8": {
+      "id": "hover-8",
+      "at": "2026-10-21T09:03:48.369Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: splitting, gsap",
+        "installed undeclared dependency: imagesloaded",
+        "restored 40 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3424985,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-10": {
+      "id": "hover-10",
+      "at": "2026-10-21T08:26:01.271Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6862,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-9": {
+      "id": "hover-9",
+      "at": "2026-10-21T08:53:56.005Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 109051,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-12": {
+      "id": "hover-12",
+      "at": "2026-10-21T08:54:00.300Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2438143,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-11": {
+      "id": "hover-11",
+      "at": "2026-10-21T09:03:48.369Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, locomotive-scroll",
+        "installed undeclared dependency: imagesloaded",
+        "restored 20 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2636523,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-15": {
+      "id": "hover-15",
+      "at": "2026-10-21T08:26:15.304Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4053158,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-13": {
+      "id": "hover-13",
+      "at": "2026-10-21T08:26:07.091Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 145802,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-16": {
+      "id": "hover-16",
+      "at": "2026-10-21T08:54:01.304Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 16 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8163687,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-14": {
+      "id": "hover-14",
+      "at": "2026-10-21T08:26:11.723Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 701967,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-17": {
+      "id": "hover-17",
+      "at": "2026-10-21T08:26:33.549Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1000016,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-18": {
+      "id": "hover-18",
+      "at": "2026-10-21T08:54:06.645Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap, vite",
+        "restored 9 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2676421,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-19": {
+      "id": "hover-19",
+      "at": "2026-10-21T08:54:06.807Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: gsap",
+        "restored 4 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1348989,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-20": {
+      "id": "hover-20",
+      "at": "2026-10-21T08:54:10.908Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 19 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2018697,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hover-21": {
+      "id": "hover-21",
+      "at": "2026-10-21T08:26:55.664Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6313176,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-1": {
+      "id": "text-1",
+      "at": "2026-10-21T08:54:13.726Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 6 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 181929,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-3": {
+      "id": "text-3",
+      "at": "2026-10-21T08:27:02.664Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 136836,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-4": {
+      "id": "text-4",
+      "at": "2026-10-21T08:54:16.244Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5141,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-2": {
+      "id": "text-2",
+      "at": "2026-10-21T08:27:00.931Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 1481694,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-5": {
+      "id": "text-5",
+      "at": "2026-10-21T08:54:18.344Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: @studio-freight/lenis, gsap, splitting"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 209720,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-8": {
+      "id": "text-8",
+      "at": "2026-10-21T08:27:20.228Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 445,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-7": {
+      "id": "text-7",
+      "at": "2026-10-21T08:27:19.170Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 118988,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-9": {
+      "id": "text-9",
+      "at": "2026-10-21T08:27:26.298Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3409,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-6": {
+      "id": "text-6",
+      "at": "2026-10-21T08:54:22.901Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: @studio-freight/lenis, gsap, splitting"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 209499,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-10": {
+      "id": "text-10",
+      "at": "2026-10-21T08:54:26.069Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7053,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-11": {
+      "id": "text-11",
+      "at": "2026-10-21T08:54:28.821Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8625,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-14": {
+      "id": "text-14",
+      "at": "2026-10-21T08:54:31.338Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 11 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1030253,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-13": {
+      "id": "text-13",
+      "at": "2026-10-21T08:27:33.447Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8823279,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-16": {
+      "id": "text-16",
+      "at": "2026-10-21T08:27:46.790Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5547,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-17": {
+      "id": "text-17",
+      "at": "2026-10-21T08:38:46.057Z",
+      "kind": "next",
+      "obfuscatedFiles": 15,
+      "obfuscated": false,
+      "bytes": 1484144,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-12": {
+      "id": "text-12",
+      "at": "2026-10-21T08:27:33.010Z",
+      "kind": "next",
+      "obfuscatedFiles": 10,
+      "obfuscated": false,
+      "bytes": 1101712,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-1": {
+      "id": "3d-1",
+      "at": "2026-10-21T08:28:31.454Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7739,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-15": {
+      "id": "text-15",
+      "at": "2026-10-21T08:27:41.256Z",
+      "kind": "next",
+      "obfuscatedFiles": 9,
+      "obfuscated": false,
+      "bytes": 3198821,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "text-18": {
+      "id": "text-18",
+      "at": "2026-10-21T08:27:54.812Z",
+      "kind": "next",
+      "obfuscatedFiles": 10,
+      "obfuscated": false,
+      "bytes": 3701888,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-2": {
+      "id": "3d-2",
+      "at": "2026-10-21T08:28:39.368Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 1961095,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-5": {
+      "id": "3d-5",
+      "at": "2026-10-21T08:59:57.828Z",
+      "kind": "next",
+      "fixes": [
+        "built with webpack (project has a custom webpack config)"
+      ],
+      "obfuscatedFiles": 15,
+      "obfuscated": false,
+      "bytes": 5197681,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-3": {
+      "id": "3d-3",
+      "at": "2026-10-21T08:28:57.213Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 6226858,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-4": {
+      "id": "3d-4",
+      "at": "2026-10-21T08:54:33.816Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 952345,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to apply style from 'http://127.0.0.1:3199/3d-4/index.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "ERR /3d-4/index.css"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-7": {
+      "id": "3d-7",
+      "at": "2026-10-21T08:54:56.650Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 78 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 13859425,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-6": {
+      "id": "3d-6",
+      "at": "2026-10-21T08:54:39.726Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 6 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2905644,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failed to load because no supported source was found."
+      ],
+      "external": [],
+      "failed": [
+        "404 /3d-6/videos/fruits_trail_squared-transcode.mp4",
+        "404 /3d-6/videos/KinectCube_1350-transcode.mp4",
+        "404 /3d-6/videos/infinte-grid_squared-transcode.mp4"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-10": {
+      "id": "3d-10",
+      "at": "2026-10-21T08:55:09.655Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1382814,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-11": {
+      "id": "3d-11",
+      "at": "2026-10-21T08:30:18.867Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 14150692,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-9": {
+      "id": "3d-9",
+      "at": "2026-10-21T08:55:06.105Z",
+      "kind": "cra",
+      "fixes": [
+        "installed undeclared dependency: ajv"
+      ],
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 5583428,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-13": {
+      "id": "3d-13",
+      "at": "2026-10-21T08:55:13.914Z",
+      "kind": "next",
+      "fixes": [
+        "installed undeclared dependency: three"
+      ],
+      "obfuscatedFiles": 16,
+      "obfuscated": false,
+      "bytes": 4830909,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+        "Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-14": {
+      "id": "3d-14",
+      "at": "2026-10-21T08:32:09.555Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 20264,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-16": {
+      "id": "3d-16",
+      "at": "2026-10-21T08:32:17.940Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8792,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-12": {
+      "id": "3d-12",
+      "at": "2026-10-21T08:30:29.460Z",
+      "kind": "next",
+      "obfuscatedFiles": 14,
+      "obfuscated": false,
+      "bytes": 15337323,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-8": {
+      "id": "3d-8",
+      "at": "2026-10-21T09:00:02.611Z",
+      "kind": "next",
+      "obfuscatedFiles": 16,
+      "obfuscated": false,
+      "bytes": 2890059,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "fail",
+      "blank": true,
+      "errors": [
+        "Failure loading font http://127.0.0.1:3199/fonts/PPNeueMontreal-Bold.otf; trying fallback Error: Not Found\n    at A.nt.onload (blob:http://127.0.0.1:3199/9fef204e-54de-4576-ad64-67ecf318a225:5:749)"
+      ],
+      "external": [
+        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+        "Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [
+        "404 /fonts/PPNeueMontreal-Bold.otf"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-17": {
+      "id": "3d-17",
+      "at": "2026-10-21T08:56:27.011Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1876978,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-18": {
+      "id": "3d-18",
+      "at": "2026-10-21T08:32:40.029Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 7733476,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-19": {
+      "id": "3d-19",
+      "at": "2026-10-21T08:56:35.538Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 4 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1873603,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-20": {
+      "id": "3d-20",
+      "at": "2026-10-21T08:56:44.249Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 11 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 112806983,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-22": {
+      "id": "3d-22",
+      "at": "2026-10-21T08:32:54.410Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 18299,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-21": {
+      "id": "3d-21",
+      "at": "2026-10-21T08:56:51.117Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: three, gsap, lenis",
+        "restored 1 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 41164094,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-1": {
+      "id": "svg-1",
+      "at": "2026-10-21T08:33:02.670Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2779,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-2": {
+      "id": "svg-2",
+      "at": "2026-10-21T08:33:04.664Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 10334,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-3": {
+      "id": "svg-3",
+      "at": "2026-10-21T08:38:48.965Z",
+      "kind": "vite",
+      "fixes": [
+        "installed undeclared dependency: ev-emitter",
+        "restored 26 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 14,
+      "obfuscated": true,
+      "bytes": 7539252,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-23": {
+      "id": "3d-23",
+      "at": "2026-10-21T08:33:00.377Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2651228,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-6": {
+      "id": "svg-6",
+      "at": "2026-10-21T08:57:36.911Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 47930,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-4": {
+      "id": "svg-4",
+      "at": "2026-10-21T08:57:25.574Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 11 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1854910,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-5": {
+      "id": "svg-5",
+      "at": "2026-10-21T08:57:36.577Z",
+      "kind": "vite-adhoc",
+      "fixes": [
+        "created package.json for npm imports: @studio-freight/lenis, gsap",
+        "installed undeclared dependency: imagesloaded",
+        "restored 13 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2248335,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-7": {
+      "id": "svg-7",
+      "at": "2026-10-21T08:57:46.877Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 7 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4221982,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "3d-15": {
+      "id": "3d-15",
+      "at": "2026-10-21T08:55:22.776Z",
+      "kind": "cra",
+      "obfuscatedFiles": 4,
+      "obfuscated": true,
+      "bytes": 3237023,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to apply style from 'http://127.0.0.1:3199/3d-15/css/base.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "ERR /3d-15/css/base.css"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-9": {
+      "id": "svg-9",
+      "at": "2026-10-21T08:33:34.788Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2674,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-8": {
+      "id": "svg-8",
+      "at": "2026-10-21T08:57:53.755Z",
+      "kind": "static",
+      "obfuscatedFiles": 5,
+      "obfuscated": false,
+      "bytes": 596441,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Cannot read properties of null (reading 'nodeName')"
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-10": {
+      "id": "svg-10",
+      "at": "2026-10-21T08:57:55.700Z",
+      "kind": "vite",
+      "fixes": [
+        "restored 5 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 473351,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "svg-11": {
+      "id": "svg-11",
+      "at": "2026-10-21T08:33:38.679Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 102183,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-4": {
+      "id": "physics-4",
+      "at": "2026-10-21T08:33:54.710Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 74830,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-5": {
+      "id": "physics-5",
+      "at": "2026-10-21T08:34:10.960Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5319,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-6": {
+      "id": "physics-6",
+      "at": "2026-10-21T08:34:17.524Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6291,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-1": {
+      "id": "physics-1",
+      "at": "2026-10-21T08:39:12.856Z",
+      "kind": "next",
+      "obfuscatedFiles": 14,
+      "obfuscated": false,
+      "bytes": 1184580,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-7": {
+      "id": "physics-7",
+      "at": "2026-10-21T08:34:25.296Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 12826,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-3": {
+      "id": "physics-3",
+      "at": "2026-10-21T08:58:10.600Z",
+      "kind": "next",
+      "obfuscatedFiles": 15,
+      "obfuscated": false,
+      "bytes": 1270079,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-9": {
+      "id": "physics-9",
+      "at": "2026-10-21T08:58:12.846Z",
+      "kind": "static",
+      "status": "fail",
+      "stage": "build",
+      "error": "npm error Missing script: \"build\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /Users/meetchauhan/.npm/_logs/2026-10-21T08_58_17_072Z-debug-0.log"
+    },
+    "physics-8": {
+      "id": "physics-8",
+      "at": "2026-10-21T08:34:33.379Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2941,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-2": {
+      "id": "physics-2",
+      "at": "2026-10-21T08:33:44.763Z",
+      "kind": "next",
+      "obfuscatedFiles": 13,
+      "obfuscated": false,
+      "bytes": 1020034,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "physics-10": {
+      "id": "physics-10",
+      "at": "2026-10-21T08:34:37.653Z",
+      "kind": "next",
+      "obfuscatedFiles": 9,
+      "obfuscated": false,
+      "bytes": 13759818,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     }

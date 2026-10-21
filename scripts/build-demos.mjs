@@ -136,7 +136,8 @@ const bin = (root, name) => path.join(root, "node_modules", ".bin", name);
 async function patchNextConfig(root, id) {
   const names = ["next.config.ts", "next.config.mjs", "next.config.js", "next.config.cjs"];
   const found = (await Promise.all(names.map(async (n) => ((await exists(path.join(root, n))) ? n : null)))).find(Boolean);
-  const inject = `output: "export", basePath: "/${id}", trailingSlash: true, images: { unoptimized: true }, typescript: { ignoreBuildErrors: true },`;
+  // Lint/type errors shouldn't block a demo build; Next <16 runs ESLint during `next build`.
+  const inject = `output: "export", basePath: "/${id}", trailingSlash: true, images: { unoptimized: true }, typescript: { ignoreBuildErrors: true }, eslint: { ignoreDuringBuilds: true },`;
   if (found) {
     const file = path.join(root, found);
     let src = await fs.readFile(file, "utf8");
@@ -160,18 +161,48 @@ async function findOutput(root, prefer = []) {
   return null;
 }
 
-const IMPORTS_BARE = /(?:^|[\s;])import\s[^;]*?from\s*["'](?![./]|https?:)[^"']+["']|(?:^|[\s;])import\s*["'](?![./]|https?:)[^"']+["']/m;
+const IMPORTS_BARE_G = /(?:^|[\s;])import\s(?:[^;]*?\sfrom\s*)?["']((?![./]|https?:|data:)[^"']+)["']/gm;
 const IMPORTS_SHADER = /from\s*["'][^"']+\.(glsl|vert|frag|vs|fs)["']/;
+const USES_IMPORT = /(^|[\s;])(import\s*[\w{*"']|export\s)/m;
 const localScripts = (html) => [...html.matchAll(/<script\b([^>]*)\bsrc=["'](?!https?:|\/\/)([^"']+)["'][^>]*>/gi)].map((m) => ({ attrs: m[1], src: m[2], tag: m[0] }));
+const pkgName = (spec) => (spec.startsWith("@") ? spec.split("/").slice(0, 2).join("/") : spec.split("/")[0]);
 
+/** Hand-written JS in a static project (vendor *.min.js excluded). */
+async function ownScripts(root) {
+  return (await walk(root)).filter((f) => /\.m?js$/.test(f) && !/\.min\.js$|[\\/](dist|build|vendor|libs?)[\\/]/i.test(f));
+}
+
+/** npm packages imported by bare specifier anywhere in the project's own scripts or HTML. */
+async function bareImports(root) {
+  const found = new Set();
+  const sources = [await fs.readFile(path.join(root, "index.html"), "utf8").catch(() => "")];
+  for (const f of await ownScripts(root)) sources.push(await fs.readFile(f, "utf8").catch(() => ""));
+  for (const src of sources) for (const m of src.matchAll(IMPORTS_BARE_G)) found.add(pkgName(m[1]));
+  return [...found];
+}
+
+/** Did this project only ever work through a bundler (npm imports, shader imports, import syntax in classic scripts)? */
 async function needsBundler(root) {
-  const html = await fs.readFile(path.join(root, "index.html"), "utf8");
-  if (/node_modules\//.test(html) || IMPORTS_BARE.test(html)) return true;
+  const html = await fs.readFile(path.join(root, "index.html"), "utf8").catch(() => "");
+  if (/node_modules\//.test(html) || (await bareImports(root)).length) return true;
+  for (const f of await ownScripts(root)) if (IMPORTS_SHADER.test(await fs.readFile(f, "utf8").catch(() => ""))) return true;
   for (const s of localScripts(html)) {
-    const code = await fs.readFile(path.join(root, s.src.split("?")[0]), "utf8").catch(() => "");
-    if (IMPORTS_BARE.test(code) || IMPORTS_SHADER.test(code)) return true;
+    if (/type=["']module/.test(s.attrs)) continue;
+    if (USES_IMPORT.test(await fs.readFile(path.join(root, s.src.split("?")[0]), "utf8").catch(() => ""))) return true;
   }
   return false;
+}
+
+/** `class="a"id="b"` breaks Vite's HTML parser; browsers tolerate it, so the originals "worked". */
+async function repairHtml(root, fixes) {
+  for (const f of (await walk(root)).filter((x) => /\.html?$/i.test(x))) {
+    const html = await fs.readFile(f, "utf8");
+    const fixed = html.replace(/(=\s*"[^"<>]*")(?=[a-zA-Z_:@][\w:.-]*\s*=)/g, "$1 ");
+    if (fixed !== html) {
+      await fs.writeFile(f, fixed);
+      fixes.add("repaired malformed HTML attributes");
+    }
+  }
 }
 
 // Vite config for projects that relied on a zero-config bundler: shader files load as strings.
@@ -182,6 +213,13 @@ async function prepareAdhoc(root) {
     `export default {
   plugins: [{ name: "kq-shaders", transform(code, id) {
     if (/\\.(glsl|vert|frag|vs|fs)$/.test(id)) return { code: "export default " + JSON.stringify(code) + ";", map: null };
+  } }, { name: "kq-parcel-globs", transform(code, id) {
+    // Parcel v1: import images from "../img/*.jpg" -> { name: url }
+    if (!/\\.m?js$/.test(id) || !/(from|require\\()\\s*["'][^"']*\\*/.test(code)) return;
+    const globObj = (glob) => "Object.fromEntries(Object.entries(import.meta.glob(" + JSON.stringify(glob) + ", { eager: true, import: 'default', query: '?url' })).map(([k, v]) => [k.split('/').pop().replace(/\\\\.[^.]+$/, ''), v]))";
+    return { code: code
+      .replace(/import\\s+(\\w+)\\s+from\\s+["']([^"']*\\*[^"']*)["'];?/g, (_, name, glob) => "const " + name + " = " + globObj(glob) + ";")
+      .replace(/require\\(\\s*["']([^"']*\\*[^"']*)["']\\s*\\)/g, (_, glob) => globObj(glob)), map: null };
   } }],
   build: { sourcemap: false },
 };\n`,
@@ -192,22 +230,104 @@ async function prepareAdhoc(root) {
   for (const s of localScripts(html)) {
     if (/type=/.test(s.attrs)) continue;
     const code = await fs.readFile(path.join(root, s.src.split("?")[0]), "utf8").catch(() => "");
-    if (/(^|[\s;])(import|export)\s/m.test(code)) html = html.replace(s.tag, s.tag.replace("<script", '<script type="module"'));
+    if (USES_IMPORT.test(code)) html = html.replace(s.tag, s.tag.replace("<script", '<script type="module"'));
   }
   await fs.writeFile(file, html);
 }
 
-async function buildProject(id, root, hasPkg, log) {
-  if (!hasPkg) return { kind: "static", out: root };
-  const pkg = await readJSON(path.join(root, "package.json")).catch(() => ({}));
-  let kind = detectKind(pkg);
+const MEDIA = /\.(png|jpe?g|webp|avif|gif|svg|ico|mp4|webm|mov|mp3|wav|ogg|glb|gltf|bin|hdr|exr|ktx2|woff2?|ttf|otf|json|txt|csv|wasm|riv|lottie)$/i;
 
-  // A package.json that only lists CDN-style deps with a ready index.html is still static —
-  // unless its scripts import npm packages or shader files, which only ever worked through a bundler.
-  if (kind === "static" && (await exists(path.join(root, "index.html")))) {
-    if (!(await needsBundler(root))) return { kind, out: root };
-    kind = "vite-adhoc";
+/**
+ * Vite only bundles module scripts and imported assets. Classic `<script src>` files, vendor libs in js/
+ * and assets referenced by runtime strings are silently left out of dist, so we copy them over.
+ */
+async function restoreDropped(srcDir, outDir, fixes) {
+  let copied = 0;
+  const copy = async (rel) => {
+    const from = path.join(srcDir, rel);
+    const to = path.join(outDir, rel);
+    if (!from.startsWith(srcDir) || (await exists(to)) || !(await exists(from))) return;
+    await fs.mkdir(path.dirname(to), { recursive: true });
+    await fs.copyFile(from, to);
+    copied++;
+  };
+  for (const f of (await walk(outDir)).filter((x) => /\.html?$/i.test(x))) {
+    const html = await fs.readFile(f, "utf8");
+    const refs = [
+      ...[...html.matchAll(/<script\b[^>]*\bsrc=["'](?!https?:|\/\/|data:)([^"'?#]+)/gi)].map((m) => m[1]),
+      ...[...html.matchAll(/<link\b[^>]*\bhref=["'](?!https?:|\/\/|data:)([^"'?#]+\.css)/gi)].map((m) => m[1]),
+    ];
+    for (const r of refs) await copy(path.normalize(r.replace(/^\.?\//, "")));
   }
+  for (const f of await walk(srcDir)) {
+    const rel = path.relative(srcDir, f);
+    if (MEDIA.test(f) && !/^(dist|build|out|__kq_dist|node_modules)[\\/]/.test(rel) && !/^(package(-lock)?|tsconfig|jsconfig)\.json$/.test(path.basename(f))) await copy(rel);
+  }
+  if (copied) fixes.add(`restored ${copied} file(s) the original build left out`);
+}
+
+/**
+ * Run a build and repair what the original project was missing, then retry (up to 4 rounds):
+ * undeclared npm packages (incl. plugins' peer deps) and referenced-but-absent icon/image files.
+ */
+async function withMissingDeps(root, log, fixes, run) {
+  let res = await run();
+  const installed = new Set();
+  for (let round = 0; round < 4 && !res.ok; round++) {
+    let repaired = false;
+
+    const missing = new Set();
+    const pkgPatterns = [
+      /(?:failed to resolve import|Could not resolve|Can't resolve|Cannot find module|Module not found: Error: Can't resolve)\s*["']([^"']+)["']/gi,
+      /["']([@\w][\w./-]*)["'] was not found/gi,
+    ];
+    for (const re of pkgPatterns)
+      for (const m of res.out.matchAll(re)) if (/^(@[\w.-]+\/)?[\w.-]+(\/[\w.\/-]*)?$/.test(m[1]) && !m[1].includes(root)) missing.add(pkgName(m[1]));
+    if (missing.size) {
+      for (const p of missing) installed.add(p);
+      // --no-save prunes earlier extraneous installs, so always reinstall the whole set.
+      const add = await sh("npm", ["install", "--ignore-scripts", "--no-audit", "--no-fund", "--legacy-peer-deps", "--no-save", ...installed], { cwd: root, log, env: { NODE_ENV: "development" } });
+      if (add.ok) {
+        fixes.add(`installed undeclared dependency: ${[...missing].join(", ")}`);
+        repaired = true;
+      }
+    }
+
+    for (const m of res.out.matchAll(/ENOENT: no such file or directory, (?:open|stat) '([^']+)'/g)) {
+      const file = m[1];
+      if (file.startsWith(root) && /\.(ico|png|svg|jpe?g|webp|gif|webmanifest)$/i.test(file) && !(await exists(file))) {
+        await fs.mkdir(path.dirname(file), { recursive: true });
+        await fs.writeFile(file, /\.svg$/i.test(file) ? '<svg xmlns="http://www.w3.org/2000/svg"/>' : "");
+        fixes.add(`added placeholder for missing ${path.basename(file)}`);
+        repaired = true;
+      }
+    }
+
+    if (!repaired) break;
+    res = await run();
+  }
+  return res;
+}
+
+async function buildProject(id, root, hasPkg, log) {
+  const fixes = new Set();
+  const done = (r) => ({ ...r, fixes: [...fixes] });
+  const index = path.join(root, "index.html");
+
+  let pkg = hasPkg ? await readJSON(path.join(root, "package.json")).catch(() => ({})) : null;
+  let kind = pkg ? detectKind(pkg) : "static";
+
+  // "Static" projects that import npm packages or shaders only ever ran through a bundler.
+  if (kind === "static" && (await exists(index))) {
+    if (!(await needsBundler(root))) return done({ kind, out: root });
+    kind = "vite-adhoc";
+    if (!pkg) {
+      const deps = Object.fromEntries((await bareImports(root)).map((d) => [d, "latest"]));
+      pkg = { name: id, private: true, type: "module", dependencies: deps };
+      await fs.writeFile(path.join(root, "package.json"), JSON.stringify(pkg, null, 2));
+      if (Object.keys(deps).length) fixes.add(`created package.json for npm imports: ${Object.keys(deps).join(", ")}`);
+    }
+  } else if (!pkg) return done({ kind, out: root });
 
   // node-sass has no build for current Node/arm64; dart-sass is the drop-in replacement.
   const deps = { ...(pkg.dependencies ?? {}), ...(pkg.devDependencies ?? {}) };
@@ -216,49 +336,80 @@ async function buildProject(id, root, hasPkg, log) {
     pkg.devDependencies = { ...(pkg.devDependencies ?? {}), sass: "^1.77.0" };
     await fs.writeFile(path.join(root, "package.json"), JSON.stringify(pkg, null, 2));
     await fs.rm(path.join(root, "package-lock.json"), { force: true });
+    fixes.add("replaced node-sass with sass");
   }
 
-  const inst = await install(root, log);
-  if (!inst.ok) return { kind, error: `install failed: ${tail(inst.out)}` };
+  let inst = await install(root, log);
+  if (!inst.ok && /registry\.npm\.taobao\.org|registry\.npmmirror\.com|ENOTFOUND|ETARGET/.test(inst.out)) {
+    // Lockfile pinned to a dead mirror or vanished versions: resolve fresh from npmjs.
+    for (const lock of ["package-lock.json", "yarn.lock", "pnpm-lock.yaml"]) await fs.rm(path.join(root, lock), { force: true });
+    await fs.rm(path.join(root, "node_modules"), { recursive: true, force: true });
+    inst = await install(root, log);
+    if (inst.ok) fixes.add("re-resolved dependencies (lockfile pointed at a dead registry)");
+  }
+  if (!inst.ok) return done({ kind, error: `install failed: ${tail(inst.out)}` });
 
   let res;
-  const outDir = "__kq_dist";
+  const outDir = path.join(root, "__kq_dist"); // absolute: some projects set Vite `root` to a sub-folder
+  const viteArgs = ["--base", "./", "--outDir", outDir, "--emptyOutDir", "--sourcemap", "false"];
   switch (kind) {
     case "next":
       await patchNextConfig(root, id);
-      res = await sh(bin(root, "next"), ["build"], { cwd: root, log });
-      return res.ok ? { kind, out: path.join(root, "out"), basePathed: true } : { kind, error: tail(res.out) };
-    case "vite":
-      res = await sh(bin(root, "vite"), ["build", "--base", "./", "--outDir", outDir, "--emptyOutDir"], { cwd: root, log });
-      if (!res.ok) {
-        // Some projects keep index.html under a sub-folder configured via `root`; fall back to their script.
-        const fb = pkg.scripts?.build ? await sh("npm", ["run", "build"], { cwd: root, log }) : res;
-        if (fb.ok) return { kind, out: await findOutput(root) };
-        return { kind, error: tail(res.out) };
+      res = await withMissingDeps(root, log, fixes, () => sh(bin(root, "next"), ["build"], { cwd: root, log }));
+      if (!res.ok && /Turbopack, with a `webpack` config/.test(res.out)) {
+        // Next 16 builds with Turbopack by default and refuses custom webpack configs.
+        res = await sh(bin(root, "next"), ["build", "--webpack"], { cwd: root, log });
+        if (res.ok) fixes.add("built with webpack (project has a custom webpack config)");
       }
-      return { kind, out: path.join(root, outDir) };
+      return done(res.ok ? { kind, out: path.join(root, "out"), basePathed: true } : { kind, error: tail(res.out) });
+    case "vite": {
+      await repairHtml(root, fixes);
+      res = await withMissingDeps(root, log, fixes, () => sh(bin(root, "vite"), ["build", ...viteArgs], { cwd: root, log }));
+      if (!res.ok) return done({ kind, error: tail(res.out) });
+      const srcHtml = (await walk(root)).filter((f) => /index\.html$/.test(f) && !f.includes("__kq_dist")).sort((a, b) => a.length - b.length)[0];
+      if (srcHtml) await restoreDropped(path.dirname(srcHtml), outDir, fixes);
+      return done({ kind, out: outDir });
+    }
     case "vite-adhoc": {
       const vite = path.join(ROOT, "node_modules", ".bin", "vite");
-      if (!(await exists(vite))) return { kind, error: "vite not available for ad-hoc build" };
+      await repairHtml(root, fixes);
       await prepareAdhoc(root);
-      res = await sh(vite, ["build", "--config", ADHOC_CONFIG, "--base", "./", "--outDir", outDir, "--emptyOutDir"], { cwd: root, log });
-      return res.ok ? { kind, out: path.join(root, outDir) } : { kind, error: tail(res.out) };
+      res = await withMissingDeps(root, log, fixes, () => sh(vite, ["build", "--config", ADHOC_CONFIG, ...viteArgs], { cwd: root, log }));
+      if (!res.ok) return done({ kind, error: tail(res.out) });
+      await restoreDropped(root, outDir, fixes);
+      return done({ kind, out: outDir });
     }
-    case "cra":
-      res = await legacyRetry(bin(root, "react-scripts"), ["build"], { cwd: root, log, env: { PUBLIC_URL: ".", GENERATE_SOURCEMAP: "false" } });
-      return res.ok ? { kind, out: path.join(root, "build") } : { kind, error: tail(res.out) };
+    case "cra": {
+      const env = { PUBLIC_URL: ".", GENERATE_SOURCEMAP: "false", SKIP_PREFLIGHT_CHECK: "true", DISABLE_ESLINT_PLUGIN: "true" };
+      res = await withMissingDeps(root, log, fixes, () => legacyRetry(bin(root, "react-scripts"), ["build"], { cwd: root, log, env }));
+      return done(res.ok ? { kind, out: path.join(root, "build") } : { kind, error: tail(res.out) });
+    }
     case "parcel": {
-      const entry = (pkg.scripts?.build ?? "").match(/parcel build\s+([^\s-][^\s]*)/)?.[1] ?? pkg.source ?? ((await exists(path.join(root, "src/index.html"))) ? "src/index.html" : "index.html");
-      res = await sh(bin(root, "parcel"), ["build", entry, "--dist-dir", outDir, "--public-url", "./", "--no-source-maps", "--no-cache"], { cwd: root, log });
-      return res.ok ? { kind, out: path.join(root, outDir) } : { kind, error: tail(res.out) };
+      // Entry: explicit build script/source, else every page the scripts mention (multi-page demos), else index.html.
+      const scriptPages = [...new Set(Object.values(pkg.scripts ?? {}).flatMap((s) => [...s.matchAll(/([\w./-]+\.html)/g)].map((m) => m[1])))];
+      const explicit = (pkg.scripts?.build ?? "").match(/parcel build\s+([^\s-][^\s]*)/)?.[1] ?? pkg.source;
+      const fallback = (await exists(path.join(root, "src/index.html"))) ? "src/index.html" : "index.html";
+      const entries = explicit ? [explicit] : scriptPages.length && !(await exists(path.join(root, "index.html"))) ? scriptPages : [fallback];
+      const v1 = Boolean(deps["parcel-bundler"]) || /^[\^~]?1\./.test(deps.parcel ?? "");
+      const args = ["build", ...entries, v1 ? "--out-dir" : "--dist-dir", outDir, "--public-url", "./", "--no-source-maps", "--no-cache", ...(v1 ? ["--no-minify"] : [])];
+      res = await withMissingDeps(root, log, fixes, () => legacyRetry(bin(root, "parcel"), args, { cwd: root, log }));
+      if (!res.ok) return done({ kind, error: tail(res.out) });
+      await restoreDropped(path.dirname(path.join(root, entries[0])), outDir, fixes);
+      if (!(await exists(path.join(outDir, "index.html")))) {
+        const first = path.join(outDir, path.basename(entries[0]));
+        if (await exists(first)) await fs.copyFile(first, path.join(outDir, "index.html"));
+      }
+      return done({ kind, out: outDir });
     }
     case "astro":
-      res = await sh(bin(root, "astro"), ["build", "--base", `/${id}/`], { cwd: root, log });
-      return res.ok ? { kind, out: await findOutput(root, ["dist"]), basePathed: true } : { kind, error: tail(res.out) };
+      res = await withMissingDeps(root, log, fixes, () => sh(bin(root, "astro"), ["build", "--base", `/${id}/`], { cwd: root, log }));
+      return done(res.ok ? { kind, out: await findOutput(root, ["dist"]), basePathed: true } : { kind, error: tail(res.out) });
     default:
-      res = await legacyRetry("npm", ["run", "build"], { cwd: root, log, env: { PUBLIC_URL: ".", GENERATE_SOURCEMAP: "false" } });
-      if (!res.ok) return { kind, error: tail(res.out) };
-      return { kind, out: (await findOutput(root)) ?? root };
+      res = await withMissingDeps(root, log, fixes, () =>
+        legacyRetry("npm", ["run", "build"], { cwd: root, log, env: { PUBLIC_URL: ".", GENERATE_SOURCEMAP: "false", SKIP_PREFLIGHT_CHECK: "true" } }),
+      );
+      if (!res.ok) return done({ kind, error: tail(res.out) });
+      return done({ kind, out: (await findOutput(root)) ?? root });
   }
 }
 
@@ -296,13 +447,14 @@ async function protect(dir, { obfuscate }) {
     try {
       if (ext === ".css") {
         const r = await esbuild.transform(code, { loader: "css", minify: true, legalComments: "none" });
-        await fs.writeFile(f, r.code);
+        await fs.writeFile(f, r.code.replace(/\/\*[#@]\s*sourceMappingURL=[^*]*\*\//g, ""));
         continue;
       }
       const isModule = /^\s*(import|export)\s|[\n;]\s*(import|export)\s[\s\S]*?from\s/m.test(code) || /\bimport\.meta\b/.test(code);
       const min = await esbuild.transform(code, { loader: "js", minify: true, legalComments: "none", format: isModule ? "esm" : undefined, target: "es2020" });
-      let out = min.code;
-      if (obfuscate && out.length < 900_000) {
+      let out = min.code.replace(/\/[/*][#@]\s*sourceMappingURL=[^\n*]*(\*\/)?/g, "");
+      // Vendor libraries (*.min.js) are third-party and already minified: nothing of ours to protect.
+      if (obfuscate && out.length < 900_000 && !/\.min\.m?js$/i.test(f)) {
         out = obfuscator
           .obfuscate(out, {
             compact: true,
@@ -352,6 +504,21 @@ async function protect(dir, { obfuscate }) {
     await fs.writeFile(f, html);
   }
   return obfuscated;
+}
+
+/** Static hosts cap file size (Cloudflare Pages: 25 MiB). Re-encode oversized videos in place. */
+async function shrinkMedia(dir, fixes) {
+  for (const f of await walk(dir, 0)) {
+    if (!/\.(mp4|webm|mov)$/i.test(f) || (await fs.stat(f)).size < 20 * 1024 * 1024) continue;
+    const tmp = `${f}.__kq.mp4`;
+    try {
+      await run("ffmpeg", ["-v", "error", "-y", "-i", f, "-vf", "scale='min(1920,iw)':-2", "-c:v", "libx264", "-crf", "28", "-preset", "medium", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", tmp], { maxBuffer: 1 << 20 });
+      await fs.rename(tmp, f);
+      fixes.push(`re-encoded ${path.basename(f)} to fit hosting limits`);
+    } catch {
+      await fs.rm(tmp, { force: true });
+    }
+  }
 }
 
 async function dirSize(dir) {
@@ -453,6 +620,7 @@ async function processOne(c) {
 
     const built = await buildProject(id, found.root, found.hasPkg, log);
     entry.kind = built.kind;
+    if (built.fixes?.length) entry.fixes = built.fixes;
     if (built.error || !built.out) return { ...entry, status: "fail", stage: "build", error: built.error ?? "build produced no index.html" };
 
     // Keep a minified-only copy so we can fall back if obfuscation breaks the demo.
@@ -462,6 +630,8 @@ async function processOne(c) {
     await fs.rm(dest, { recursive: true, force: true });
     await copyClean(built.out, raw, { skipSource: built.out === found.root && built.kind !== "static" });
     if (found.entry && !(await exists(path.join(raw, "index.html")))) await fs.copyFile(path.join(raw, found.entry), path.join(raw, "index.html"));
+    entry.fixes ??= [];
+    await shrinkMedia(raw, entry.fixes);
     await fs.cp(raw, dest, { recursive: true });
     await protect(raw, { obfuscate: false });
     entry.obfuscatedFiles = await protect(dest, { obfuscate: true });
