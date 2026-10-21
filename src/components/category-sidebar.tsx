@@ -30,14 +30,14 @@ export function CategorySidebar({ categories, total }: { categories: Cat[]; tota
                 aria-current={on ? "page" : undefined}
                 className={`group relative flex h-[52px] shrink-0 items-center justify-center rounded-[18px] px-4 text-[15.5px] transition-all duration-300 ${
                   on
-                    ? "bg-gradient-to-r from-[#22c1ee] via-[#4fd8ff] to-[#3cc8f0] font-semibold text-[#03141c] shadow-[0_0_28px_-6px_rgba(79,216,255,0.7),inset_0_1px_0_rgba(255,255,255,0.5)]"
-                    : "border border-line bg-[#0a1220]/60 text-text-2 shadow-[inset_0_1px_0_rgba(199,225,255,0.05)] hover:border-line-strong hover:bg-surface-2 hover:text-text"
+                    ? "bg-gradient-to-r from-accent-deep via-accent to-accent-2 font-semibold text-accent-ink shadow-[0_0_28px_-6px_rgba(255,107,53,0.7),inset_0_1px_0_rgba(255,255,255,0.5)]"
+                    : "border border-line bg-surface-solid/60 text-text-2 shadow-[inset_0_1px_0_rgba(255,228,210,0.05)] hover:border-line-strong hover:bg-surface-2 hover:text-text"
                 }`}
               >
                 <span>{c.name}</span>
                 <span
                   className={`absolute right-3.5 font-mono text-[11px] tabular-nums transition-opacity ${
-                    on ? "text-[#03141c]/70" : "text-faint opacity-0 group-hover:opacity-100"
+                    on ? "text-accent-ink/70" : "text-faint opacity-0 group-hover:opacity-100"
                   }`}
                 >
                   {c.count}

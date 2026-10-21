@@ -10,7 +10,7 @@ const fmt = (n: number) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n))
 export async function SiteHeader() {
   const stars = await repoStars();
   return (
-    <header className="sticky top-0 z-40 border-b border-line/60 bg-[#060a14]/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-line/60 bg-bg/75 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-[1480px] items-center gap-3 px-4 sm:gap-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2.5" aria-label={`${site.name} home`}>
           <Logomark className="size-8" />

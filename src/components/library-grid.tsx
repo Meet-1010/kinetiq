@@ -26,7 +26,7 @@ export function LibraryGrid({ items, categoryNames }: { items: Component[]; cate
         <div className="scrollbar-thin -mx-1 flex flex-1 gap-2 overflow-x-auto px-1 py-1">
           <button
             onClick={() => setTag(null)}
-            className={`h-9 shrink-0 rounded-full px-4 text-[13px] transition ${tag === null ? "bg-white text-[#0a0f1a] font-semibold" : "pill text-text-2 hover:text-text"}`}
+            className={`h-9 shrink-0 rounded-full px-4 text-[13px] transition ${tag === null ? "bg-white text-ink font-semibold" : "pill text-text-2 hover:text-text"}`}
           >
             All · {items.length}
           </button>
@@ -34,7 +34,7 @@ export function LibraryGrid({ items, categoryNames }: { items: Component[]; cate
             <button
               key={t}
               onClick={() => setTag(tag === t ? null : t)}
-              className={`h-9 shrink-0 rounded-full px-4 text-[13px] transition ${tag === t ? "bg-white text-[#0a0f1a] font-semibold" : "pill text-text-2 hover:text-text"}`}
+              className={`h-9 shrink-0 rounded-full px-4 text-[13px] transition ${tag === t ? "bg-white text-ink font-semibold" : "pill text-text-2 hover:text-text"}`}
             >
               {t} <span className={`font-mono text-[11px] ${tag === t ? "text-black/50" : "text-faint"}`}>{n}</span>
             </button>

@@ -37,7 +37,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 opacity-35 lg:opacity-100">
           <HeroWall items={wall} />
         </div>
-        <div className="absolute inset-y-0 left-0 -z-10 w-full bg-gradient-to-r from-[#060a14] via-[#060a14]/85 to-transparent lg:w-[62%]" />
+        <div className="absolute inset-y-0 left-0 -z-10 w-full bg-gradient-to-r from-bg via-bg/85 to-transparent lg:w-[62%]" />
 
         <div className="mx-auto flex max-w-[1480px] flex-col justify-center px-4 pb-20 pt-20 sm:px-6 lg:min-h-[760px] lg:pt-10">
           <div className="max-w-[640px]">

@@ -27,6 +27,8 @@ export type Component = {
   files: string[];
   source: string | null;
   hasLicense: boolean;
+  /** Set by pages from the demo report; the report itself stays out of client bundles. */
+  live?: "pass" | "warn";
 };
 
 type Library = { generatedAt: string; total: number; categories: Category[]; components: Component[] };

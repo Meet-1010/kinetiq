@@ -29,6 +29,15 @@ export function ComponentCard({ c, categoryName, eager }: { c: Component; catego
           eager={eager}
           className="aspect-[16/10] rounded-[20px] ring-1 ring-white/5 transition duration-500 group-hover:ring-accent/25"
         />
+        {c.live && (
+          <span className="absolute bottom-6 left-6 flex items-center gap-1.5 rounded-full bg-black/60 px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-wider text-white/90 backdrop-blur transition duration-300 group-hover:opacity-0">
+            <span className="relative flex size-1.5">
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-70" />
+              <span className="relative inline-flex size-1.5 rounded-full bg-accent" />
+            </span>
+            Live
+          </span>
+        )}
         <span className="absolute inset-x-3 top-3 flex justify-between p-3 opacity-0 transition duration-300 group-hover:opacity-100">
           <span className="rounded-full bg-black/55 px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-wider text-white/85 backdrop-blur">
             {categoryName ?? c.category} · {String(c.number).padStart(2, "0")}
@@ -50,7 +59,7 @@ export function ComponentCard({ c, categoryName, eager }: { c: Component; catego
             href={`/api/download/${c.id}`}
             aria-label={`Download ${c.title} source`}
             title="Download source"
-            className="grid size-11 shrink-0 place-items-center rounded-2xl bg-accent/12 text-accent shadow-[0_0_18px_-4px_rgba(79,216,255,0.6)] ring-1 ring-accent/40 transition hover:bg-accent/20"
+            className="grid size-11 shrink-0 place-items-center rounded-2xl bg-accent/12 text-accent shadow-[0_0_18px_-4px_rgba(255,107,53,0.6)] ring-1 ring-accent/40 transition hover:bg-accent/20"
           >
             <Gem className="size-[19px]" />
           </a>
@@ -59,7 +68,7 @@ export function ComponentCard({ c, categoryName, eager }: { c: Component; catego
             onClick={openUnlock}
             aria-label={`Unlock ${c.title} source`}
             title="Star on GitHub to unlock"
-            className="pill grid size-11 shrink-0 place-items-center rounded-2xl text-text-2 transition hover:text-accent hover:shadow-[0_0_18px_-4px_rgba(79,216,255,0.5)]"
+            className="pill grid size-11 shrink-0 place-items-center rounded-2xl text-text-2 transition hover:text-accent hover:shadow-[0_0_18px_-4px_rgba(255,107,53,0.5)]"
           >
             <Gem className="size-[19px]" />
           </button>

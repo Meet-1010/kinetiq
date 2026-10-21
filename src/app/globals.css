@@ -1,28 +1,29 @@
 @import "tailwindcss";
 
-/* Kinetiq — midnight glass. One accent (cyan), used for focus, active state and the unlock CTA. */
+/* Kinetiq — Ember. Warm graphite canvas; molten orange is the one accent, reserved for
+   actions, active state and focus. Amber only ever appears as glow, never as UI. */
 :root {
-  --bg: #060a14;
-  --bg-2: #0a1120;
-  --surface: rgba(150, 190, 255, 0.035);
-  --surface-2: rgba(150, 190, 255, 0.06);
-  --surface-solid: #0d1526;
-  --line: rgba(186, 215, 247, 0.09);
-  --line-strong: rgba(186, 215, 247, 0.16);
-  --text: #e8f1fb;
-  --text-2: #b4c2d6;
-  --muted: #7d8aa1;
-  --faint: #56627a;
-  --accent: #4fd8ff;
-  --accent-2: #22a6e0;
-  --accent-ink: #03141c;
-  --glass-card:
-    inset 0 1px 1px rgba(199, 225, 255, 0.1),
-    inset 0 24px 48px rgba(199, 225, 255, 0.03),
-    0 24px 40px -12px rgba(2, 4, 12, 0.7);
-  --glass-pill:
-    inset 0 1px 0 rgba(199, 225, 255, 0.08),
-    inset 0 0 0 1px rgba(186, 215, 247, 0.08);
+  --bg: #0c0a09;
+  --bg-2: #120e0c;
+  --surface: rgba(255, 228, 210, 0.03);
+  --surface-2: rgba(255, 228, 210, 0.06);
+  --surface-solid: #171310;
+  --panel: #161210;
+  --overlay: #050403;
+  --line: rgba(255, 228, 210, 0.085);
+  --line-strong: rgba(255, 228, 210, 0.15);
+  --text: #f5efea;
+  --text-2: #cfc5bd;
+  --muted: #9c918a;
+  --faint: #675e58;
+  --ink: #140f0c;
+  --accent: #ff6b35;
+  --accent-2: #ffb347;
+  --accent-deep: #e8431f;
+  --accent-ink: #1a0a03;
+  --glass-card: inset 0 1px 1px rgba(255, 236, 222, 0.09), inset 0 24px 48px rgba(255, 228, 210, 0.025),
+    0 24px 40px -12px rgba(0, 0, 0, 0.75);
+  --glass-pill: inset 0 1px 0 rgba(255, 236, 222, 0.07), inset 0 0 0 1px rgba(255, 228, 210, 0.08);
 }
 
 @theme inline {
@@ -31,14 +32,18 @@
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
   --color-surface-solid: var(--surface-solid);
+  --color-panel: var(--panel);
+  --color-overlay: var(--overlay);
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
   --color-text: var(--text);
   --color-text-2: var(--text-2);
   --color-muted: var(--muted);
   --color-faint: var(--faint);
+  --color-ink: var(--ink);
   --color-accent: var(--accent);
   --color-accent-2: var(--accent-2);
+  --color-accent-deep: var(--accent-deep);
   --color-accent-ink: var(--accent-ink);
   --font-sans: var(--font-inter);
   --font-display: var(--font-display);
@@ -56,16 +61,8 @@
 
   body {
     background:
-      radial-gradient(
-        1200px 600px at 70% -10%,
-        rgba(34, 166, 224, 0.12),
-        transparent 60%
-      ),
-      radial-gradient(
-        900px 500px at -10% 30%,
-        rgba(79, 216, 255, 0.05),
-        transparent 60%
-      ),
+      radial-gradient(1100px 620px at 78% -12%, rgba(255, 107, 53, 0.13), transparent 62%),
+      radial-gradient(800px 480px at -8% 28%, rgba(255, 179, 71, 0.05), transparent 60%),
       linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
     background-attachment: fixed;
     color: var(--text);
@@ -74,8 +71,20 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Film grain over everything — keeps the large dark fields from looking flat. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
   ::selection {
-    background: rgba(79, 216, 255, 0.28);
+    background: rgba(255, 107, 53, 0.32);
     color: #fff;
   }
 
@@ -88,34 +97,25 @@
 @layer components {
   /* Frosted glass container: translucent fill + inset top light, no flat opaque panels. */
   .glass {
-    background: linear-gradient(
-      180deg,
-      rgba(150, 190, 255, 0.05),
-      rgba(150, 190, 255, 0.02)
-    );
+    background: linear-gradient(180deg, rgba(255, 228, 210, 0.045), rgba(255, 228, 210, 0.015));
     box-shadow: var(--glass-card);
     border: 1px solid var(--line);
-    backdrop-filter: blur(14px) saturate(140%);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(130%);
+    -webkit-backdrop-filter: blur(14px) saturate(130%);
   }
 
   .pill {
     box-shadow: var(--glass-pill);
-    background: rgba(150, 190, 255, 0.03);
+    background: rgba(255, 228, 210, 0.03);
   }
 
   .accent-fill {
-    background: linear-gradient(
-      180deg,
-      #6fe2ff 0%,
-      var(--accent) 45%,
-      var(--accent-2) 100%
-    );
+    background: linear-gradient(180deg, #ff8a4c 0%, var(--accent) 50%, var(--accent-deep) 100%);
     color: var(--accent-ink);
     box-shadow:
-      0 0 0 1px rgba(79, 216, 255, 0.4),
-      0 8px 28px -6px rgba(79, 216, 255, 0.55),
-      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      0 0 0 1px rgba(255, 107, 53, 0.45),
+      0 8px 28px -6px rgba(255, 107, 53, 0.55),
+      inset 0 1px 0 rgba(255, 220, 190, 0.6);
   }
 
   /* Pointer-tracked edge light for cards; --mx/--my are set from JS. */
@@ -129,11 +129,7 @@
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: radial-gradient(
-      420px circle at var(--mx, 50%) var(--my, 0%),
-      rgba(79, 216, 255, 0.45),
-      transparent 45%
-    );
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 140, 80, 0.55), transparent 45%);
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);
@@ -150,13 +146,20 @@
 
   .grid-lines {
     background-image:
-      linear-gradient(rgba(186, 215, 247, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(186, 215, 247, 0.04) 1px, transparent 1px);
+      linear-gradient(rgba(255, 228, 210, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 228, 210, 0.035) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
   .text-gradient {
-    background: linear-gradient(180deg, #ffffff 20%, #9fb4cf 100%);
+    background: linear-gradient(180deg, #fffaf6 25%, #b8a99e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-ember {
+    background: linear-gradient(100deg, var(--accent-2) 0%, var(--accent) 45%, var(--accent-deep) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -164,7 +167,7 @@
 
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: rgba(186, 215, 247, 0.14) transparent;
+    scrollbar-color: rgba(255, 228, 210, 0.14) transparent;
   }
 }
 
@@ -200,20 +203,42 @@
   }
 }
 .skeleton {
-  background: linear-gradient(
-    90deg,
-    rgba(150, 190, 255, 0.03),
-    rgba(150, 190, 255, 0.08),
-    rgba(150, 190, 255, 0.03)
-  );
+  background: linear-gradient(90deg, rgba(255, 228, 210, 0.03), rgba(255, 228, 210, 0.075), rgba(255, 228, 210, 0.03));
   background-size: 200% 100%;
   animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* Logo: keyframe dots replay their ease-in on hover. */
+@keyframes kq-key {
+  0% {
+    transform: translate(-3px, -3px);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+.kq-mark:hover .kq-k1,
+.kq-mark:hover .kq-k2,
+.kq-mark:hover .kq-k3 {
+  animation: kq-key 0.6s cubic-bezier(0.3, 0, 0.2, 1) both;
+}
+.kq-mark:hover .kq-k2 {
+  animation-delay: 0.06s;
+}
+.kq-mark:hover .kq-k3 {
+  animation-delay: 0.14s;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .marquee-up,
   .marquee-down,
-  .skeleton {
-    animation: none;
+  .skeleton,
+  .kq-mark * {
+    animation: none !important;
   }
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { LibraryGrid } from "@/components/library-grid";
 import { LibraryHeader } from "@/components/library-header";
+import { withLive } from "@/lib/demos";
 import { categories, components, totalComponents } from "@/lib/library";
 
 export const metadata: Metadata = { title: "Library" };
@@ -16,7 +17,7 @@ export default function LibraryPage() {
         blurb="Every component plays live. Hover to see the stack, open one for details and the full-size preview."
         count={totalComponents}
       />
-      <LibraryGrid items={components} categoryNames={names} />
+      <LibraryGrid items={withLive(components)} categoryNames={names} />
     </>
   );
 }

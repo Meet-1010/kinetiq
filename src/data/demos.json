@@ -1,0 +1,1503 @@
+{
+  "generatedAt": "2026-10-21T08:10:50.214Z",
+  "demos": {
+    "grid-2": {
+      "id": "grid-2",
+      "at": "2026-10-21T07:58:01.871Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3404734,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-1": {
+      "id": "scroll-1",
+      "at": "2026-10-21T08:01:23.043Z",
+      "kind": "vite-adhoc",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1510148,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-56": {
+      "id": "scroll-56",
+      "at": "2026-10-21T08:01:23.044Z",
+      "kind": "next",
+      "obfuscatedFiles": 12,
+      "obfuscated": false,
+      "bytes": 1536340,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "hero-20": {
+      "id": "hero-20",
+      "at": "2026-10-21T08:02:42.458Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 5259,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "sliders-11": {
+      "id": "sliders-11",
+      "at": "2026-10-21T08:01:23.044Z",
+      "kind": "cra",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 2723953,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "webgl-3": {
+      "id": "webgl-3",
+      "at": "2026-10-21T08:02:42.461Z",
+      "kind": "script",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 7964316,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-4": {
+      "id": "scroll-4",
+      "at": "2026-10-21T08:03:23.457Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 225235,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-5": {
+      "id": "scroll-5",
+      "at": "2026-10-21T08:03:23.457Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1158669,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-5/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-5/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-5/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-5/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "imagesLoaded is not defined"
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-5/js/gsap.min.js",
+        "ERR /scroll-5/js/gsap.min.js",
+        "404 /scroll-5/js/ScrollTrigger.min.js",
+        "ERR /scroll-5/js/ScrollTrigger.min.js",
+        "404 /scroll-5/js/lenis.min.js",
+        "ERR /scroll-5/js/lenis.min.js",
+        "404 /scroll-5/js/imagesloaded.pkgd.min.js",
+        "ERR /scroll-5/js/imagesloaded.pkgd.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-2": {
+      "id": "scroll-2",
+      "at": "2026-10-21T08:03:23.455Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4614173,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-2/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-2/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-2/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-2/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "imagesLoaded is not defined"
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-2/js/gsap.min.js",
+        "ERR /scroll-2/js/gsap.min.js",
+        "404 /scroll-2/js/ScrollTrigger.min.js",
+        "ERR /scroll-2/js/ScrollTrigger.min.js",
+        "404 /scroll-2/js/imagesloaded.pkgd.min.js",
+        "ERR /scroll-2/js/imagesloaded.pkgd.min.js",
+        "404 /scroll-2/js/lenis.min.js",
+        "ERR /scroll-2/js/lenis.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-3": {
+      "id": "scroll-3",
+      "at": "2026-10-21T08:03:23.457Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 1393129,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failure loading font http://127.0.0.1:3199/fonts/Humane-Bold.ttf Error: Not Found\n    at c.onload (blob:http://127.0.0.1:3199/4b0bf63a-3538-472e-9ef6-a3e2a6c71643:5:260)",
+        "Failure loading font http://127.0.0.1:3199/fonts/Humane-Regular.ttf Error: Not Found\n    at c.onload (blob:http://127.0.0.1:3199/4b0bf63a-3538-472e-9ef6-a3e2a6c71643:5:260)"
+      ],
+      "external": [],
+      "failed": [
+        "404 /fonts/Humane-Bold.ttf",
+        "404 /fonts/Humane-Regular.ttf"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-7": {
+      "id": "scroll-7",
+      "at": "2026-10-21T08:03:49.969Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8986,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-6": {
+      "id": "scroll-6",
+      "at": "2026-10-21T08:03:47.289Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1958812,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-6/js/smoothscroll.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-6/js/gsap.min.js",
+        "ERR /scroll-6/js/gsap.min.js",
+        "404 /scroll-6/js/ScrollTrigger.min.js",
+        "ERR /scroll-6/js/ScrollTrigger.min.js",
+        "404 /scroll-6/js/imagesloaded.pkgd.min.js",
+        "ERR /scroll-6/js/imagesloaded.pkgd.min.js",
+        "404 /scroll-6/js/lenis.min.js",
+        "ERR /scroll-6/js/lenis.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-9": {
+      "id": "scroll-9",
+      "at": "2026-10-21T08:03:54.481Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 511497,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-9/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-9/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-9/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-9/js/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-9/js/gsap.min.js",
+        "ERR /scroll-9/js/gsap.min.js",
+        "404 /scroll-9/js/lenis.min.js",
+        "ERR /scroll-9/js/lenis.min.js",
+        "404 /scroll-9/js/ScrollTrigger.min.js",
+        "ERR /scroll-9/js/ScrollTrigger.min.js",
+        "404 /scroll-9/js/script.js",
+        "ERR /scroll-9/js/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-12": {
+      "id": "scroll-12",
+      "at": "2026-10-21T08:04:06.465Z",
+      "kind": "vite",
+      "status": "fail",
+      "stage": "build",
+      "error": ":///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-12/webgl-progressive-blur-main/node_modules/vite/dist/node/chunks/dep-827b23df.js:37524:11)\n    at Parser.onParseError (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-12/webgl-progressive-blur-main/node_modules/vite/dist/node/chunks/dep-827b23df.js:37450:13)\n    at Tokenizer._err (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-12/webgl-progressive-blur-main/node_modules/vite/dist/node/chunks/dep-f0c7dae0.js:1125:89)"
+    },
+    "scroll-13": {
+      "id": "scroll-13",
+      "at": "2026-10-21T08:04:16.620Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8433,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-10": {
+      "id": "scroll-10",
+      "at": "2026-10-21T08:03:56.777Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1781233,
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [
+        "404 /scroll-10/assets/mask.png"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-11": {
+      "id": "scroll-11",
+      "at": "2026-10-21T08:04:03.686Z",
+      "kind": "astro",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1959551,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-16": {
+      "id": "scroll-16",
+      "status": "fail",
+      "stage": "crash",
+      "error": "ENOENT: no such file or directory, scandir '/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/scroll-16/sticky-grid-scroll-main/__kq_dist'"
+    },
+    "scroll-14": {
+      "id": "scroll-14",
+      "at": "2026-10-21T08:04:36.733Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2892,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-15": {
+      "id": "scroll-15",
+      "at": "2026-10-21T08:04:44.746Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4253,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "m is not a function"
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-8": {
+      "id": "scroll-8",
+      "at": "2026-10-21T08:03:53.178Z",
+      "kind": "next",
+      "obfuscatedFiles": 12,
+      "obfuscated": false,
+      "bytes": 5317236,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-17": {
+      "id": "scroll-17",
+      "at": "2026-10-21T08:04:57.319Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1182424,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/Flip.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-17/js/lenis.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-17/js/ScrollTrigger.min.js",
+        "ERR /scroll-17/js/ScrollTrigger.min.js",
+        "404 /scroll-17/js/Flip.min.js",
+        "ERR /scroll-17/js/Flip.min.js",
+        "404 /scroll-17/js/imagesloaded.pkgd.min.js",
+        "ERR /scroll-17/js/imagesloaded.pkgd.min.js",
+        "404 /scroll-17/js/gsap.min.js",
+        "ERR /scroll-17/js/gsap.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-18": {
+      "id": "scroll-18",
+      "at": "2026-10-21T08:04:57.419Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 403694,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/lenis.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-18/js/smoothscroll.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-18/js/gsap.min.js",
+        "ERR /scroll-18/js/gsap.min.js",
+        "404 /scroll-18/js/ScrollTrigger.min.js",
+        "ERR /scroll-18/js/ScrollTrigger.min.js",
+        "404 /scroll-18/js/imagesloaded.pkgd.min.js",
+        "ERR /scroll-18/js/imagesloaded.pkgd.min.js",
+        "404 /scroll-18/js/smoothscroll.js",
+        "ERR /scroll-18/js/smoothscroll.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-20": {
+      "id": "scroll-20",
+      "at": "2026-10-21T08:05:14.346Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 117228,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-20/js/index.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-20/js/index.js",
+        "ERR /scroll-20/js/index.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-19": {
+      "id": "scroll-19",
+      "at": "2026-10-21T08:05:07.851Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1296462,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-19/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-19/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-19/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-19/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "imagesLoaded is not defined"
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-19/js/gsap.min.js",
+        "ERR /scroll-19/js/gsap.min.js",
+        "404 /scroll-19/js/ScrollTrigger.min.js",
+        "ERR /scroll-19/js/ScrollTrigger.min.js",
+        "404 /scroll-19/js/lenis.min.js",
+        "ERR /scroll-19/js/lenis.min.js",
+        "404 /scroll-19/js/imagesloaded.pkgd.min.js",
+        "ERR /scroll-19/js/imagesloaded.pkgd.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-24": {
+      "id": "scroll-24",
+      "at": "2026-10-21T08:05:26.145Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3457,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-21": {
+      "id": "scroll-21",
+      "at": "2026-10-21T08:05:15.196Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 2746029,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/Flip.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-21/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-21/js/gsap.min.js",
+        "ERR /scroll-21/js/gsap.min.js",
+        "404 /scroll-21/js/ScrollTrigger.min.js",
+        "ERR /scroll-21/js/ScrollTrigger.min.js",
+        "404 /scroll-21/js/imagesloaded.pkgd.min.js",
+        "ERR /scroll-21/js/imagesloaded.pkgd.min.js",
+        "404 /scroll-21/js/Flip.min.js",
+        "ERR /scroll-21/js/Flip.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-22": {
+      "id": "scroll-22",
+      "at": "2026-10-21T08:05:17.904Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1426615,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-22/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-22/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-22/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-22/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Lenis is not defined"
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-22/js/imagesloaded.pkgd.min.js",
+        "ERR /scroll-22/js/imagesloaded.pkgd.min.js",
+        "404 /scroll-22/js/gsap.min.js",
+        "ERR /scroll-22/js/gsap.min.js",
+        "404 /scroll-22/js/ScrollTrigger.min.js",
+        "ERR /scroll-22/js/ScrollTrigger.min.js",
+        "404 /scroll-22/js/lenis.min.js",
+        "ERR /scroll-22/js/lenis.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-23": {
+      "id": "scroll-23",
+      "at": "2026-10-21T08:05:23.991Z",
+      "kind": "static",
+      "obfuscatedFiles": 11,
+      "obfuscated": true,
+      "bytes": 383330,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failed to load module script: Expected a JavaScript-or-Wasm module script but the server responded with a MIME type of \"text/html\". Strict MIME type checking is enforced for module scripts per HTML sp"
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-26": {
+      "id": "scroll-26",
+      "at": "2026-10-21T08:05:33.081Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 11467,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-26/js/default.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-26/js/default.js",
+        "ERR /scroll-26/js/default.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-25": {
+      "id": "scroll-25",
+      "at": "2026-10-21T08:05:32.553Z",
+      "kind": "static",
+      "obfuscatedFiles": 2,
+      "obfuscated": true,
+      "bytes": 556432,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failed to resolve module specifier \"locomotive-scroll\". Relative references must start with either \"/\", \"./\", or \"../\"."
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-29": {
+      "id": "scroll-29",
+      "at": "2026-10-21T08:05:43.088Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8830,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-28": {
+      "id": "scroll-28",
+      "at": "2026-10-21T08:05:37.710Z",
+      "kind": "static",
+      "obfuscatedFiles": 4,
+      "obfuscated": true,
+      "bytes": 982236,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-32": {
+      "id": "scroll-32",
+      "at": "2026-10-21T08:05:51.411Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 3193915,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-32/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-32/script.js",
+        "ERR /scroll-32/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-30": {
+      "id": "scroll-30",
+      "at": "2026-10-21T08:05:47.809Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1833687,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/gsap.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/ScrollTrigger.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/Flip.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/imagesloaded.pkgd.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-30/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-30/js/ScrollTrigger.min.js",
+        "ERR /scroll-30/js/ScrollTrigger.min.js",
+        "404 /scroll-30/js/gsap.min.js",
+        "ERR /scroll-30/js/gsap.min.js",
+        "404 /scroll-30/js/Flip.min.js",
+        "ERR /scroll-30/js/Flip.min.js",
+        "404 /scroll-30/js/lenis.min.js",
+        "ERR /scroll-30/js/lenis.min.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-31": {
+      "id": "scroll-31",
+      "at": "2026-10-21T08:05:49.076Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 997033,
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [
+        "404 /scroll-31/1.webp"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-33": {
+      "id": "scroll-33",
+      "at": "2026-10-21T08:06:02.939Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 102205,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-33/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-33/script.js",
+        "ERR /scroll-33/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-34": {
+      "id": "scroll-34",
+      "at": "2026-10-21T08:06:04.533Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 7145608,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-35": {
+      "id": "scroll-35",
+      "at": "2026-10-21T08:06:09.242Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 302854,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-35/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-35/script.js",
+        "ERR /scroll-35/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-37": {
+      "id": "scroll-37",
+      "at": "2026-10-21T08:06:16.648Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 4022719,
+      "status": "fail",
+      "blank": true,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-37/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-37/script.js",
+        "ERR /scroll-37/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-27": {
+      "id": "scroll-27",
+      "at": "2026-10-21T08:05:34.138Z",
+      "kind": "parcel",
+      "status": "fail",
+      "stage": "build",
+      "error": "error: unknown option `--dist-dir'"
+    },
+    "scroll-38": {
+      "id": "scroll-38",
+      "at": "2026-10-21T08:06:17.685Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 187943,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-39": {
+      "id": "scroll-39",
+      "at": "2026-10-21T08:06:27.272Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 1124796,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-39/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-39/script.js",
+        "ERR /scroll-39/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-40": {
+      "id": "scroll-40",
+      "at": "2026-10-21T08:06:27.277Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 760845,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-40/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-40/script.js",
+        "ERR /scroll-40/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-41": {
+      "id": "scroll-41",
+      "at": "2026-10-21T08:06:31.827Z",
+      "kind": "static",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 4179917,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-43": {
+      "id": "scroll-43",
+      "at": "2026-10-21T08:06:35.568Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 24790430,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-43/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-43/script.js",
+        "ERR /scroll-43/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-44": {
+      "id": "scroll-44",
+      "at": "2026-10-21T08:06:40.384Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 288068,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-44/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-44/script.js",
+        "ERR /scroll-44/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-42": {
+      "id": "scroll-42",
+      "at": "2026-10-21T08:06:35.320Z",
+      "kind": "static",
+      "obfuscatedFiles": 2,
+      "obfuscated": true,
+      "bytes": 4865045,
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [
+        "404 /scroll-42/assets/img34.jpeg",
+        "404 /scroll-42/assets/img35.jpeg",
+        "404 /scroll-42/assets/img36.jpeg"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-45": {
+      "id": "scroll-45",
+      "at": "2026-10-21T08:06:59.419Z",
+      "kind": "vite",
+      "status": "fail",
+      "stage": "build",
+      "error": "ed with 1 error:\nError: [vite]: Rolldown failed to resolve import \"gsap\" from \"/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/scroll-45/files/script.js\".\n    at aggregateBindingErrorsIntoJsError (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-45/files/node_modules/rolldown/dist/shared/error-BlQ0-ek7.mjs:48:18)\n    at unwrapBindingResult (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/scroll-45/files/node_modules/rolldown/dist/shared/error-BlQ0-ek7.mjs:18:128)\n  errors: [Getter/Setter]"
+    },
+    "scroll-47": {
+      "id": "scroll-47",
+      "at": "2026-10-21T08:06:59.432Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 791852,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-47/img_1.jpg",
+        "404 /scroll-47/img_2.jpg",
+        "404 /scroll-47/img_3.jpg",
+        "404 /scroll-47/img_4.jpg"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-46": {
+      "id": "scroll-46",
+      "at": "2026-10-21T08:06:59.420Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 16869819,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
+      ],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-36": {
+      "id": "scroll-36",
+      "at": "2026-10-21T08:06:12.976Z",
+      "kind": "next",
+      "obfuscatedFiles": 9,
+      "obfuscated": false,
+      "bytes": 3351257,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-48": {
+      "id": "scroll-48",
+      "at": "2026-10-21T08:07:04.385Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2720021,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-48/hero-img.jpg"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-49": {
+      "id": "scroll-49",
+      "at": "2026-10-21T08:07:12.267Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 6578184,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-50": {
+      "id": "scroll-50",
+      "at": "2026-10-21T08:07:13.187Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 5704122,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-50/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-50/script.js",
+        "ERR /scroll-50/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-52": {
+      "id": "scroll-52",
+      "at": "2026-10-21T08:07:16.289Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 757507,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-53": {
+      "id": "scroll-53",
+      "at": "2026-10-21T08:07:18.805Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 4216173,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-53/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-53/script.js",
+        "ERR /scroll-53/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-51": {
+      "id": "scroll-51",
+      "at": "2026-10-21T08:07:15.627Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 1782415,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Failed to resolve module specifier \"gsap\". Relative references must start with either \"/\", \"./\", or \"../\"."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-51/work_01.jpg",
+        "404 /scroll-51/work_02.jpg",
+        "404 /scroll-51/work_03.jpg",
+        "404 /scroll-51/work_04.jpg",
+        "404 /scroll-51/work_05.jpg"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-59": {
+      "id": "scroll-59",
+      "at": "2026-10-21T08:07:28.411Z",
+      "kind": "vite",
+      "obfuscatedFiles": 8,
+      "obfuscated": true,
+      "bytes": 20220319,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-60": {
+      "id": "scroll-60",
+      "at": "2026-10-21T08:07:55.158Z",
+      "kind": "vite",
+      "obfuscatedFiles": 7,
+      "obfuscated": true,
+      "bytes": 34276993,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-61": {
+      "id": "scroll-61",
+      "at": "2026-10-21T08:09:13.846Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2931485,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-58": {
+      "id": "scroll-58",
+      "at": "2026-10-21T08:07:27.945Z",
+      "kind": "next",
+      "obfuscatedFiles": 12,
+      "obfuscated": false,
+      "bytes": 14055822,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-57": {
+      "id": "scroll-57",
+      "at": "2026-10-21T08:07:22.771Z",
+      "kind": "next",
+      "obfuscatedFiles": 12,
+      "obfuscated": false,
+      "bytes": 1251611,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-54": {
+      "id": "scroll-54",
+      "at": "2026-10-21T08:07:22.600Z",
+      "kind": "next",
+      "obfuscatedFiles": 13,
+      "obfuscated": false,
+      "bytes": 8306421,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-62": {
+      "id": "scroll-62",
+      "at": "2026-10-21T08:09:28.566Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 2256589,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-62/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-62/script.js",
+        "ERR /scroll-62/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-64": {
+      "id": "scroll-64",
+      "at": "2026-10-21T08:09:30.570Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 33324362,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-63": {
+      "id": "scroll-63",
+      "at": "2026-10-21T08:09:29.601Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 8455601,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-65": {
+      "id": "scroll-65",
+      "at": "2026-10-21T08:09:36.325Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 2846,
+      "status": "fail",
+      "blank": true,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-65/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-65/script.js",
+        "ERR /scroll-65/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-66": {
+      "id": "scroll-66",
+      "at": "2026-10-21T08:09:42.395Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 3987,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/scroll-66/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /scroll-66/script.js",
+        "ERR /scroll-66/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-69": {
+      "id": "scroll-69",
+      "at": "2026-10-21T08:09:50.018Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 214362,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-68": {
+      "id": "scroll-68",
+      "at": "2026-10-21T08:09:49.454Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 15930525,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-70": {
+      "id": "scroll-70",
+      "at": "2026-10-21T08:09:52.425Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 190875,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-67": {
+      "id": "scroll-67",
+      "at": "2026-10-21T08:09:46.892Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": false,
+      "bytes": 7199,
+      "note": "obfuscation broke this demo; serving minified build",
+      "status": "warn",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [
+        "404 /scroll-67/assets/slide_img_left_4.jpg",
+        "404 /scroll-67/assets/slide_img_left_5.jpg",
+        "404 /scroll-67/assets/slide_img_right_5.jpg",
+        "404 /scroll-67/assets/slide_img_left_3.jpg",
+        "404 /scroll-67/assets/slide_img_left_2.jpg",
+        "404 /scroll-67/assets/slide_img_left_1.jpg",
+        "404 /scroll-67/assets/slide_img_right_4.jpg",
+        "404 /scroll-67/assets/slide_img_right_1.jpg"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-72": {
+      "id": "scroll-72",
+      "at": "2026-10-21T08:10:09.448Z",
+      "kind": "static",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 6023,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-2": {
+      "id": "mouse-2",
+      "at": "2026-10-21T08:10:11.185Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 4879937,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/mouse-2/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /mouse-2/script.js",
+        "ERR /mouse-2/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "scroll-71": {
+      "id": "scroll-71",
+      "at": "2026-10-21T08:10:08.029Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 3758042,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-1": {
+      "id": "mouse-1",
+      "at": "2026-10-21T08:10:09.845Z",
+      "kind": "static",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 746609,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-3": {
+      "id": "mouse-3",
+      "at": "2026-10-21T08:10:23.741Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 2335,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/mouse-3/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /mouse-3/script.js",
+        "ERR /mouse-3/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-6": {
+      "id": "mouse-6",
+      "at": "2026-10-21T08:10:29.454Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 1801,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/mouse-6/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /mouse-6/script.js",
+        "ERR /mouse-6/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-5": {
+      "id": "mouse-5",
+      "at": "2026-10-21T08:10:26.862Z",
+      "kind": "vite",
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 664546,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
+    },
+    "mouse-7": {
+      "id": "mouse-7",
+      "at": "2026-10-21T08:10:37.078Z",
+      "kind": "vite",
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 1759,
+      "status": "warn",
+      "blank": false,
+      "errors": [
+        "Refused to execute script from 'http://127.0.0.1:3199/mouse-7/script.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+      ],
+      "external": [],
+      "failed": [
+        "404 /mouse-7/script.js",
+        "ERR /mouse-7/script.js"
+      ],
+      "navError": null,
+      "stage": "verify"
+    }
+  }
+}

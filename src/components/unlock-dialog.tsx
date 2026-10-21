@@ -66,14 +66,14 @@ export function UnlockDialog({ open, onClose }: { open: boolean; onClose: () => 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <button aria-label="Close" className="absolute inset-0 bg-[#02050c]/75 backdrop-blur-md" onClick={close} />
+          <button aria-label="Close" className="absolute inset-0 bg-overlay/75 backdrop-blur-md" onClick={close} />
           <motion.div
             ref={panel}
             tabIndex={-1}
             role="dialog"
             aria-modal="true"
             aria-labelledby="unlock-title"
-            className="glass relative w-full max-w-[460px] overflow-hidden rounded-[28px] !bg-[#0a1222]/95 p-7 outline-none"
+            className="glass relative w-full max-w-[460px] overflow-hidden rounded-[28px] !bg-panel/95 p-7 outline-none"
             initial={{ y: 24, scale: 0.97, opacity: 0 }}
             animate={{ y: 0, scale: 1, opacity: 1 }}
             exit={{ y: 12, scale: 0.98, opacity: 0 }}
@@ -133,7 +133,7 @@ export function UnlockDialog({ open, onClose }: { open: boolean; onClose: () => 
                     {!signedIn && (
                       <a
                         href={`/api/auth/github?returnTo=${encodeURIComponent(returnTo)}`}
-                        className="inline-flex h-10 items-center gap-2 rounded-full bg-white px-4 text-[14px] font-semibold text-[#0a0f1a] transition hover:bg-white/90"
+                        className="inline-flex h-10 items-center gap-2 rounded-full bg-white px-4 text-[14px] font-semibold text-ink transition hover:bg-white/90"
                       >
                         <GithubIcon className="size-4" /> Continue with GitHub
                       </a>

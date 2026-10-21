@@ -43,3 +43,7 @@ next-env.d.ts
 
 # component code is gated; never commit or deploy it publicly
 /vault
+
+# built live demos + build cache
+/demos
+/.cache

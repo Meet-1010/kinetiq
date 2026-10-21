@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { LibraryGrid } from "@/components/library-grid";
 import { GridSkeleton } from "@/components/skeletons";
 import { LibraryHeader } from "@/components/library-header";
+import { withLive } from "@/lib/demos";
 import { categories, componentsIn, getCategory } from "@/lib/library";
 
 const names = Object.fromEntries(categories.map((c) => [c.slug, c.name]));
@@ -31,7 +32,7 @@ async function Category({ params }: { params: PageProps<"/library/[category]">["
   return (
     <>
       <LibraryHeader eyebrow="Category" title={cat.name} blurb={cat.blurb} count={cat.count} />
-      <LibraryGrid items={componentsIn(cat.slug)} categoryNames={names} />
+      <LibraryGrid items={withLive(componentsIn(cat.slug))} categoryNames={names} />
     </>
   );
 }

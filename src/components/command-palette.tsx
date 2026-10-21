@@ -112,7 +112,7 @@ export function CommandPaletteProvider({
       <AnimatePresence>
         {open && (
           <motion.div className="fixed inset-0 z-[90] flex items-start justify-center px-4 pt-[12vh]" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <button aria-label="Close search" className="absolute inset-0 bg-[#02050c]/70 backdrop-blur-sm" onClick={() => setOpen(false)} />
+            <button aria-label="Close search" className="absolute inset-0 bg-overlay/70 backdrop-blur-sm" onClick={() => setOpen(false)} />
             <motion.div
               role="dialog"
               aria-modal="true"
@@ -121,7 +121,7 @@ export function CommandPaletteProvider({
               animate={{ y: 0, scale: 1 }}
               exit={{ y: -6, scale: 0.98, opacity: 0 }}
               transition={{ type: "spring", stiffness: 420, damping: 34 }}
-              className="glass relative w-full max-w-[620px] overflow-hidden rounded-[22px] !bg-[#0a1222]/95"
+              className="glass relative w-full max-w-[620px] overflow-hidden rounded-[22px] !bg-panel/95"
               onKeyDown={onKeyDown}
             >
               <div className="flex items-center gap-3 border-b border-line px-5">

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ChevronRight, ExternalLink, FileCode2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, BadgeCheck, ChevronRight, ExternalLink, FileCode2 } from "lucide-react";
 import { Suspense } from "react";
 import { ComponentCard } from "@/components/component-card";
 import { DetailSkeleton } from "@/components/skeletons";
 import { DownloadPanel } from "@/components/download-panel";
 import { KeyboardNav } from "@/components/keyboard-nav";
 import { VideoPlayer } from "@/components/video-player";
+import { liveDemo, withLive } from "@/lib/demos";
 import { categories, componentsIn, components, formatBytes, getCategory, getComponent, neighbours, posterSrc } from "@/lib/library";
 
 const names = Object.fromEntries(categories.map((c) => [c.slug, c.name]));
@@ -52,6 +53,7 @@ async function ComponentDetail({ params }: { params: PageProps<"/c/[id]">["param
   const siblings = componentsIn(c.category);
   const position = siblings.findIndex((x) => x.id === c.id) + 1;
   const more = siblings.filter((x) => x.id !== c.id).slice(Math.max(0, position - 1), Math.max(0, position - 1) + 3);
+  const demo = liveDemo(c.id);
   const sourceHost = c.source ? new URL(c.source).hostname.replace(/^www\./, "") : null;
 
   return (
@@ -130,7 +132,26 @@ async function ComponentDetail({ params }: { params: PageProps<"/c/[id]">["param
 
             <div className="my-6 h-px bg-gradient-to-r from-transparent via-line-strong to-transparent" />
 
+            {demo && (
+              <Link
+                href={`/c/${c.id}/live`}
+                className="group mb-3 flex h-12 items-center justify-center gap-2.5 rounded-full border border-line-strong bg-surface-2 text-[15px] font-semibold text-text transition hover:border-accent/50 hover:bg-accent/10"
+              >
+                <span className="relative flex size-2">
+                  <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-70" />
+                  <span className="relative inline-flex size-2 rounded-full bg-accent" />
+                </span>
+                Try it live
+                <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
+              </Link>
+            )}
             <DownloadPanel c={c} />
+            {demo && (
+              <p className="mt-3 flex items-center gap-1.5 text-[12px] text-muted">
+                <BadgeCheck className={`size-3.5 ${demo.status === "pass" ? "text-emerald-400" : "text-amber-300"}`} />
+                {demo.status === "pass" ? "Built and verified in headless Chrome" : "Builds and runs; logs minor console errors"}
+              </p>
+            )}
 
             {c.source && (
               <a href={c.source} target="_blank" rel="noreferrer" className="mt-5 flex items-center gap-2 text-[13px] text-muted hover:text-text">
@@ -172,7 +193,7 @@ async function ComponentDetail({ params }: { params: PageProps<"/c/[id]">["param
             </Link>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {more.map((m) => (
+            {withLive(more).map((m) => (
               <ComponentCard key={m.id} c={m} categoryName={names[m.category]} />
             ))}
           </div>

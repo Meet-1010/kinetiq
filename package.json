@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "library:build": "node scripts/build-library.mjs",
-    "vault:upload": "bash scripts/upload-vault.sh"
+    "vault:upload": "bash scripts/upload-vault.sh",
+    "demos:build": "node scripts/build-demos.mjs",
+    "demos:serve": "node scripts/demo-server.mjs --port=3100"
   },
   "dependencies": {
     "lucide-react": "^1.61.0",
@@ -23,9 +25,13 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "esbuild": "^0.28.2",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
+    "javascript-obfuscator": "^5.9.0",
+    "playwright-core": "^1.64.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^8.3.5"
   }
 }

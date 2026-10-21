@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
 import { AccessProvider } from "@/components/access-provider";
 import { CommandPaletteProvider } from "@/components/command-palette";
 import { SiteFooter } from "@/components/site-footer";
@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-const display = Space_Grotesk({ variable: "--font-display", subsets: ["latin"], weight: ["400", "500", "600"] });
+const display = Bricolage_Grotesque({ variable: "--font-display", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 const mono = JetBrains_Mono({ variable: "--font-mono", subsets: ["latin"], weight: ["400", "500"] });
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: site.name, description: site.tagline },
 };
 
-export const viewport: Viewport = { themeColor: "#060a14" };
+export const viewport: Viewport = { themeColor: "#0c0a09" };
 
 const paletteItems = components.map((c) => ({
   id: c.id,

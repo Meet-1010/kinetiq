@@ -26,6 +26,23 @@ npm run dev
 Without OAuth env vars, local dev runs in **dev-open** mode: the gate is open so you can test downloads.
 In production a missing config never opens the gate; downloads show "opening soon" instead.
 
+## Live demos
+
+```bash
+npm run demos:build      # build + verify every component (resumable; --only=id,id --force to redo)
+npm run demos:serve      # serve demos/ on http://localhost:3100
+```
+
+Each zip is built with its own tool (Vite, Next static export, CRA, Parcel, Astro, or copied as-is),
+then published to `demos/<id>` with **only production output**: no package.json, README, configs,
+`src/` or source maps; JS minified and lightly obfuscated. Every demo is then opened in headless Chrome
+and graded `pass` / `warn` (runs, logs errors) / `fail` (build error or blank page) into
+`src/data/demos.json`. Only pass/warn demos get a "Try it live" button. Install scripts are disabled
+for all dependency installs.
+
+Demos must be hosted on a different origin than the site; `demo-server.mjs` also redirects
+root-absolute asset paths back under the right demo and sets `frame-ancestors`.
+
 ## Adding components
 
 Drop a new folder `Category/N/` with `code.zip` and a preview video into the collection, then re-run

@@ -52,7 +52,7 @@ export function VideoPreview({
   }, [hasVideo]);
 
   return (
-    <div className={`relative overflow-hidden bg-[#0b1322] ${className}`}>
+    <div className={`relative overflow-hidden bg-surface-solid ${className}`}>
       {!ready && <div className="skeleton absolute inset-0" />}
       {hasVideo ? (
         <video

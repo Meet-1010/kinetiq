@@ -47,11 +47,11 @@ export function AccountChip() {
         <button onClick={() => setMenu((m) => !m)} className="pill flex h-10 items-center gap-2 rounded-full pl-1 pr-3" aria-haspopup="menu" aria-expanded={menu}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={access.user.avatar} alt="" className="size-8 rounded-full ring-1 ring-white/10" />
-          <span className={`size-2 rounded-full ${access.starred ? "bg-accent shadow-[0_0_8px_#4fd8ff]" : "bg-amber-300"}`} />
+          <span className={`size-2 rounded-full ${access.starred ? "bg-accent shadow-[0_0_8px_#ff6b35]" : "bg-amber-300"}`} />
           <span className="hidden text-[13px] text-text-2 sm:block">{access.starred ? "Unlocked" : "Star to unlock"}</span>
         </button>
         {menu && (
-          <div role="menu" className="glass absolute right-0 top-12 z-50 w-56 rounded-2xl !bg-[#0b1426]/95 p-2">
+          <div role="menu" className="glass absolute right-0 top-12 z-50 w-56 rounded-2xl !bg-panel/95 p-2">
             <p className="px-3 py-2 text-[13px] text-muted">
               Signed in as <span className="text-text">@{access.user.login}</span>
             </p>

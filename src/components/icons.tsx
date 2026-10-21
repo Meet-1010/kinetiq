@@ -8,21 +8,36 @@ export function GithubIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-/** Kinetiq mark: a K whose arms leave motion trails. */
-export function Logomark(props: SVGProps<SVGSVGElement>) {
+/**
+ * Kinetiq mark — the "keyframe K". Stem and upper arm are solid; the lower leg is three
+ * keyframes easing in along the diagonal (growing and spreading out, like an ease-in curve).
+ * Keep in sync with src/app/icon.svg and public/brand/*.svg.
+ */
+export function Logomark({ className, ...props }: SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" {...props}>
+    <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" className={`kq-mark ${className ?? ""}`} {...props}>
       <defs>
-        <linearGradient id="kq-g" x1="6" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#9BEBFF" />
-          <stop offset="0.55" stopColor="#4FD8FF" />
-          <stop offset="1" stopColor="#1E8FD0" />
+        <linearGradient id="kq-tile" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#221B17" />
+          <stop offset="1" stopColor="#100D0B" />
+        </linearGradient>
+        <linearGradient id="kq-ember" x1="16" y1="12" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#FFC46B" />
+          <stop offset="0.45" stopColor="#FF6B35" />
+          <stop offset="1" stopColor="#E3401C" />
         </linearGradient>
       </defs>
-      <rect x="0.5" y="0.5" width="31" height="31" rx="9.5" fill="#0B1528" stroke="rgba(186,215,247,0.16)" />
-      <path d="M10 7.5v17" stroke="url(#kq-g)" strokeWidth="3" strokeLinecap="round" />
-      <path d="M11.5 16 21.5 7.5M11.5 16l10 8.5" stroke="url(#kq-g)" strokeWidth="3" strokeLinecap="round" />
-      <path d="M24.5 7.5h2M25 16h1.5M24.5 24.5h2" stroke="#4FD8FF" strokeOpacity="0.55" strokeWidth="1.6" strokeLinecap="round" />
+      <rect x="1" y="1" width="62" height="62" rx="17" fill="url(#kq-tile)" />
+      <rect x="1" y="1" width="62" height="62" rx="17" stroke="#FFE4D2" strokeOpacity="0.14" strokeWidth="1.5" />
+      <path d="M18 3.5h28" stroke="#FFE8D8" strokeOpacity="0.12" strokeWidth="1" strokeLinecap="round" />
+      {/* stem */}
+      <rect x="16.5" y="13.5" width="8.5" height="37" rx="4.25" fill="url(#kq-ember)" />
+      {/* upper arm */}
+      <path d="M27.5 32.5 44.5 16" stroke="url(#kq-ember)" strokeWidth="8.5" strokeLinecap="round" />
+      {/* lower leg as eased keyframes */}
+      <circle className="kq-k1" cx="34.3" cy="39.1" r="2.4" fill="#FF6B35" fillOpacity="0.45" />
+      <circle className="kq-k2" cx="39.7" cy="44.3" r="3.1" fill="#FF6B35" fillOpacity="0.75" />
+      <circle className="kq-k3" cx="45.8" cy="50.2" r="4.3" fill="url(#kq-ember)" />
     </svg>
   );
 }

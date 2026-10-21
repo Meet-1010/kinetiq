@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "kinetiq-demos",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/demo-server.mjs", "--port=3100"],
+      "port": 3100
     }
   ]
 }
