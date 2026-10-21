@@ -1,7 +1,5 @@
-// Cloudflare Pages "advanced mode" worker for the demo host — the production twin of
-// scripts/demo-server.mjs. Copied to demos/_worker.js by scripts/deploy-demos.sh.
-//
-// Env (Pages project settings): FRAME_ANCESTORS, e.g. "'self' https://kinetiq.vercel.app"
+// Cloudflare Worker for the demo host (static assets bound as ASSETS) — the production twin of
+// scripts/demo-server.mjs. Config: deploy/demos/wrangler.jsonc (FRAME_ANCESTORS var).
 
 const ID = /^[a-z0-9-]+-\d+$/;
 
