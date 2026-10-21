@@ -12,7 +12,8 @@
     "demos:build": "node scripts/build-demos.mjs && node scripts/write-route-index.mjs",
     "demos:serve": "node scripts/demo-server.mjs --port=3100",
     "demos:deploy": "bash scripts/deploy-demos.sh",
-    "demos:report": "node scripts/demo-report.mjs"
+    "demos:report": "node scripts/demo-report.mjs",
+    "secrets": "bash scripts/set-secrets.sh"
   },
   "dependencies": {
     "lucide-react": "^1.61.0",
