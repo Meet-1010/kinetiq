@@ -15,6 +15,6 @@
   },
   "vars": {
     // Sites allowed to embed the demos in an iframe.
-    "FRAME_ANCESTORS": "'self' http://localhost:3000 https://kinetiq.vercel.app"
+    "FRAME_ANCESTORS": "'self' http://localhost:3000 https://kinetiq-self.vercel.app"
   }
 }
