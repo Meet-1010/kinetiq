@@ -22,7 +22,15 @@ async function releaseAssets(repo: string) {
     "User-Agent": "kinetiq-library",
   };
   const rel = await fetch(`https://api.github.com/repos/${repo}/releases/tags/${tag}`, { headers, cache: "no-store" });
-  if (!rel.ok) throw new Error(`vault release lookup failed (${rel.status})`);
+  if (!rel.ok) {
+    const hint =
+      rel.status === 404
+        ? "token can't see the repo or release: give VAULT_TOKEN Contents read on VAULT_REPO, and check VAULT_TAG"
+        : rel.status === 401
+          ? "VAULT_TOKEN is invalid or expired"
+          : "unexpected GitHub response";
+    throw new Error(`vault release lookup failed (${rel.status}): ${hint}`);
+  }
   const { id } = (await rel.json()) as { id: number };
 
   const assets = new Map<string, number>();
