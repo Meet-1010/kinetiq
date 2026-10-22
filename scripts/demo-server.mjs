@@ -9,7 +9,7 @@
 //   node scripts/demo-server.mjs [--port=3100]
 
 import { createReadStream } from "node:fs";
-import { readdir, stat } from "node:fs/promises";
+import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -54,6 +54,38 @@ const TYPES = {
 };
 
 const ID = /^[a-z0-9-]+-\d+$/;
+
+async function listFiles(dir, base = dir, out = []) {
+  for (const e of await readdir(dir, { withFileTypes: true }).catch(() => [])) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) await listFiles(p, base, out);
+    else out.push("/" + path.relative(base, p).split(path.sep).join("/"));
+  }
+  return out;
+}
+
+/**
+ * "/fonts/x.otf" -> "3d-8" for every path that exists in exactly one demo. Requests from Web Workers
+ * and some fetches carry no usable Referer, so this is how a root-absolute asset finds its demo.
+ */
+export async function buildPathIndex() {
+  const owners = new Map();
+  for (const id of (await readdir(DEMOS_DIR).catch(() => [])).filter((d) => ID.test(d))) {
+    for (const p of await listFiles(path.join(DEMOS_DIR, id))) owners.set(p, owners.has(p) ? null : id);
+  }
+  return Object.fromEntries([...owners].filter(([p, id]) => id && !/\/index\.html?$/.test(p)));
+}
+
+/** Writes demos/_kq/paths.json for the Cloudflare worker (read through its ASSETS binding only). */
+export async function writePathIndex() {
+  const index = await buildPathIndex();
+  await mkdir(path.join(DEMOS_DIR, "_kq"), { recursive: true });
+  await writeFile(path.join(DEMOS_DIR, "_kq", "paths.json"), JSON.stringify(index));
+  return Object.keys(index).length;
+}
+
+let pathIndex;
+let pathIndexAt = 0;
 
 async function isFile(p) {
   const s = await stat(p).catch(() => null);
@@ -120,6 +152,15 @@ export function createDemoServer({ frameAncestors = process.env.DEMO_FRAME_ANCES
         res.writeHead(307, { Location: `/${refId}${url.pathname}${url.search}`, ...security });
         return res.end();
       }
+      if (!pathIndex || Date.now() - pathIndexAt > 30_000) {
+        pathIndex = buildPathIndex();
+        pathIndexAt = Date.now();
+      }
+      const owner = (await pathIndex)[decodeURIComponent(url.pathname)];
+      if (owner) {
+        res.writeHead(307, { Location: `/${owner}${url.pathname}${url.search}`, ...security });
+        return res.end();
+      }
 
       if (url.pathname === "/") {
         const ids = (await readdir(DEMOS_DIR).catch(() => [])).filter((d) => ID.test(d));
@@ -135,7 +176,9 @@ export function createDemoServer({ frameAncestors = process.env.DEMO_FRAME_ANCES
   });
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+if (process.argv[1] === fileURLToPath(import.meta.url) && process.argv.includes("--write-index")) {
+  writePathIndex().then((n) => console.log(`demos/_kq/paths.json: ${n} unique asset paths`));
+} else if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const port = Number(process.argv.find((a) => a.startsWith("--port="))?.split("=")[1] ?? process.env.PORT ?? 3100);
   createDemoServer().listen(port, () => console.log(`demo server on http://localhost:${port}`));
 }

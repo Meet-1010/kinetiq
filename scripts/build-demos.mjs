@@ -104,6 +104,65 @@ async function findRoot(dir) {
   return anyHtml ? { root: path.dirname(anyHtml), hasPkg: false, entry: path.basename(anyHtml) } : null;
 }
 
+/**
+ * A zip that is a set of separate works (folder per work, each with its own built page, no root page)
+ * becomes a "collection": the pages are published side by side under a generated gallery index.
+ */
+async function findCollection(work) {
+  const entries = (await fs.readdir(work, { withFileTypes: true })).filter((e) => e.isDirectory() && !e.name.startsWith("."));
+  const top = entries.length === 1 ? path.join(work, entries[0].name) : work;
+  if ((await exists(path.join(top, "index.html"))) || (await exists(path.join(top, "package.json")))) return null;
+  const items = [];
+  for (const e of await fs.readdir(top, { withFileTypes: true })) {
+    if (!e.isDirectory() || e.name.startsWith(".")) continue;
+    for (const sub of ["", "bin", "dist", "build", "docs", "public"]) {
+      const dir = path.join(top, e.name, sub);
+      if (await exists(path.join(dir, "index.html"))) {
+        items.push({ name: e.name, dir });
+        break;
+      }
+    }
+  }
+  return items.length >= 3 ? { top, items } : null;
+}
+
+async function buildCollection(id, title, { top, items }) {
+  const out = path.join(WORK, `${id}__collection`);
+  await fs.rm(out, { recursive: true, force: true });
+  for (const it of items) await copyClean(it.dir, path.join(out, it.name), { skipSource: false });
+  const thumbs = path.join(top, "imgs");
+  if (await exists(thumbs)) await fs.cp(thumbs, path.join(out, "imgs"), { recursive: true });
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const cards = await Promise.all(
+    items.map(async (it) => {
+      const thumb = (await exists(path.join(thumbs, `${it.name}.png`))) ? `imgs/${it.name}.png` : null;
+      const label = it.name.replace(/[-_]/g, " ");
+      return `<a class="card" href="${esc(it.name)}/">${thumb ? `<img src="${thumb}" alt="" loading="lazy">` : `<div class="ph"></div>`}<span>${esc(label)}</span></a>`;
+    }),
+  );
+  await fs.writeFile(
+    path.join(out, "index.html"),
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title>
+<style>body{margin:0;background:#0c0a09;color:#f5efea;font:15px/1.5 system-ui,sans-serif;padding:32px}h1{font-size:22px;margin:0 0 4px}p{color:#9c918a;margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}.card{display:block;background:#171310;border:1px solid rgba(255,228,210,.1);border-radius:16px;overflow:hidden;color:inherit;text-decoration:none;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:#ff6b35}.card img,.ph{display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#221b17}.card span{display:block;padding:10px 14px;text-transform:capitalize;font-weight:600}</style></head>
+<body><h1>${esc(title)}</h1><p>${items.length} interactive pieces. Pick one to open it.</p><div class="grid">${cards.join("")}</div></body></html>\n`,
+  );
+  return { kind: "collection", out, fixes: [`generated a gallery page for ${items.length} separate works`] };
+}
+
+const PREBUILT_DIRS = ["docs", "app", "dist", "build", "out", "www", "site", "public"];
+
+/** The project's own previously built site (e.g. GitHub Pages `docs/`), used when building from source fails. */
+async function findPrebuilt(root) {
+  for (const d of PREBUILT_DIRS) {
+    const dir = path.join(root, d);
+    const html = await fs.readFile(path.join(dir, "index.html"), "utf8").catch(() => "");
+    if (/<script\b/i.test(html)) return dir;
+  }
+  return null;
+}
+
 function detectKind(pkg) {
   const deps = { ...(pkg.dependencies ?? {}), ...(pkg.devDependencies ?? {}) };
   const build = pkg.scripts?.build ?? "";
@@ -137,7 +196,9 @@ async function patchNextConfig(root, id) {
   const names = ["next.config.ts", "next.config.mjs", "next.config.js", "next.config.cjs"];
   const found = (await Promise.all(names.map(async (n) => ((await exists(path.join(root, n))) ? n : null)))).find(Boolean);
   // Lint/type errors shouldn't block a demo build; Next <16 runs ESLint during `next build`.
-  const inject = `output: "export", basePath: "/${id}", trailingSlash: true, images: { unoptimized: true }, typescript: { ignoreBuildErrors: true }, eslint: { ignoreDuringBuilds: true },`;
+  // turbopack.root: the work dir sits inside this repo, and Next would otherwise infer *this* repo
+  // as the workspace root and compile its files (e.g. src/proxy.ts) into the demo.
+  const inject = `output: "export", basePath: "/${id}", trailingSlash: true, images: { unoptimized: true }, typescript: { ignoreBuildErrors: true }, eslint: { ignoreDuringBuilds: true }, turbopack: { root: ${JSON.stringify(root)} },`;
   if (found) {
     const file = path.join(root, found);
     let src = await fs.readFile(file, "utf8");
@@ -151,6 +212,51 @@ async function patchNextConfig(root, id) {
     await fs.rename(file, path.join(root, `__orig_${found}`));
   }
   await fs.writeFile(path.join(root, "next.config.mjs"), `export default { ${inject} };\n`);
+}
+
+/**
+ * Next/Astro demos are served under /<id>/, but source often hard-codes "/fonts/x.otf"-style paths into
+ * public/. Prefix those with the base path, and point references to missing fonts at the same family's
+ * font that does ship (e.g. Bold.otf -> Regular.ttf).
+ */
+async function fixAssetPaths(root, id, fixes) {
+  const pub = path.join(root, "public");
+  const dirs = (await fs.readdir(pub, { withFileTypes: true }).catch(() => [])).filter((e) => e.isDirectory()).map((e) => e.name);
+  if (!dirs.length) return;
+  const re = new RegExp(`(["'\`])/(${dirs.map((d) => d.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})/([^"'\`]+)\\1`, "g");
+  let prefixed = 0;
+  for (const f of await walk(root)) {
+    if (!/\.(m?[jt]sx?)$/.test(f) || /[\\/](out|\.next|public|__kq_dist)[\\/]/.test(f) || /\.config\./.test(f)) continue;
+    const src = await fs.readFile(f, "utf8");
+    let changed = false;
+    const next = await replaceAsync(src, re, async (all, q, dir, rest) => {
+      let file = rest;
+      if (!(await exists(path.join(pub, dir, rest))) && /\.(otf|ttf|woff2?)$/i.test(rest)) {
+        const family = path.basename(rest).split(/[-_.]/)[0];
+        const alt = (await fs.readdir(path.join(pub, dir), { recursive: true }).catch(() => [])).find((x) => path.basename(x).startsWith(family) && /\.(otf|ttf|woff2?)$/i.test(x));
+        if (alt) {
+          file = alt.split(path.sep).join("/");
+          fixes.add(`font ${path.basename(rest)} is missing from the project; used ${path.basename(alt)}`);
+        }
+      }
+      changed = true;
+      prefixed++;
+      return `${q}/${id}/${dir}/${file}${q}`;
+    });
+    if (changed) await fs.writeFile(f, next);
+  }
+  if (prefixed) fixes.add(`prefixed ${prefixed} hard-coded asset path(s) with the demo's base path`);
+}
+
+async function replaceAsync(str, re, fn) {
+  const parts = [];
+  let last = 0;
+  for (const m of str.matchAll(re)) {
+    parts.push(str.slice(last, m.index), await fn(...m));
+    last = m.index + m[0].length;
+  }
+  parts.push(str.slice(last));
+  return parts.join("");
 }
 
 async function findOutput(root, prefer = []) {
@@ -207,12 +313,24 @@ async function repairHtml(root, fixes) {
 
 // Vite config for projects that relied on a zero-config bundler: shader files load as strings.
 const ADHOC_CONFIG = "__kq_vite.config.mjs";
-async function prepareAdhoc(root) {
+async function prepareAdhoc(root, fixes) {
+  // Entry pages: every top-level HTML file. Demos whose page isn't index.html (base.html,
+  // step1.html…) get an index.html copy of their first page so the demo URL opens something.
+  const pages = (await fs.readdir(root)).filter((f) => /\.html?$/i.test(f)).sort();
+  if (!pages.includes("index.html") && pages.length) {
+    await fs.copyFile(path.join(root, pages[0]), path.join(root, "index.html"));
+    pages.unshift("index.html");
+    fixes?.add(`opened ${pages[1]} as the demo's start page`);
+  }
+  const input = Object.fromEntries(pages.map((p) => [p.replace(/\.html?$/i, ""), p]));
   await fs.writeFile(
     path.join(root, ADHOC_CONFIG),
     `export default {
   plugins: [{ name: "kq-shaders", transform(code, id) {
     if (/\\.(glsl|vert|frag|vs|fs)$/.test(id)) return { code: "export default " + JSON.stringify(code) + ";", map: null };
+  } }, { name: "kq-node-shims", transformIndexHtml() {
+    // Parcel v1 provided a browser "process" object; some old packages call it directly.
+    return [{ tag: "script", children: "globalThis.process=globalThis.process||{env:{NODE_ENV:'production'},browser:true,emitWarning(){},nextTick:(f,...a)=>queueMicrotask(()=>f(...a))};", injectTo: "head-prepend" }];
   } }, { name: "kq-parcel-globs", transform(code, id) {
     // Parcel v1: import images from "../img/*.jpg" -> { name: url }
     if (!/\\.m?js$/.test(id) || !/(from|require\\()\\s*["'][^"']*\\*/.test(code)) return;
@@ -221,18 +339,22 @@ async function prepareAdhoc(root) {
       .replace(/import\\s+(\\w+)\\s+from\\s+["']([^"']*\\*[^"']*)["'];?/g, (_, name, glob) => "const " + name + " = " + globObj(glob) + ";")
       .replace(/require\\(\\s*["']([^"']*\\*[^"']*)["']\\s*\\)/g, (_, glob) => globObj(glob)), map: null };
   } }],
-  build: { sourcemap: false },
+  // Parcel shimmed Node globals that old browser packages still touch.
+  define: { "process.env.NODE_ENV": '"production"', "process.env": "{}", "process.browser": "true", global: "globalThis" },
+  build: { sourcemap: false, rollupOptions: { input: ${JSON.stringify(input)} } },
 };\n`,
   );
   // Classic <script> tags that use import syntax have to become modules for any bundler to take them.
-  const file = path.join(root, "index.html");
-  let html = await fs.readFile(file, "utf8");
-  for (const s of localScripts(html)) {
-    if (/type=/.test(s.attrs)) continue;
-    const code = await fs.readFile(path.join(root, s.src.split("?")[0]), "utf8").catch(() => "");
-    if (USES_IMPORT.test(code)) html = html.replace(s.tag, s.tag.replace("<script", '<script type="module"'));
+  for (const page of pages) {
+    const file = path.join(root, page);
+    let html = await fs.readFile(file, "utf8");
+    for (const s of localScripts(html)) {
+      if (/type=/.test(s.attrs)) continue;
+      const code = await fs.readFile(path.join(root, s.src.split("?")[0]), "utf8").catch(() => "");
+      if (USES_IMPORT.test(code)) html = html.replace(s.tag, s.tag.replace("<script", '<script type="module"'));
+    }
+    await fs.writeFile(file, html);
   }
-  await fs.writeFile(file, html);
 }
 
 const MEDIA = /\.(png|jpe?g|webp|avif|gif|svg|ico|mp4|webm|mov|mp3|wav|ogg|glb|gltf|bin|hdr|exr|ktx2|woff2?|ttf|otf|json|txt|csv|wasm|riv|lottie)$/i;
@@ -293,6 +415,22 @@ async function withMissingDeps(root, log, fixes, run) {
       }
     }
 
+    // A newer release moved an export the project imports: drop back to the version it declared.
+    const declared = await readJSON(path.join(root, "package.json"))
+      .then((p) => ({ ...(p.dependencies ?? {}), ...(p.devDependencies ?? {}) }))
+      .catch(() => ({}));
+    for (const m of res.out.matchAll(/"([\w$]+)" is not exported by "node_modules\/((?:@[^/"]+\/)?[^/"]+)\//g)) {
+      const [, name, dep] = m;
+      const min = (declared[dep] ?? "").match(/\d+\.\d+\.\d+/)?.[0];
+      if (!min || [...installed].some((p) => p.startsWith(`${dep}@`))) continue;
+      installed.add(`${dep}@${min}`);
+      const pin = await sh("npm", ["install", "--ignore-scripts", "--no-audit", "--no-fund", "--legacy-peer-deps", "--no-save", ...installed], { cwd: root, log, env: { NODE_ENV: "development" } });
+      if (pin.ok) {
+        fixes.add(`pinned ${dep}@${min}: newer versions moved the ${name} export`);
+        repaired = true;
+      }
+    }
+
     for (const m of res.out.matchAll(/ENOENT: no such file or directory, (?:open|stat) '([^']+)'/g)) {
       const file = m[1];
       if (file.startsWith(root) && /\.(ico|png|svg|jpe?g|webp|gif|webmanifest)$/i.test(file) && !(await exists(file))) {
@@ -309,16 +447,16 @@ async function withMissingDeps(root, log, fixes, run) {
   return res;
 }
 
-async function buildProject(id, root, hasPkg, log) {
+async function buildFromSource(id, root, hasPkg, log, forceKind) {
   const fixes = new Set();
   const done = (r) => ({ ...r, fixes: [...fixes] });
   const index = path.join(root, "index.html");
 
   let pkg = hasPkg ? await readJSON(path.join(root, "package.json")).catch(() => ({})) : null;
-  let kind = pkg ? detectKind(pkg) : "static";
+  let kind = forceKind ?? (pkg ? detectKind(pkg) : "static");
 
   // "Static" projects that import npm packages or shaders only ever ran through a bundler.
-  if (kind === "static" && (await exists(index))) {
+  if (!forceKind && kind === "static" && (await exists(index))) {
     if (!(await needsBundler(root))) return done({ kind, out: root });
     kind = "vite-adhoc";
     if (!pkg) {
@@ -341,11 +479,26 @@ async function buildProject(id, root, hasPkg, log) {
 
   let inst = await install(root, log);
   if (!inst.ok && /registry\.npm\.taobao\.org|registry\.npmmirror\.com|ENOTFOUND|ETARGET/.test(inst.out)) {
-    // Lockfile pinned to a dead mirror or vanished versions: resolve fresh from npmjs.
-    for (const lock of ["package-lock.json", "yarn.lock", "pnpm-lock.yaml"]) await fs.rm(path.join(root, lock), { force: true });
+    // Lockfile pinned to a dead mirror or vanished versions: resolve from npmjs, but keep the exact
+    // versions the lockfile recorded for direct dependencies (open ranges like ">=0.102" would
+    // otherwise jump years ahead and break the demo).
+    const lock = await readJSON(path.join(root, "package-lock.json")).catch(() => null);
+    const locked = (name) => lock?.packages?.[`node_modules/${name}`]?.version ?? lock?.dependencies?.[name]?.version;
+    let pinned = 0;
+    for (const field of ["dependencies", "devDependencies"]) {
+      for (const name of Object.keys(pkg[field] ?? {})) {
+        const v = locked(name);
+        if (v && /^\d+\.\d+\.\d+/.test(v)) {
+          pkg[field][name] = v;
+          pinned++;
+        }
+      }
+    }
+    if (pinned) await fs.writeFile(path.join(root, "package.json"), JSON.stringify(pkg, null, 2));
+    for (const lockFile of ["package-lock.json", "yarn.lock", "pnpm-lock.yaml"]) await fs.rm(path.join(root, lockFile), { force: true });
     await fs.rm(path.join(root, "node_modules"), { recursive: true, force: true });
     inst = await install(root, log);
-    if (inst.ok) fixes.add("re-resolved dependencies (lockfile pointed at a dead registry)");
+    if (inst.ok) fixes.add(`re-resolved dependencies from npmjs (lockfile pointed at a dead registry)${pinned ? `, keeping its ${pinned} original versions` : ""}`);
   }
   if (!inst.ok) return done({ kind, error: `install failed: ${tail(inst.out)}` });
 
@@ -355,6 +508,7 @@ async function buildProject(id, root, hasPkg, log) {
   switch (kind) {
     case "next":
       await patchNextConfig(root, id);
+      await fixAssetPaths(root, id, fixes);
       res = await withMissingDeps(root, log, fixes, () => sh(bin(root, "next"), ["build"], { cwd: root, log }));
       if (!res.ok && /Turbopack, with a `webpack` config/.test(res.out)) {
         // Next 16 builds with Turbopack by default and refuses custom webpack configs.
@@ -373,7 +527,7 @@ async function buildProject(id, root, hasPkg, log) {
     case "vite-adhoc": {
       const vite = path.join(ROOT, "node_modules", ".bin", "vite");
       await repairHtml(root, fixes);
-      await prepareAdhoc(root);
+      await prepareAdhoc(root, fixes);
       res = await withMissingDeps(root, log, fixes, () => sh(vite, ["build", "--config", ADHOC_CONFIG, ...viteArgs], { cwd: root, log }));
       if (!res.ok) return done({ kind, error: tail(res.out) });
       await restoreDropped(root, outDir, fixes);
@@ -402,6 +556,7 @@ async function buildProject(id, root, hasPkg, log) {
       return done({ kind, out: outDir });
     }
     case "astro":
+      await fixAssetPaths(root, id, fixes);
       res = await withMissingDeps(root, log, fixes, () => sh(bin(root, "astro"), ["build", "--base", `/${id}/`], { cwd: root, log }));
       return done(res.ok ? { kind, out: await findOutput(root, ["dist"]), basePathed: true } : { kind, error: tail(res.out) });
     default:
@@ -411,6 +566,33 @@ async function buildProject(id, root, hasPkg, log) {
       if (!res.ok) return done({ kind, error: tail(res.out) });
       return done({ kind, out: (await findOutput(root)) ?? root });
   }
+}
+
+/**
+ * Build from source; when that's impossible (dead toolchains, native modules, git deps), fall back to
+ * the project's own prebuilt site, then to a fresh Vite build of Parcel-era/zero-config projects.
+ */
+async function buildProject(id, root, hasPkg, log) {
+  const first = await buildFromSource(id, root, hasPkg, log);
+  if (!first.error && first.out) return first;
+
+  const prebuilt = await findPrebuilt(root);
+  if (prebuilt) {
+    return {
+      kind: `${first.kind}→prebuilt`,
+      out: prebuilt,
+      fixes: [...first.fixes, `used the project's own prebuilt site (${path.basename(prebuilt)}/): building from source failed`],
+    };
+  }
+
+  if (hasPkg && ["parcel", "script"].includes(first.kind)) {
+    const viaVite = await buildFromSource(id, root, hasPkg, log, "vite-adhoc");
+    if (!viaVite.error && viaVite.out) {
+      const was = first.kind === "parcel" ? "Parcel v1" : "its original build script";
+      return { ...viaVite, kind: `${first.kind}→vite`, fixes: [...first.fixes, ...viaVite.fixes, `rebuilt with Vite (${was} no longer runs)`] };
+    }
+  }
+  return first;
 }
 
 // ---------------------------------------------------------------- publishing (strip + minify + obfuscate)
@@ -490,7 +672,8 @@ async function protect(dir, { obfuscate }) {
   for (const f of files.filter((x) => /\.html?$/i.test(x))) {
     let html = await fs.readFile(f, "utf8");
     html = html
-      .replace(/<!--(?!\[if)[\s\S]*?-->/g, "")
+      // Drop authoring comments, but keep React/Vue hydration markers (<!--$-->, <!--/$-->, <!-- -->, <!--[-->…).
+      .replace(/<!--(?!\[if)([\s\S]*?)-->/g, (m, body) => (/^\s*$|^[$/&!?\[\]]{1,3}$/.test(body) ? m : ""))
       // Demo-site ad loaders (Codrops/Carbon/BuySellAds) don't belong in the library.
       .replace(/<script[^>]*src=["'][^"']*(adpacks|carbonads|buysellads|srv\.carbonads)[^"']*["'][^>]*>\s*<\/script>/gi, "");
     const blocks = [...html.matchAll(/<script(?![^>]*\bsrc=)([^>]*)>([\s\S]*?)<\/script>/gi)];
@@ -589,7 +772,11 @@ async function verify(id) {
   await ctx.close();
 
   // Errors caused by third-party hosts (ad servers, analytics, CORS) say nothing about the component.
-  const isExternal = (e) => /blocked by CORS policy|ERR_NAME_NOT_RESOLVED|ERR_BLOCKED_BY|net::ERR_/.test(e) || /https?:\/\/(?!127\.0\.0\.1)/.test(e);
+  // A URL in the message only means "external" when it's about loading something from another host;
+  // React's minified errors link to reactjs.org but are the demo's own errors.
+  const isExternal = (e) =>
+    /blocked by CORS policy|ERR_NAME_NOT_RESOLVED|ERR_BLOCKED_BY|net::ERR_/.test(e) ||
+    (/https?:\/\/(?!127\.0\.0\.1)/.test(e) && !/react(js)?\.(org|dev)\/(docs\/)?error/i.test(e) && /load|fetch|request|script|resource|font/i.test(e));
   const external = errors.filter(isExternal);
   let own = errors.filter((e) => !isExternal(e));
   if (external.length) own = own.filter((e) => !/^(TypeError: )?Failed to fetch$/.test(e));
@@ -615,10 +802,11 @@ async function processOne(c) {
     const unz = await sh("unzip", ["-q", "-o", path.join(VAULT, `${id}.zip`), "-d", work, "-x", "__MACOSX/*", "*/node_modules/*", "node_modules/*"], { cwd: work, log, timeout: 120_000 });
     if (!unz.ok && !(await fs.readdir(work)).length) return { ...entry, status: "fail", stage: "extract", error: tail(unz.out) };
 
-    const found = await findRoot(work);
+    const collection = await findCollection(work);
+    const found = collection ? { root: collection.top, hasPkg: false } : await findRoot(work);
     if (!found) return { ...entry, status: "fail", stage: "detect", error: "no index.html or package.json in zip" };
 
-    const built = await buildProject(id, found.root, found.hasPkg, log);
+    const built = collection ? await buildCollection(id, c.title, collection) : await buildProject(id, found.root, found.hasPkg, log);
     entry.kind = built.kind;
     if (built.fixes?.length) entry.fixes = built.fixes;
     if (built.error || !built.out) return { ...entry, status: "fail", stage: "build", error: built.error ?? "build produced no index.html" };

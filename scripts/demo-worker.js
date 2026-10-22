@@ -12,6 +12,16 @@ function secure(res, env) {
   return r;
 }
 
+// path -> demo id for asset paths unique to one demo (demos/_kq/paths.json, written at deploy).
+// Never served publicly: /_kq/* isn't a demo id, so outside requests fall through to 404.
+let pathIndex;
+async function ownerOf(pathname, request, env) {
+  pathIndex ??= env.ASSETS.fetch(new Request(new URL("/_kq/paths.json", request.url)))
+    .then((r) => (r.ok ? r.json() : {}))
+    .catch(() => ({}));
+  return (await pathIndex)[decodeURIComponent(pathname)];
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -33,6 +43,9 @@ export default {
     const ref = request.headers.get("referer");
     const refId = ref ? new URL(ref).pathname.split("/")[1] : "";
     if (refId && ID.test(refId)) return Response.redirect(`${url.origin}/${refId}${url.pathname}${url.search}`, 307);
+    // Requests from Web Workers often carry no usable Referer: find the one demo that has this file.
+    const owner = await ownerOf(url.pathname, request, env);
+    if (owner) return Response.redirect(`${url.origin}/${owner}${url.pathname}${url.search}`, 307);
 
     if (url.pathname === "/") return secure(new Response("Kinetiq live demos. Open /<component-id>/", { headers: { "Content-Type": "text/plain" } }), env);
     return secure(new Response("Not found", { status: 404 }), env);

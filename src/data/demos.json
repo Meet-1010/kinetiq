@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T09:08:48.614Z",
+  "generatedAt": "2026-10-22T03:34:22.934Z",
   "demos": {
     "grid-2": {
       "id": "grid-2",
@@ -32,18 +32,19 @@
     },
     "scroll-56": {
       "id": "scroll-56",
-      "at": "2026-10-21T08:01:23.044Z",
+      "at": "2026-10-22T03:29:07.367Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 1 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 12,
       "obfuscated": false,
-      "bytes": 1536340,
+      "bytes": 1536494,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
@@ -275,11 +276,12 @@
     },
     "scroll-11": {
       "id": "scroll-11",
-      "at": "2026-10-21T08:04:03.686Z",
+      "at": "2026-10-22T03:28:48.476Z",
       "kind": "astro",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1959551,
+      "bytes": 1958670,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -338,11 +340,14 @@
     },
     "scroll-8": {
       "id": "scroll-8",
-      "at": "2026-10-21T08:03:53.178Z",
+      "at": "2026-10-22T03:28:48.476Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 1 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 12,
       "obfuscated": false,
-      "bytes": 5317236,
+      "bytes": 5315666,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -903,18 +908,17 @@
     },
     "scroll-36": {
       "id": "scroll-36",
-      "at": "2026-10-21T08:06:12.976Z",
+      "at": "2026-10-22T03:28:48.476Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 9,
       "obfuscated": false,
-      "bytes": 3351257,
+      "bytes": 3351458,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
@@ -1070,47 +1074,50 @@
     },
     "scroll-58": {
       "id": "scroll-58",
-      "at": "2026-10-21T08:07:27.945Z",
+      "at": "2026-10-22T03:29:21.297Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 8 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 12,
       "obfuscated": false,
-      "bytes": 14055822,
+      "bytes": 14056285,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-57": {
       "id": "scroll-57",
-      "at": "2026-10-21T08:07:22.771Z",
+      "at": "2026-10-22T03:29:15.351Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 12,
       "obfuscated": false,
-      "bytes": 1251611,
+      "bytes": 1253445,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-54": {
       "id": "scroll-54",
-      "at": "2026-10-21T08:07:22.600Z",
+      "at": "2026-10-22T03:28:48.476Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 1 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 13,
       "obfuscated": false,
-      "bytes": 8306421,
+      "bytes": 8307927,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -1628,11 +1635,21 @@
     },
     "mouse-12": {
       "id": "mouse-12",
-      "at": "2026-10-21T08:47:27.601Z",
-      "kind": "script",
-      "status": "fail",
-      "stage": "build",
-      "error": "install failed: nline=false --offline=false --no-progress --no-save --no-audit --include=dev --include=peer --include=optional --no-package-lock-only --no-dry-run\nnpm error npm error code EALLOWSCRIPTS\nnpm error npm error --allow-scripts is not allowed in project-scoped installs. Add the entries to the \"allowScripts\" field in package.json, or to .npmrc, instead.\nnpm error npm error A complete log of this run can be found in: /Users/meetchauhan/.npm/_logs/2026-10-21T08_48_20_102Z-debug-0.log\nnpm error A complete log of this run can be found in: /Users/meetchauhan/.npm/_logs/2026-10-21T08_47_28_176Z-debug-0.log"
+      "at": "2026-10-22T03:13:01.145Z",
+      "kind": "script→prebuilt",
+      "fixes": [
+        "used the project's own prebuilt site (app/): building from source failed"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 850526,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "page-transitions-2": {
       "id": "page-transitions-2",
@@ -1699,18 +1716,19 @@
     },
     "mouse-21": {
       "id": "mouse-21",
-      "at": "2026-10-21T08:11:53.291Z",
+      "at": "2026-10-22T03:29:21.297Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 1 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 9,
       "obfuscated": false,
-      "bytes": 5442919,
+      "bytes": 5441890,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
@@ -1788,11 +1806,12 @@
     },
     "page-transitions-8": {
       "id": "page-transitions-8",
-      "at": "2026-10-21T08:13:14.135Z",
+      "at": "2026-10-22T03:29:38.890Z",
       "kind": "astro",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 866913,
+      "bytes": 866585,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1803,36 +1822,36 @@
     },
     "page-transitions-13": {
       "id": "page-transitions-13",
-      "at": "2026-10-21T08:48:15.369Z",
+      "at": "2026-10-22T03:29:56.176Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 16,
       "obfuscated": false,
-      "bytes": 30816799,
+      "bytes": 30816337,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "page-transitions-9": {
       "id": "page-transitions-9",
-      "at": "2026-10-21T08:47:52.645Z",
+      "at": "2026-10-22T03:29:44.415Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 2 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 11,
       "obfuscated": false,
-      "bytes": 3063672,
+      "bytes": 3064597,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "warn",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [
         "ERR /page-transitions-9/about/"
       ],
@@ -1841,36 +1860,34 @@
     },
     "page-transitions-12": {
       "id": "page-transitions-12",
-      "at": "2026-10-21T08:14:07.464Z",
+      "at": "2026-10-22T03:29:53.911Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 11,
       "obfuscated": false,
-      "bytes": 23763841,
+      "bytes": 23761526,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "page-transitions-14": {
       "id": "page-transitions-14",
-      "at": "2026-10-21T08:48:23.299Z",
+      "at": "2026-10-22T03:29:56.774Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 10,
       "obfuscated": false,
-      "bytes": 1223677,
+      "bytes": 1223912,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "warn",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [
         "ERR /page-transitions-14/about/",
         "ERR /page-transitions-14/"
@@ -1990,18 +2007,17 @@
     },
     "page-transitions-15": {
       "id": "page-transitions-15",
-      "at": "2026-10-21T08:48:25.142Z",
+      "at": "2026-10-22T03:30:06.441Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 16,
       "obfuscated": false,
-      "bytes": 1545747,
+      "bytes": 1545227,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "warn",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [
         "ERR /page-transitions-15/",
         "ERR /page-transitions-15/projects/",
@@ -2274,11 +2290,21 @@
     },
     "sliders-7": {
       "id": "sliders-7",
-      "at": "2026-10-21T08:50:52.915Z",
-      "kind": "parcel",
-      "status": "fail",
-      "stage": "build",
-      "error": "  err = new Error(\nError: Could not locate the bindings file. Tried:"
+      "at": "2026-10-22T03:13:01.145Z",
+      "kind": "parcel→prebuilt",
+      "fixes": [
+        "used the project's own prebuilt site (docs/): building from source failed"
+      ],
+      "obfuscatedFiles": 4,
+      "obfuscated": true,
+      "bytes": 8316086,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "sliders-16": {
       "id": "sliders-16",
@@ -2521,18 +2547,17 @@
     },
     "sliders-21": {
       "id": "sliders-21",
-      "at": "2026-10-21T08:19:37.120Z",
+      "at": "2026-10-22T03:30:28.117Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 9,
       "obfuscated": false,
-      "bytes": 1099433,
+      "bytes": 1098901,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
@@ -2922,19 +2947,42 @@
     },
     "webgl-1": {
       "id": "webgl-1",
-      "at": "2026-10-21T08:52:32.766Z",
+      "at": "2026-10-22T03:13:01.145Z",
       "kind": "vite",
-      "status": "fail",
-      "stage": "build",
-      "error": "meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/webgl-1/WebGPU-clair-obscur-gommage-codrops-master/node_modules/rollup/dist/es/shared/parseAst.js:337:41)\n    at error (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/webgl-1/WebGPU-clair-obscur-gommage-codrops-master/node_modules/rollup/dist/es/shared/parseAst.js:333:42)\n    at Module.error (file:///Users/meetchauhan/Claude%20Projects/Personal%20UI%20Library/.cache/demos/work/webgl-1/WebGPU-clair-obscur-gommage-codrops-master/node_modules/rollup/dist/es/shared/node-entry.js:17920:16)"
+      "fixes": [
+        "pinned three-msdf-text-utils@1.2.1: newer versions moved the MSDFTextNodeMaterial export",
+        "restored 7 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 4657471,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "webgl-4": {
       "id": "webgl-4",
-      "at": "2026-10-21T08:52:33.161Z",
-      "kind": "parcel",
-      "status": "fail",
-      "stage": "build",
-      "error": "  err = new Error('Could not locate the bindings file. Tried:\\n'\nError: Could not locate the bindings file. Tried:"
+      "at": "2026-10-22T03:13:24.842Z",
+      "kind": "parcel→vite",
+      "fixes": [
+        "opened base.html as the demo's start page",
+        "restored 6 file(s) the original build left out",
+        "rebuilt with Vite (Parcel v1 no longer runs)"
+      ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 2113236,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "webgl-5": {
       "id": "webgl-5",
@@ -3244,14 +3292,24 @@
     },
     "webgl-2": {
       "id": "webgl-2",
-      "at": "2026-10-21T09:03:48.368Z",
-      "kind": "parcel",
+      "at": "2026-10-22T03:25:27.770Z",
+      "kind": "parcel→vite",
       "fixes": [
-        "re-resolved dependencies (lockfile pointed at a dead registry)"
+        "re-resolved dependencies from npmjs (lockfile pointed at a dead registry), keeping its  original versions",
+        "opened step1.html as the demo's start page",
+        "restored 5 file(s) the original build left out",
+        "rebuilt with Vite (Parcel v1 no longer runs)"
       ],
-      "status": "fail",
-      "stage": "build",
-      "error": ":25)\n    at async getBabelConfig (/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/webgl-2/webgl-mouseover-effects-master/node_modules/parcel/src/transforms/babel/config.js:32:19)\n    at async babelTransform (/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/webgl-2/webgl-mouseover-effects-master/node_modules/parcel/src/transforms/babel/transform.js:6:16)\n    at async JSAsset.pretransform (/Users/meetchauhan/Claude Projects/Personal UI Library/.cache/demos/work/webgl-2/webgl-mouseover-effects-master/node_modules/parcel/src/assets/JSAsset.js:83:5)\n"
+      "obfuscatedFiles": 3,
+      "obfuscated": true,
+      "bytes": 1986387,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "background-5": {
       "id": "background-5",
@@ -4282,36 +4340,34 @@
     },
     "text-17": {
       "id": "text-17",
-      "at": "2026-10-21T08:38:46.057Z",
+      "at": "2026-10-22T03:30:37.301Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 15,
       "obfuscated": false,
-      "bytes": 1484144,
+      "bytes": 1484565,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "text-12": {
       "id": "text-12",
-      "at": "2026-10-21T08:27:33.010Z",
+      "at": "2026-10-22T03:30:31.815Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 10,
       "obfuscated": false,
-      "bytes": 1101712,
+      "bytes": 1101100,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
@@ -4333,36 +4389,36 @@
     },
     "text-15": {
       "id": "text-15",
-      "at": "2026-10-21T08:27:41.256Z",
+      "at": "2026-10-22T03:30:33.286Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 9,
       "obfuscated": false,
-      "bytes": 3198821,
+      "bytes": 3198757,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "text-18": {
       "id": "text-18",
-      "at": "2026-10-21T08:27:54.812Z",
+      "at": "2026-10-22T03:31:00.722Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 4 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 10,
       "obfuscated": false,
-      "bytes": 3701888,
+      "bytes": 3700238,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
@@ -4385,14 +4441,14 @@
     },
     "3d-5": {
       "id": "3d-5",
-      "at": "2026-10-21T08:59:57.828Z",
+      "at": "2026-10-22T03:31:04.434Z",
       "kind": "next",
       "fixes": [
         "built with webpack (project has a custom webpack config)"
       ],
       "obfuscatedFiles": 15,
       "obfuscated": false,
-      "bytes": 5197681,
+      "bytes": 5199701,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -4534,22 +4590,20 @@
     },
     "3d-13": {
       "id": "3d-13",
-      "at": "2026-10-21T08:55:13.914Z",
+      "at": "2026-10-22T03:31:28.365Z",
       "kind": "next",
       "fixes": [
+        "prefixed 4 hard-coded asset path(s) with the demo's base path",
         "installed undeclared dependency: three"
       ],
       "obfuscatedFiles": 16,
       "obfuscated": false,
-      "bytes": 4830909,
+      "bytes": 4831060,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
-        "Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
@@ -4586,42 +4640,40 @@
     },
     "3d-12": {
       "id": "3d-12",
-      "at": "2026-10-21T08:30:29.460Z",
+      "at": "2026-10-22T03:33:37.170Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 52 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 14,
       "obfuscated": false,
-      "bytes": 15337323,
+      "bytes": 15337245,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "3d-8": {
       "id": "3d-8",
-      "at": "2026-10-21T09:00:02.611Z",
+      "at": "2026-10-22T03:31:06.656Z",
       "kind": "next",
+      "fixes": [
+        "font PPNeueMontreal-Bold.otf is missing from the project; used PPNeueMontreal-Regular.ttf",
+        "prefixed 2 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 16,
       "obfuscated": false,
-      "bytes": 2890059,
+      "bytes": 2888870,
       "note": "obfuscation broke this demo; serving minified build",
-      "status": "fail",
-      "blank": true,
-      "errors": [
-        "Failure loading font http://127.0.0.1:3199/fonts/PPNeueMontreal-Bold.otf; trying fallback Error: Not Found\n    at A.nt.onload (blob:http://127.0.0.1:3199/9fef204e-54de-4576-ad64-67ecf318a225:5:749)"
-      ],
-      "external": [
-        "Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
-        "Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
-      "failed": [
-        "404 /fonts/PPNeueMontreal-Bold.otf"
-      ],
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -4999,11 +5051,12 @@
     },
     "physics-1": {
       "id": "physics-1",
-      "at": "2026-10-21T08:39:12.856Z",
+      "at": "2026-10-22T03:31:37.057Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 14,
       "obfuscated": false,
-      "bytes": 1184580,
+      "bytes": 1182983,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -5030,11 +5083,12 @@
     },
     "physics-3": {
       "id": "physics-3",
-      "at": "2026-10-21T08:58:10.600Z",
+      "at": "2026-10-22T03:32:30.819Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 15,
       "obfuscated": false,
-      "bytes": 1270079,
+      "bytes": 1268400,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -5046,11 +5100,21 @@
     },
     "physics-9": {
       "id": "physics-9",
-      "at": "2026-10-21T08:58:12.846Z",
-      "kind": "static",
-      "status": "fail",
-      "stage": "build",
-      "error": "npm error Missing script: \"build\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /Users/meetchauhan/.npm/_logs/2026-10-21T08_58_17_072Z-debug-0.log"
+      "at": "2026-10-22T03:13:43.142Z",
+      "kind": "collection",
+      "fixes": [
+        "generated a gallery page for 8 separate works"
+      ],
+      "obfuscatedFiles": 0,
+      "obfuscated": false,
+      "bytes": 7696280,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
+      "external": [],
+      "failed": [],
+      "navError": null,
+      "stage": "verify"
     },
     "physics-8": {
       "id": "physics-8",
@@ -5069,11 +5133,12 @@
     },
     "physics-2": {
       "id": "physics-2",
-      "at": "2026-10-21T08:33:44.763Z",
+      "at": "2026-10-22T03:32:21.827Z",
       "kind": "next",
+      "fixes": [],
       "obfuscatedFiles": 13,
       "obfuscated": false,
-      "bytes": 1020034,
+      "bytes": 1019335,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -5085,18 +5150,19 @@
     },
     "physics-10": {
       "id": "physics-10",
-      "at": "2026-10-21T08:34:37.653Z",
+      "at": "2026-10-22T03:33:37.171Z",
       "kind": "next",
+      "fixes": [
+        "prefixed 1 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 9,
       "obfuscated": false,
-      "bytes": 13759818,
+      "bytes": 13760259,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"

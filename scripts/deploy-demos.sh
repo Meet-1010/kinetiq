@@ -13,4 +13,5 @@ if [ -n "$too_big" ]; then
   exit 1
 fi
 
+node "$ROOT/scripts/demo-server.mjs" --write-index
 npx wrangler deploy --config "$ROOT/deploy/demos/wrangler.jsonc"
