@@ -1,0 +1,49 @@
+{
+  "_about": "Exact find/replace fixes for bugs in original demo projects, applied to a copy of the source before building (never to the zips). Paths are relative to the project root. Each applied patch is listed in the demo report.",
+  "scroll-21": [
+    {
+      "file": "js/index.js",
+      "find": "triggerFlipOnScroll(galleryElement, gallery.options);",
+      "replace": "if (galleryElement) triggerFlipOnScroll(galleryElement, gallery.options);",
+      "why": "the script animates #gallery-9 but the page only has 8 galleries"
+    }
+  ],
+  "svg-8": [
+    {
+      "file": "js/demo1.js",
+      "find": "const watcher = scrollMonitor.create(scrollElemToWatch,-300);",
+      "replace": "if (!scrollElemToWatch) return;\n\t\t\tconst watcher = scrollMonitor.create(scrollElemToWatch,-300);",
+      "why": "the page has no .content--related footer, which crashed the loop before any scroll watcher was created"
+    }
+  ],
+  "scroll-42": [
+    {
+      "file": "script.js",
+      "find": "img.src = `./assets/img${imageCounter}.jpeg`;",
+      "replace": "img.src = `./assets/img${((imageCounter - 1) % 33) + 1}.jpeg`;",
+      "why": "the cube has 36 faces but the zip ships 33 images; faces 34-36 reuse images 1-3"
+    }
+  ],
+  "sliders-10": [
+    {
+      "file": "index.html",
+      "find": "<script src=\"https://cdn.jsdelivr.net/npm/tweakpane@4.0.4/dist/tweakpane.min.js\"></script>",
+      "replace": "<script type=\"module\">import * as Tweakpane from \"https://cdn.jsdelivr.net/npm/tweakpane@4.0.4/dist/tweakpane.min.js\"; window.Tweakpane = Tweakpane;</script>",
+      "why": "Tweakpane 4 is ES-module only, so the plain <script> tag never defined window.Tweakpane"
+    },
+    {
+      "file": "index.html",
+      "find": "<script src=\"./script.js\"></script>",
+      "replace": "<script defer src=\"./script.js\"></script>",
+      "why": "the demo script now runs after the Tweakpane module, in document order"
+    }
+  ],
+  "scroll-65": [
+    {
+      "file": "script.js",
+      "find": "    go(e.deltaY > 0 ? 1 : -1);\n  }\n);",
+      "replace": "    go(e.deltaY > 0 ? 1 : -1);\n  },\n  { passive: false }\n);",
+      "why": "window wheel listeners are passive by default, so preventDefault() was ignored and the page scrolled under the slide transition"
+    }
+  ]
+}

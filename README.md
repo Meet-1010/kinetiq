@@ -40,6 +40,10 @@ and graded `pass` / `warn` (runs, logs errors) / `fail` (build error or blank pa
 `src/data/demos.json`. Only pass/warn demos get a "Try it live" button. Install scripts are disabled
 for all dependency installs.
 
+Bugs in a specific original project that no generic rule can catch go in `scripts/demo-patches.json`
+as exact find/replace pairs with a reason. They're applied to a copy of the source before building
+(the zips are never modified), and every applied patch shows up in the demo report.
+
 Demos must be hosted on a different origin than the site; `demo-server.mjs` also redirects
 root-absolute asset paths back under the right demo and sets `frame-ancestors`.
 

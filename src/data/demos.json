@@ -1,16 +1,21 @@
 {
-  "generatedAt": "2026-10-22T03:34:22.934Z",
+  "generatedAt": "2026-10-22T04:13:12.382Z",
   "demos": {
     "grid-2": {
       "id": "grid-2",
-      "at": "2026-10-21T07:58:01.871Z",
+      "at": "2026-10-22T04:04:50.370Z",
       "kind": "vite",
+      "fixes": [
+        "prefixed 2 hard-coded asset path(s) with the demo's base path",
+        "restored 64 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3404734,
+      "bytes": 6074916,
       "status": "pass",
       "blank": false,
       "errors": [],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
@@ -96,11 +101,14 @@
     },
     "scroll-4": {
       "id": "scroll-4",
-      "at": "2026-10-21T08:03:23.457Z",
+      "at": "2026-10-22T04:01:05.354Z",
       "kind": "vite",
+      "fixes": [
+        "restored 27 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 225235,
+      "bytes": 2395792,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -111,14 +119,14 @@
     },
     "scroll-5": {
       "id": "scroll-5",
-      "at": "2026-10-21T08:37:56.813Z",
+      "at": "2026-10-22T04:01:05.354Z",
       "kind": "vite",
       "fixes": [
         "restored 53 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2415917,
+      "bytes": 2415984,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -129,14 +137,14 @@
     },
     "scroll-2": {
       "id": "scroll-2",
-      "at": "2026-10-21T08:37:56.810Z",
+      "at": "2026-10-22T04:01:05.354Z",
       "kind": "vite",
       "fixes": [
         "restored 27 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 10802456,
+      "bytes": 10802810,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -147,26 +155,21 @@
     },
     "scroll-3": {
       "id": "scroll-3",
-      "at": "2026-10-21T08:44:01.394Z",
+      "at": "2026-10-22T04:01:05.354Z",
       "kind": "vite",
       "fixes": [
+        "prefixed 19 hard-coded asset path(s) with the demo's base path",
         "restored 11 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": false,
-      "bytes": 1907751,
+      "bytes": 1908264,
       "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Failure loading font http://127.0.0.1:3199/fonts/Humane-Bold.ttf Error: Not Found\n    at c.onload (blob:http://127.0.0.1:3199/5d78fc2b-b1c4-4934-b3db-68c8440f9b1b:5:260)",
-        "Failure loading font http://127.0.0.1:3199/fonts/Humane-Regular.ttf Error: Not Found\n    at c.onload (blob:http://127.0.0.1:3199/5d78fc2b-b1c4-4934-b3db-68c8440f9b1b:5:260)"
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /fonts/Humane-Bold.ttf",
-        "404 /fonts/Humane-Regular.ttf"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -187,14 +190,15 @@
     },
     "scroll-6": {
       "id": "scroll-6",
-      "at": "2026-10-21T08:44:01.453Z",
+      "at": "2026-10-22T04:01:14.305Z",
       "kind": "vite",
       "fixes": [
-        "restored 26 file(s) the original build left out"
+        "restored 26 file(s) the original build left out",
+        "swapped CodePen trial GSAP plugins for the official free builds"
       ],
       "obfuscatedFiles": 2,
       "obfuscated": true,
-      "bytes": 4021807,
+      "bytes": 4021701,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -205,14 +209,14 @@
     },
     "scroll-9": {
       "id": "scroll-9",
-      "at": "2026-10-21T08:44:01.454Z",
+      "at": "2026-10-22T04:01:17.778Z",
       "kind": "vite",
       "fixes": [
         "restored 14 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2833415,
+      "bytes": 2833493,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -223,14 +227,14 @@
     },
     "scroll-12": {
       "id": "scroll-12",
-      "at": "2026-10-21T08:43:00.309Z",
+      "at": "2026-10-22T04:01:22.856Z",
       "kind": "vite",
       "fixes": [
         "installed undeclared dependency: @rollup/pluginutils"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 987351,
+      "bytes": 987530,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -256,21 +260,20 @@
     },
     "scroll-10": {
       "id": "scroll-10",
-      "at": "2026-10-21T08:44:01.454Z",
+      "at": "2026-10-22T04:01:19.110Z",
       "kind": "vite",
       "fixes": [
-        "restored 12 file(s) the original build left out"
+        "restored 12 file(s) the original build left out",
+        "restored mask.png (the page looks for it at assets/mask.png, the project keeps it at public/mask.png)"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3381139,
-      "status": "warn",
+      "bytes": 3381651,
+      "status": "pass",
       "blank": false,
       "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-10/assets/mask.png"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -292,11 +295,12 @@
     },
     "scroll-16": {
       "id": "scroll-16",
-      "at": "2026-10-21T08:37:56.813Z",
+      "at": "2026-10-22T04:01:24.968Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1723674,
+      "bytes": 1723172,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -322,17 +326,18 @@
     },
     "scroll-15": {
       "id": "scroll-15",
-      "at": "2026-10-21T08:44:23.793Z",
+      "at": "2026-10-22T03:59:18.003Z",
       "kind": "static",
-      "obfuscatedFiles": 1,
-      "obfuscated": false,
-      "bytes": 4112,
-      "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
-      "blank": false,
-      "errors": [
-        "m is not a function"
+      "fixes": [
+        "fixed a typo in a CDN address (unpkg.co -> unpkg.com)",
+        "swapped CodePen trial GSAP plugins for the official free builds"
       ],
+      "obfuscatedFiles": 1,
+      "obfuscated": true,
+      "bytes": 4068,
+      "status": "pass",
+      "blank": false,
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -359,14 +364,14 @@
     },
     "scroll-17": {
       "id": "scroll-17",
-      "at": "2026-10-21T08:44:32.794Z",
+      "at": "2026-10-22T04:01:25.174Z",
       "kind": "vite",
       "fixes": [
         "restored 20 file(s) the original build left out"
       ],
       "obfuscatedFiles": 3,
       "obfuscated": false,
-      "bytes": 2551937,
+      "bytes": 2552055,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -378,14 +383,14 @@
     },
     "scroll-18": {
       "id": "scroll-18",
-      "at": "2026-10-21T08:44:57.085Z",
+      "at": "2026-10-22T04:01:37.400Z",
       "kind": "vite",
       "fixes": [
         "restored 16 file(s) the original build left out"
       ],
       "obfuscatedFiles": 3,
       "obfuscated": false,
-      "bytes": 953077,
+      "bytes": 953193,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -397,14 +402,14 @@
     },
     "scroll-20": {
       "id": "scroll-20",
-      "at": "2026-10-21T08:45:03.094Z",
+      "at": "2026-10-22T04:01:50.317Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 231038,
+      "bytes": 230983,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -415,14 +420,14 @@
     },
     "scroll-19": {
       "id": "scroll-19",
-      "at": "2026-10-21T08:45:00.118Z",
+      "at": "2026-10-22T04:01:46.432Z",
       "kind": "vite",
       "fixes": [
         "restored 58 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 6517688,
+      "bytes": 6517606,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -448,19 +453,18 @@
     },
     "scroll-21": {
       "id": "scroll-21",
-      "at": "2026-10-21T08:45:04.782Z",
+      "at": "2026-10-22T04:01:52.498Z",
       "kind": "vite",
       "fixes": [
+        "patched js/index.js: the script animates #gallery-9 but the page only has 8 galleries",
         "restored 75 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 6108362,
-      "status": "warn",
+      "bytes": 6108385,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Cannot read properties of null (reading 'querySelector')"
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -468,14 +472,14 @@
     },
     "scroll-22": {
       "id": "scroll-22",
-      "at": "2026-10-21T08:45:12.600Z",
+      "at": "2026-10-22T04:01:58.706Z",
       "kind": "vite",
       "fixes": [
         "restored 10 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2963267,
+      "bytes": 2963428,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -505,14 +509,14 @@
     },
     "scroll-26": {
       "id": "scroll-26",
-      "at": "2026-10-21T08:45:23.556Z",
+      "at": "2026-10-22T04:01:59.221Z",
       "kind": "vite",
       "fixes": [
         "restored 22 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2636687,
+      "bytes": 2636651,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -523,22 +527,20 @@
     },
     "scroll-25": {
       "id": "scroll-25",
-      "at": "2026-10-21T08:45:20.171Z",
+      "at": "2026-10-22T03:54:44.778Z",
       "kind": "vite-adhoc",
       "fixes": [
+        "used locomotive-scroll@^4.1.4: the demo is written for that API",
         "created package.json for npm imports: locomotive-scroll",
         "installed undeclared dependency: imagesloaded",
         "restored 7 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
-      "obfuscated": false,
-      "bytes": 1118730,
-      "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "obfuscated": true,
+      "bytes": 1150387,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "$.on is not a function"
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -581,14 +583,14 @@
     },
     "scroll-32": {
       "id": "scroll-32",
-      "at": "2026-10-21T08:45:44.567Z",
+      "at": "2026-10-22T04:02:08.889Z",
       "kind": "vite",
       "fixes": [
         "restored 16 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 6385808,
+      "bytes": 6385841,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -599,14 +601,14 @@
     },
     "scroll-30": {
       "id": "scroll-30",
-      "at": "2026-10-21T08:45:27.512Z",
+      "at": "2026-10-22T04:01:59.563Z",
       "kind": "vite",
       "fixes": [
         "restored 21 file(s) the original build left out"
       ],
       "obfuscatedFiles": 2,
       "obfuscated": true,
-      "bytes": 3805349,
+      "bytes": 3805392,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -617,14 +619,14 @@
     },
     "scroll-31": {
       "id": "scroll-31",
-      "at": "2026-10-21T08:45:42.308Z",
+      "at": "2026-10-22T04:02:01.014Z",
       "kind": "vite",
       "fixes": [
         "restored 25 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1813359,
+      "bytes": 1813529,
       "status": "warn",
       "blank": false,
       "errors": [],
@@ -637,14 +639,14 @@
     },
     "scroll-33": {
       "id": "scroll-33",
-      "at": "2026-10-21T08:45:45.567Z",
+      "at": "2026-10-22T04:02:10.664Z",
       "kind": "vite",
       "fixes": [
         "restored 5 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 201166,
+      "bytes": 201031,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -655,11 +657,14 @@
     },
     "scroll-34": {
       "id": "scroll-34",
-      "at": "2026-10-21T08:06:04.533Z",
+      "at": "2026-10-22T04:02:11.221Z",
       "kind": "vite",
+      "fixes": [
+        "restored 3 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 7145608,
+      "bytes": 14115036,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -670,14 +675,14 @@
     },
     "scroll-35": {
       "id": "scroll-35",
-      "at": "2026-10-21T08:45:45.574Z",
+      "at": "2026-10-22T04:02:18.840Z",
       "kind": "vite",
       "fixes": [
         "restored 6 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 607264,
+      "bytes": 607364,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -688,14 +693,14 @@
     },
     "scroll-37": {
       "id": "scroll-37",
-      "at": "2026-10-21T08:46:00.422Z",
+      "at": "2026-10-22T04:02:19.012Z",
       "kind": "vite",
       "fixes": [
         "restored 16 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8047009,
+      "bytes": 8047215,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -725,11 +730,12 @@
     },
     "scroll-38": {
       "id": "scroll-38",
-      "at": "2026-10-21T08:06:17.685Z",
+      "at": "2026-10-22T04:02:20.297Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 187943,
+      "bytes": 187904,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -740,14 +746,14 @@
     },
     "scroll-39": {
       "id": "scroll-39",
-      "at": "2026-10-21T08:46:00.466Z",
+      "at": "2026-10-22T04:02:25.101Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2247650,
+      "bytes": 2247683,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -758,14 +764,14 @@
     },
     "scroll-40": {
       "id": "scroll-40",
-      "at": "2026-10-21T08:46:03.259Z",
+      "at": "2026-10-22T04:02:29.276Z",
       "kind": "vite",
       "fixes": [
         "restored 4 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1520826,
+      "bytes": 1520859,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -791,14 +797,14 @@
     },
     "scroll-43": {
       "id": "scroll-43",
-      "at": "2026-10-21T08:46:14.331Z",
+      "at": "2026-10-22T04:02:32.400Z",
       "kind": "vite",
       "fixes": [
         "restored 5 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": false,
-      "bytes": 49581593,
+      "bytes": 49581474,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -810,14 +816,14 @@
     },
     "scroll-44": {
       "id": "scroll-44",
-      "at": "2026-10-21T08:46:17.333Z",
+      "at": "2026-10-22T04:02:33.351Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 573988,
+      "bytes": 573903,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -828,29 +834,26 @@
     },
     "scroll-42": {
       "id": "scroll-42",
-      "at": "2026-10-21T08:46:08.229Z",
+      "at": "2026-10-22T03:54:52.540Z",
       "kind": "vite-adhoc",
       "fixes": [
+        "patched script.js: the cube has 36 faces but the zip ships 33 images; faces 34-36 reuse images 1-3",
         "restored 33 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4865207,
-      "status": "warn",
+      "bytes": 4865387,
+      "status": "pass",
       "blank": false,
       "errors": [],
       "external": [],
-      "failed": [
-        "404 /scroll-42/assets/img34.jpeg",
-        "404 /scroll-42/assets/img36.jpeg",
-        "404 /scroll-42/assets/img35.jpeg"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-45": {
       "id": "scroll-45",
-      "at": "2026-10-21T08:43:00.313Z",
+      "at": "2026-10-22T04:02:34.862Z",
       "kind": "vite",
       "fixes": [
         "installed undeclared dependency: gsap",
@@ -859,7 +862,7 @@
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2832164,
+      "bytes": 2832022,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -959,14 +962,14 @@
     },
     "scroll-50": {
       "id": "scroll-50",
-      "at": "2026-10-21T08:46:46.995Z",
+      "at": "2026-10-22T04:02:37.014Z",
       "kind": "vite",
       "fixes": [
         "restored 19 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 22956488,
+      "bytes": 22956515,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -992,14 +995,14 @@
     },
     "scroll-53": {
       "id": "scroll-53",
-      "at": "2026-10-21T08:46:48.366Z",
+      "at": "2026-10-22T04:02:43.271Z",
       "kind": "vite",
       "fixes": [
         "restored 10 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8843753,
+      "bytes": 8843706,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1029,11 +1032,15 @@
     },
     "scroll-59": {
       "id": "scroll-59",
-      "at": "2026-10-21T08:07:28.411Z",
+      "at": "2026-10-22T04:02:46.983Z",
       "kind": "vite",
-      "obfuscatedFiles": 8,
+      "fixes": [
+        "prefixed 33 hard-coded asset path(s) with the demo's base path",
+        "restored 45 file(s) the original build left out"
+      ],
+      "obfuscatedFiles": 10,
       "obfuscated": true,
-      "bytes": 20220319,
+      "bytes": 39484144,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1044,11 +1051,15 @@
     },
     "scroll-60": {
       "id": "scroll-60",
-      "at": "2026-10-21T08:07:55.158Z",
+      "at": "2026-10-22T04:02:47.609Z",
       "kind": "vite",
+      "fixes": [
+        "prefixed 9 hard-coded asset path(s) with the demo's base path",
+        "restored 35 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 7,
       "obfuscated": true,
-      "bytes": 34276993,
+      "bytes": 67579672,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1129,14 +1140,14 @@
     },
     "scroll-62": {
       "id": "scroll-62",
-      "at": "2026-10-21T08:46:52.535Z",
+      "at": "2026-10-22T04:02:48.522Z",
       "kind": "vite",
       "fixes": [
         "restored 8 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4513315,
+      "bytes": 4513417,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1147,11 +1158,14 @@
     },
     "scroll-64": {
       "id": "scroll-64",
-      "at": "2026-10-21T08:09:30.570Z",
+      "at": "2026-10-22T04:03:02.782Z",
       "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 33324362,
+      "bytes": 66451225,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1162,11 +1176,14 @@
     },
     "scroll-63": {
       "id": "scroll-63",
-      "at": "2026-10-21T08:09:29.601Z",
+      "at": "2026-10-22T04:02:50.737Z",
       "kind": "vite",
+      "fixes": [
+        "restored 3 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8455601,
+      "bytes": 16711052,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1177,34 +1194,33 @@
     },
     "scroll-65": {
       "id": "scroll-65",
-      "at": "2026-10-21T08:46:56.123Z",
+      "at": "2026-10-22T04:13:05.564Z",
       "kind": "vite",
       "fixes": [
+        "patched script.js: window wheel listeners are passive by default, so preventDefault() was ignored and the page scrolled under the slide transition",
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 6253,
+      "bytes": 6221,
       "status": "pass",
       "blank": false,
       "errors": [],
-      "external": [
-        "Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/feature/6662647093133312"
-      ],
+      "external": [],
       "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "scroll-66": {
       "id": "scroll-66",
-      "at": "2026-10-21T08:46:56.318Z",
+      "at": "2026-10-22T04:03:41.188Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 5467,
+      "bytes": 5478,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1215,11 +1231,12 @@
     },
     "scroll-69": {
       "id": "scroll-69",
-      "at": "2026-10-21T08:09:50.018Z",
+      "at": "2026-10-22T04:03:49.633Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 214362,
+      "bytes": 214453,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1230,11 +1247,14 @@
     },
     "scroll-68": {
       "id": "scroll-68",
-      "at": "2026-10-21T08:09:49.454Z",
+      "at": "2026-10-22T04:03:47.216Z",
       "kind": "vite",
+      "fixes": [
+        "restored 4 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 15930525,
+      "bytes": 31673576,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1245,11 +1265,12 @@
     },
     "scroll-70": {
       "id": "scroll-70",
-      "at": "2026-10-21T08:09:52.425Z",
+      "at": "2026-10-22T04:03:49.648Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 190875,
+      "bytes": 190539,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1260,14 +1281,14 @@
     },
     "scroll-67": {
       "id": "scroll-67",
-      "at": "2026-10-21T08:46:57.965Z",
+      "at": "2026-10-22T04:03:41.194Z",
       "kind": "vite",
       "fixes": [
         "restored 10 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 35251543,
+      "bytes": 35251320,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1293,14 +1314,14 @@
     },
     "mouse-2": {
       "id": "mouse-2",
-      "at": "2026-10-21T08:47:04.444Z",
+      "at": "2026-10-22T04:03:57.542Z",
       "kind": "vite",
       "fixes": [
         "restored 13 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 9758005,
+      "bytes": 9757988,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1311,11 +1332,15 @@
     },
     "scroll-71": {
       "id": "scroll-71",
-      "at": "2026-10-21T08:10:08.029Z",
+      "at": "2026-10-22T04:03:56.880Z",
       "kind": "vite",
+      "fixes": [
+        "prefixed 5 hard-coded asset path(s) with the demo's base path",
+        "restored 5 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3758042,
+      "bytes": 7329499,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1341,14 +1366,14 @@
     },
     "mouse-3": {
       "id": "mouse-3",
-      "at": "2026-10-21T08:47:11.564Z",
+      "at": "2026-10-22T04:04:01.509Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4527,
+      "bytes": 4425,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1359,14 +1384,14 @@
     },
     "mouse-6": {
       "id": "mouse-6",
-      "at": "2026-10-21T08:47:14.891Z",
+      "at": "2026-10-22T04:04:07.887Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3959,
+      "bytes": 3958,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1377,11 +1402,14 @@
     },
     "mouse-5": {
       "id": "mouse-5",
-      "at": "2026-10-21T08:10:26.862Z",
+      "at": "2026-10-22T04:04:04.778Z",
       "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 664546,
+      "bytes": 668767,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1392,14 +1420,14 @@
     },
     "mouse-7": {
       "id": "mouse-7",
-      "at": "2026-10-21T08:47:14.936Z",
+      "at": "2026-10-22T04:04:09.464Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4408,
+      "bytes": 4443,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1410,14 +1438,14 @@
     },
     "mouse-8": {
       "id": "mouse-8",
-      "at": "2026-10-21T08:47:22.157Z",
+      "at": "2026-10-22T04:04:15.726Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3434,
+      "bytes": 3381,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1428,14 +1456,14 @@
     },
     "mouse-9": {
       "id": "mouse-9",
-      "at": "2026-10-21T08:47:22.619Z",
+      "at": "2026-10-22T04:04:17.018Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 6220,
+      "bytes": 6234,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1446,11 +1474,14 @@
     },
     "mouse-4": {
       "id": "mouse-4",
-      "at": "2026-10-21T08:10:25.742Z",
+      "at": "2026-10-22T04:04:01.661Z",
       "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 1298071,
+      "bytes": 1681207,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1461,14 +1492,14 @@
     },
     "mouse-10": {
       "id": "mouse-10",
-      "at": "2026-10-21T08:47:26.600Z",
+      "at": "2026-10-22T04:04:19.044Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 6883,
+      "bytes": 6871,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1494,11 +1525,14 @@
     },
     "mouse-11": {
       "id": "mouse-11",
-      "at": "2026-10-21T08:10:57.984Z",
+      "at": "2026-10-22T04:04:24.825Z",
       "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 840032,
+      "bytes": 842645,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1509,8 +1543,9 @@
     },
     "mouse-14": {
       "id": "mouse-14",
-      "at": "2026-10-21T08:11:25.770Z",
+      "at": "2026-10-22T04:04:24.968Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 0,
       "obfuscated": false,
       "bytes": 261,
@@ -1539,15 +1574,16 @@
     },
     "mouse-18": {
       "id": "mouse-18",
-      "at": "2026-10-21T08:47:33.910Z",
+      "at": "2026-10-22T04:04:27.545Z",
       "kind": "vite",
       "fixes": [
+        "prefixed 2 hard-coded asset path(s) with the demo's base path",
         "installed undeclared dependency: gsap",
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 16171067,
+      "bytes": 16171289,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1558,8 +1594,9 @@
     },
     "mouse-17": {
       "id": "mouse-17",
-      "at": "2026-10-21T08:11:38.721Z",
+      "at": "2026-10-22T04:04:27.105Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 0,
       "obfuscated": false,
       "bytes": 195,
@@ -1588,16 +1625,17 @@
     },
     "mouse-15": {
       "id": "mouse-15",
-      "at": "2026-10-21T08:47:30.935Z",
+      "at": "2026-10-22T03:54:52.541Z",
       "kind": "static",
+      "fixes": [
+        "loaded a Parcel bundle as a classic script: it was marked as a module, where its globals are illegal"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 37568,
-      "status": "warn",
+      "bytes": 37220,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "parcelRequire is not defined"
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -1605,11 +1643,14 @@
     },
     "mouse-20": {
       "id": "mouse-20",
-      "at": "2026-10-21T08:11:50.608Z",
+      "at": "2026-10-22T04:04:33.975Z",
       "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 375130,
+      "bytes": 549640,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1620,11 +1661,14 @@
     },
     "page-transitions-1": {
       "id": "page-transitions-1",
-      "at": "2026-10-21T08:12:14.372Z",
+      "at": "2026-10-22T04:04:34.367Z",
       "kind": "vite",
+      "fixes": [
+        "restored 9 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 4,
       "obfuscated": true,
-      "bytes": 1190947,
+      "bytes": 2243209,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1653,11 +1697,14 @@
     },
     "page-transitions-2": {
       "id": "page-transitions-2",
-      "at": "2026-10-21T08:12:28.263Z",
+      "at": "2026-10-22T04:04:39.662Z",
       "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 32113767,
+      "bytes": 64222139,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1668,11 +1715,14 @@
     },
     "page-transitions-4": {
       "id": "page-transitions-4",
-      "at": "2026-10-21T08:12:38.417Z",
+      "at": "2026-10-22T04:04:47.897Z",
       "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1989481,
+      "bytes": 3955502,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1683,14 +1733,14 @@
     },
     "page-transitions-3": {
       "id": "page-transitions-3",
-      "at": "2026-10-21T08:47:41.383Z",
+      "at": "2026-10-22T04:04:39.685Z",
       "kind": "vite",
       "fixes": [
         "restored 14 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1118790,
+      "bytes": 1118745,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1751,19 +1801,18 @@
     },
     "page-transitions-7": {
       "id": "page-transitions-7",
-      "at": "2026-10-21T08:47:51.658Z",
+      "at": "2026-10-22T04:04:49.001Z",
       "kind": "vite",
       "fixes": [
-        "restored 7 file(s) the original build left out"
+        "restored 7 file(s) the original build left out",
+        "added SplitType, which the page uses but never loads"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 489225,
-      "status": "warn",
+      "bytes": 489426,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "SplitType is not defined"
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -1839,22 +1888,20 @@
     },
     "page-transitions-9": {
       "id": "page-transitions-9",
-      "at": "2026-10-22T03:29:44.415Z",
+      "at": "2026-10-22T03:54:58.663Z",
       "kind": "next",
       "fixes": [
         "prefixed 2 hard-coded asset path(s) with the demo's base path"
       ],
       "obfuscatedFiles": 11,
       "obfuscated": false,
-      "bytes": 3064597,
+      "bytes": 3065026,
       "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "status": "pass",
       "blank": false,
       "errors": [],
       "external": [],
-      "failed": [
-        "ERR /page-transitions-9/about/"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1877,21 +1924,18 @@
     },
     "page-transitions-14": {
       "id": "page-transitions-14",
-      "at": "2026-10-22T03:29:56.774Z",
+      "at": "2026-10-22T03:55:06.016Z",
       "kind": "next",
       "fixes": [],
       "obfuscatedFiles": 10,
       "obfuscated": false,
-      "bytes": 1223912,
+      "bytes": 1224466,
       "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "status": "pass",
       "blank": false,
       "errors": [],
       "external": [],
-      "failed": [
-        "ERR /page-transitions-14/about/",
-        "ERR /page-transitions-14/"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -1913,11 +1957,12 @@
     },
     "grid-4": {
       "id": "grid-4",
-      "at": "2026-10-21T08:49:57.231Z",
+      "at": "2026-10-22T04:04:57.581Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1351857,
+      "bytes": 1352219,
       "status": "warn",
       "blank": false,
       "errors": [
@@ -1932,14 +1977,14 @@
     },
     "grid-3": {
       "id": "grid-3",
-      "at": "2026-10-21T08:49:10.873Z",
+      "at": "2026-10-22T04:04:51.123Z",
       "kind": "vite",
       "fixes": [
         "restored 44 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3862578,
+      "bytes": 3862593,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1950,11 +1995,12 @@
     },
     "grid-6": {
       "id": "grid-6",
-      "at": "2026-10-21T08:50:28.475Z",
+      "at": "2026-10-22T04:05:03.392Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2903098,
+      "bytes": 2903477,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -1965,38 +2011,34 @@
     },
     "grid-5": {
       "id": "grid-5",
-      "at": "2026-10-21T08:50:04.883Z",
+      "at": "2026-10-22T04:04:59.930Z",
       "kind": "vite",
       "fixes": [
-        "restored 36 file(s) the original build left out"
+        "restored 36 file(s) the original build left out",
+        "restored missing library lenis.min.js from npm",
+        "added Lenis, which the page uses but never loads"
       ],
       "obfuscatedFiles": 2,
       "obfuscated": true,
-      "bytes": 2515641,
-      "status": "warn",
+      "bytes": 2515617,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to execute script from 'http://127.0.0.1:3199/grid-5/js/lenis.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
-        "Lenis is not defined"
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "404 /grid-5/js/lenis.min.js",
-        "ERR /grid-5/js/lenis.min.js"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "grid-7": {
       "id": "grid-7",
-      "at": "2026-10-21T08:50:30.071Z",
+      "at": "2026-10-22T04:05:03.725Z",
       "kind": "vite",
       "fixes": [
         "restored 45 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 5741572,
+      "bytes": 5741739,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2007,35 +2049,33 @@
     },
     "page-transitions-15": {
       "id": "page-transitions-15",
-      "at": "2026-10-22T03:30:06.441Z",
+      "at": "2026-10-22T03:55:07.541Z",
       "kind": "next",
-      "fixes": [],
+      "fixes": [
+        "prefixed 5 hard-coded asset path(s) with the demo's base path"
+      ],
       "obfuscatedFiles": 16,
       "obfuscated": false,
-      "bytes": 1545227,
+      "bytes": 1546481,
       "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "status": "pass",
       "blank": false,
       "errors": [],
       "external": [],
-      "failed": [
-        "ERR /page-transitions-15/",
-        "ERR /page-transitions-15/projects/",
-        "ERR /page-transitions-15/info/"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "grid-8": {
       "id": "grid-8",
-      "at": "2026-10-21T08:50:33.702Z",
+      "at": "2026-10-22T04:05:12.058Z",
       "kind": "vite",
       "fixes": [
         "restored 23 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 13231366,
+      "bytes": 13231355,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2046,11 +2086,14 @@
     },
     "grid-9": {
       "id": "grid-9",
-      "at": "2026-10-21T08:18:16.023Z",
+      "at": "2026-10-22T04:05:12.595Z",
       "kind": "vite",
+      "fixes": [
+        "restored 43 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1347831,
+      "bytes": 2557415,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2061,14 +2104,14 @@
     },
     "sliders-1": {
       "id": "sliders-1",
-      "at": "2026-10-21T08:50:40.067Z",
+      "at": "2026-10-22T04:05:17.132Z",
       "kind": "vite",
       "fixes": [
         "restored 101 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 7105679,
+      "bytes": 7105596,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2079,14 +2122,14 @@
     },
     "sliders-2": {
       "id": "sliders-2",
-      "at": "2026-10-21T08:50:43.715Z",
+      "at": "2026-10-22T04:05:21.862Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8389,
+      "bytes": 8327,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2097,14 +2140,14 @@
     },
     "sliders-3": {
       "id": "sliders-3",
-      "at": "2026-10-21T08:50:45.727Z",
+      "at": "2026-10-22T04:05:22.234Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 7537,
+      "bytes": 7675,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2115,14 +2158,14 @@
     },
     "grid-10": {
       "id": "grid-10",
-      "at": "2026-10-21T08:50:33.925Z",
+      "at": "2026-10-22T04:05:16.371Z",
       "kind": "vite",
       "fixes": [
         "restored 53 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2303382,
+      "bytes": 2303578,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2133,14 +2176,14 @@
     },
     "sliders-4": {
       "id": "sliders-4",
-      "at": "2026-10-21T08:50:46.819Z",
+      "at": "2026-10-22T04:05:25.675Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 40218,
+      "bytes": 40275,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2151,14 +2194,14 @@
     },
     "sliders-6": {
       "id": "sliders-6",
-      "at": "2026-10-21T08:50:48.021Z",
+      "at": "2026-10-22T04:05:28.442Z",
       "kind": "vite",
       "fixes": [
         "restored 9 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1522031,
+      "bytes": 1522043,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2169,11 +2212,12 @@
     },
     "sliders-5": {
       "id": "sliders-5",
-      "at": "2026-10-21T08:18:41.951Z",
+      "at": "2026-10-22T04:05:26.858Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 23585,
+      "bytes": 23620,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2184,11 +2228,14 @@
     },
     "sliders-8": {
       "id": "sliders-8",
-      "at": "2026-10-21T08:18:52.205Z",
+      "at": "2026-10-22T04:05:29.690Z",
       "kind": "vite",
+      "fixes": [
+        "restored 6 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 760149,
+      "bytes": 1415085,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2199,14 +2246,14 @@
     },
     "sliders-9": {
       "id": "sliders-9",
-      "at": "2026-10-21T08:50:55.062Z",
+      "at": "2026-10-22T04:05:34.676Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 7964,
+      "bytes": 7920,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2217,19 +2264,19 @@
     },
     "sliders-10": {
       "id": "sliders-10",
-      "at": "2026-10-21T08:50:56.339Z",
+      "at": "2026-10-22T04:05:35.746Z",
       "kind": "vite",
       "fixes": [
+        "patched index.html: Tweakpane 4 is ES-module only, so the plain <script> tag never defined window.Tweakpane",
+        "patched index.html: the demo script now runs after the Tweakpane module, in document order",
         "restored 1 file(s) the original build left out"
       ],
-      "obfuscatedFiles": 1,
+      "obfuscatedFiles": 2,
       "obfuscated": true,
-      "bytes": 24246,
-      "status": "warn",
+      "bytes": 25834,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Unexpected token 'export'"
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -2237,14 +2284,14 @@
     },
     "sliders-12": {
       "id": "sliders-12",
-      "at": "2026-10-21T08:50:58.260Z",
+      "at": "2026-10-22T04:05:38.614Z",
       "kind": "vite",
       "fixes": [
         "restored 12 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 642888,
+      "bytes": 642597,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2255,19 +2302,26 @@
     },
     "sliders-15": {
       "id": "sliders-15",
-      "at": "2026-10-21T08:51:09.858Z",
+      "at": "2026-10-22T04:05:44.403Z",
       "kind": "vite",
       "fixes": [
-        "restored 8 file(s) the original build left out"
+        "loaded 1 script(s) as modules: they use import/export but were plain <script> tags",
+        "installed undeclared dependency: three",
+        "restored 7 file(s) the original build left out",
+        "restored img2.jpg (the page looks for it at @img/img2.jpg, the project keeps it at img/img2.jpg)",
+        "restored img3.jpg (the page looks for it at @img/img3.jpg, the project keeps it at img/img3.jpg)",
+        "restored img1.jpg (the page looks for it at @img/img1.jpg, the project keeps it at img/img1.jpg)",
+        "restored img4.jpg (the page looks for it at @img/img4.jpg, the project keeps it at img/img4.jpg)",
+        "restored img5.jpg (the page looks for it at @img/img5.jpg, the project keeps it at img/img5.jpg)",
+        "restored img6.jpg (the page looks for it at @img/img6.jpg, the project keeps it at img/img6.jpg)",
+        "restored img7.jpg (the page looks for it at @img/img7.jpg, the project keeps it at img/img7.jpg)"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 22935729,
-      "status": "warn",
+      "bytes": 23653780,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Cannot use import statement outside a module"
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -2275,11 +2329,15 @@
     },
     "sliders-14": {
       "id": "sliders-14",
-      "at": "2026-10-21T08:19:09.204Z",
+      "at": "2026-10-22T04:05:38.874Z",
       "kind": "vite",
+      "fixes": [
+        "prefixed 4 hard-coded asset path(s) with the demo's base path",
+        "restored 4 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 8210576,
+      "bytes": 15830370,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2308,14 +2366,14 @@
     },
     "sliders-16": {
       "id": "sliders-16",
-      "at": "2026-10-21T08:51:18.335Z",
+      "at": "2026-10-22T04:05:45.847Z",
       "kind": "vite",
       "fixes": [
         "restored 21 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3203972,
+      "bytes": 3204114,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2326,14 +2384,14 @@
     },
     "sliders-17": {
       "id": "sliders-17",
-      "at": "2026-10-21T08:51:24.696Z",
+      "at": "2026-10-22T04:05:47.384Z",
       "kind": "vite",
       "fixes": [
         "restored 7 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 5908928,
+      "bytes": 5908760,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2363,14 +2421,14 @@
     },
     "sliders-19": {
       "id": "sliders-19",
-      "at": "2026-10-21T08:51:27.054Z",
+      "at": "2026-10-22T04:05:55.370Z",
       "kind": "vite",
       "fixes": [
         "restored 9 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 5696549,
+      "bytes": 5696501,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2381,11 +2439,15 @@
     },
     "sliders-20": {
       "id": "sliders-20",
-      "at": "2026-10-21T08:19:32.331Z",
+      "at": "2026-10-22T04:05:56.615Z",
       "kind": "vite",
+      "fixes": [
+        "prefixed 10 hard-coded asset path(s) with the demo's base path",
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8859504,
+      "bytes": 17096784,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2396,11 +2458,14 @@
     },
     "sliders-22": {
       "id": "sliders-22",
-      "at": "2026-10-21T08:19:40.115Z",
+      "at": "2026-10-22T04:05:59.584Z",
       "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 32113513,
+      "bytes": 64222095,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2411,14 +2476,14 @@
     },
     "sliders-23": {
       "id": "sliders-23",
-      "at": "2026-10-21T08:51:35.834Z",
+      "at": "2026-10-22T04:06:05.140Z",
       "kind": "vite",
       "fixes": [
         "restored 21 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1600919,
+      "bytes": 1600884,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2429,11 +2494,14 @@
     },
     "sliders-24": {
       "id": "sliders-24",
-      "at": "2026-10-21T08:19:49.928Z",
+      "at": "2026-10-22T04:06:12.169Z",
       "kind": "vite",
+      "fixes": [
+        "restored 13 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 10976829,
+      "bytes": 21850542,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2463,11 +2531,14 @@
     },
     "sliders-25": {
       "id": "sliders-25",
-      "at": "2026-10-21T08:19:56.044Z",
+      "at": "2026-10-22T04:06:13.051Z",
       "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1353901,
+      "bytes": 2702436,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2478,14 +2549,14 @@
     },
     "hero-1": {
       "id": "hero-1",
-      "at": "2026-10-21T08:51:36.503Z",
+      "at": "2026-10-22T04:06:13.859Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 9388,
+      "bytes": 9409,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2496,11 +2567,14 @@
     },
     "sliders-26": {
       "id": "sliders-26",
-      "at": "2026-10-21T08:20:01.063Z",
+      "at": "2026-10-22T04:06:13.832Z",
       "kind": "vite",
+      "fixes": [
+        "restored 10 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1436668,
+      "bytes": 2770514,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2511,14 +2585,14 @@
     },
     "hero-2": {
       "id": "hero-2",
-      "at": "2026-10-21T08:51:37.160Z",
+      "at": "2026-10-22T04:06:24.212Z",
       "kind": "vite",
       "fixes": [
         "restored 6 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 879833,
+      "bytes": 879849,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2529,14 +2603,14 @@
     },
     "hero-3": {
       "id": "hero-3",
-      "at": "2026-10-21T08:51:43.174Z",
+      "at": "2026-10-22T04:06:27.367Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 5681,
+      "bytes": 5750,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2564,14 +2638,14 @@
     },
     "hero-5": {
       "id": "hero-5",
-      "at": "2026-10-21T08:51:44.886Z",
+      "at": "2026-10-22T04:06:27.381Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4615,
+      "bytes": 4709,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2582,14 +2656,14 @@
     },
     "hero-4": {
       "id": "hero-4",
-      "at": "2026-10-21T08:51:44.558Z",
+      "at": "2026-10-22T04:06:27.373Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 152597,
+      "bytes": 152683,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2633,14 +2707,14 @@
     },
     "hero-8": {
       "id": "hero-8",
-      "at": "2026-10-21T08:51:52.148Z",
+      "at": "2026-10-22T04:06:34.036Z",
       "kind": "vite",
       "fixes": [
         "restored 8 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 6409690,
+      "bytes": 6409765,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2651,14 +2725,14 @@
     },
     "hero-9": {
       "id": "hero-9",
-      "at": "2026-10-21T08:51:52.661Z",
+      "at": "2026-10-22T04:06:35.078Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1642548,
+      "bytes": 1642541,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2669,14 +2743,14 @@
     },
     "hero-10": {
       "id": "hero-10",
-      "at": "2026-10-21T08:51:53.805Z",
+      "at": "2026-10-22T04:06:36.363Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 453346,
+      "bytes": 453542,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2687,14 +2761,14 @@
     },
     "hero-11": {
       "id": "hero-11",
-      "at": "2026-10-21T08:52:00.634Z",
+      "at": "2026-10-22T04:06:36.692Z",
       "kind": "vite",
       "fixes": [
         "restored 27 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3158034,
+      "bytes": 3158018,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2705,11 +2779,12 @@
     },
     "hero-13": {
       "id": "hero-13",
-      "at": "2026-10-21T08:52:00.981Z",
+      "at": "2026-10-22T03:55:35.736Z",
       "kind": "static",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1472810,
+      "bytes": 1472333,
       "status": "warn",
       "blank": false,
       "errors": [],
@@ -2738,17 +2813,17 @@
     },
     "hero-15": {
       "id": "hero-15",
-      "at": "2026-10-21T08:52:04.252Z",
+      "at": "2026-10-22T04:06:41.452Z",
       "kind": "vite",
       "fixes": [
         "installed undeclared dependency: gsap",
-        "installed undeclared dependency: imagesloaded",
         "installed undeclared dependency: split-type",
+        "installed undeclared dependency: imagesloaded",
         "restored 4 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 720246,
+      "bytes": 720720,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2759,19 +2834,18 @@
     },
     "hero-16": {
       "id": "hero-16",
-      "at": "2026-10-21T08:52:15.191Z",
+      "at": "2026-10-22T04:06:42.567Z",
       "kind": "vite",
       "fixes": [
-        "restored 1 file(s) the original build left out"
+        "loaded 3 script(s) as modules: they use import/export but were plain <script> tags",
+        "installed undeclared dependency: gsap"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 9370,
-      "status": "warn",
+      "bytes": 109566,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Cannot use import statement outside a module"
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -2794,14 +2868,14 @@
     },
     "hero-18": {
       "id": "hero-18",
-      "at": "2026-10-21T08:52:15.505Z",
+      "at": "2026-10-22T04:06:43.904Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 25955900,
+      "bytes": 25955929,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2812,7 +2886,7 @@
     },
     "hero-22": {
       "id": "hero-22",
-      "at": "2026-10-21T08:52:20.128Z",
+      "at": "2026-10-22T04:06:54.190Z",
       "kind": "vite",
       "fixes": [
         "installed undeclared dependency: gsap",
@@ -2820,7 +2894,7 @@
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 31234346,
+      "bytes": 31233967,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2831,14 +2905,14 @@
     },
     "hero-19": {
       "id": "hero-19",
-      "at": "2026-10-21T08:52:19.823Z",
+      "at": "2026-10-22T04:06:44.266Z",
       "kind": "vite",
       "fixes": [
         "restored 9 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 19128166,
+      "bytes": 19128183,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2864,11 +2938,14 @@
     },
     "hero-21": {
       "id": "hero-21",
-      "at": "2026-10-21T08:21:19.879Z",
+      "at": "2026-10-22T04:06:52.539Z",
       "kind": "vite",
+      "fixes": [
+        "restored 11 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 2077934,
+      "bytes": 4151408,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2879,14 +2956,14 @@
     },
     "hero-23": {
       "id": "hero-23",
-      "at": "2026-10-21T08:52:23.547Z",
+      "at": "2026-10-22T04:06:54.677Z",
       "kind": "vite",
       "fixes": [
         "restored 8 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8828842,
+      "bytes": 8828845,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2897,7 +2974,7 @@
     },
     "hero-26": {
       "id": "hero-26",
-      "at": "2026-10-21T08:52:30.067Z",
+      "at": "2026-10-22T04:07:02.740Z",
       "kind": "vite",
       "fixes": [
         "installed undeclared dependency: gsap",
@@ -2905,7 +2982,7 @@
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1408287,
+      "bytes": 1408119,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2916,11 +2993,14 @@
     },
     "hero-25": {
       "id": "hero-25",
-      "at": "2026-10-21T08:21:29.604Z",
+      "at": "2026-10-22T04:07:01.473Z",
       "kind": "vite",
+      "fixes": [
+        "restored 5 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 816670,
+      "bytes": 887079,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2931,11 +3011,15 @@
     },
     "hero-24": {
       "id": "hero-24",
-      "at": "2026-10-21T08:21:27.531Z",
+      "at": "2026-10-22T04:06:56.437Z",
       "kind": "vite",
+      "fixes": [
+        "prefixed 1 hard-coded asset path(s) with the demo's base path",
+        "restored 35 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": false,
-      "bytes": 2553624,
+      "bytes": 4981358,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -2947,15 +3031,16 @@
     },
     "webgl-1": {
       "id": "webgl-1",
-      "at": "2026-10-22T03:13:01.145Z",
+      "at": "2026-10-22T04:07:08.731Z",
       "kind": "vite",
       "fixes": [
+        "prefixed 1 hard-coded asset path(s) with the demo's base path",
         "pinned three-msdf-text-utils@1.2.1: newer versions moved the MSDFTextNodeMaterial export",
         "restored 7 file(s) the original build left out"
       ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 4657471,
+      "bytes": 4657477,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -2986,11 +3071,14 @@
     },
     "webgl-5": {
       "id": "webgl-5",
-      "at": "2026-10-21T08:21:49.618Z",
+      "at": "2026-10-22T04:07:15.621Z",
       "kind": "vite",
+      "fixes": [
+        "restored 12 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1014903,
+      "bytes": 1401375,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3016,11 +3104,14 @@
     },
     "webgl-6": {
       "id": "webgl-6",
-      "at": "2026-10-21T08:21:51.544Z",
+      "at": "2026-10-22T04:07:16.108Z",
       "kind": "vite",
+      "fixes": [
+        "restored 3 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 3094722,
+      "bytes": 5142520,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3046,11 +3137,14 @@
     },
     "webgl-10": {
       "id": "webgl-10",
-      "at": "2026-10-21T08:22:23.513Z",
+      "at": "2026-10-22T04:07:16.352Z",
       "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 626355,
+      "bytes": 2387202,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3080,11 +3174,14 @@
     },
     "webgl-13": {
       "id": "webgl-13",
-      "at": "2026-10-21T08:22:46.292Z",
+      "at": "2026-10-22T04:07:31.858Z",
       "kind": "vite",
+      "fixes": [
+        "restored 121 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 9172381,
+      "bytes": 18326908,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3110,14 +3207,14 @@
     },
     "webgl-14": {
       "id": "webgl-14",
-      "at": "2026-10-21T08:52:44.560Z",
+      "at": "2026-10-22T04:07:34.621Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8400,
+      "bytes": 8172,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3143,11 +3240,14 @@
     },
     "webgl-15": {
       "id": "webgl-15",
-      "at": "2026-10-21T08:23:10.115Z",
+      "at": "2026-10-22T04:07:36.309Z",
       "kind": "vite",
+      "fixes": [
+        "restored 5 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2279932,
+      "bytes": 4436596,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3158,33 +3258,35 @@
     },
     "webgl-17": {
       "id": "webgl-17",
-      "at": "2026-10-21T08:52:46.567Z",
+      "at": "2026-10-22T04:07:40.157Z",
       "kind": "vite",
       "fixes": [
-        "restored 6 file(s) the original build left out"
+        "restored 6 file(s) the original build left out",
+        "restored PPWoodland-Ultralight.woff2 (the page looks for it at assets/fonts/PPWoodland-Ultralight.woff2, the project keeps it at fonts/PPWoodland-Ultralight.woff2)"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": false,
-      "bytes": 6000984,
+      "bytes": 6000912,
       "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "status": "pass",
       "blank": false,
       "errors": [],
       "external": [],
-      "failed": [
-        "404 /webgl-17/assets/fonts/PPWoodland-Ultralight.woff2",
-        "ERR /webgl-17/assets/fonts/PPWoodland-Ultralight.woff2"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
     "webgl-18": {
       "id": "webgl-18",
-      "at": "2026-10-21T08:23:22.818Z",
+      "at": "2026-10-22T04:07:41.775Z",
       "kind": "vite",
+      "fixes": [
+        "prefixed 4 hard-coded asset path(s) with the demo's base path",
+        "restored 7 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3416527,
+      "bytes": 6008290,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3225,14 +3327,14 @@
     },
     "webgl-19": {
       "id": "webgl-19",
-      "at": "2026-10-21T08:52:55.439Z",
+      "at": "2026-10-22T04:07:45.364Z",
       "kind": "vite",
       "fixes": [
         "restored 5 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4946327,
+      "bytes": 4946148,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3433,11 +3535,12 @@
     },
     "background-11": {
       "id": "background-11",
-      "at": "2026-10-21T08:24:32.276Z",
+      "at": "2026-10-22T04:07:52.790Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 823778,
+      "bytes": 822676,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3737,14 +3840,14 @@
     },
     "hover-2": {
       "id": "hover-2",
-      "at": "2026-10-21T08:53:34.077Z",
+      "at": "2026-10-22T04:08:19.233Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4431,
+      "bytes": 4499,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3755,14 +3858,14 @@
     },
     "hover-1": {
       "id": "hover-1",
-      "at": "2026-10-21T08:53:24.930Z",
+      "at": "2026-10-22T04:08:16.103Z",
       "kind": "vite",
       "fixes": [
         "restored 9 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 3459840,
+      "bytes": 3459964,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3773,14 +3876,14 @@
     },
     "hover-3": {
       "id": "hover-3",
-      "at": "2026-10-21T08:53:42.016Z",
+      "at": "2026-10-22T04:08:24.044Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4881,
+      "bytes": 4837,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3791,14 +3894,14 @@
     },
     "hover-4": {
       "id": "hover-4",
-      "at": "2026-10-21T08:53:44.997Z",
+      "at": "2026-10-22T04:08:24.472Z",
       "kind": "vite",
       "fixes": [
         "restored 31 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 814698,
+      "bytes": 814593,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3922,14 +4025,14 @@
     },
     "hover-12": {
       "id": "hover-12",
-      "at": "2026-10-21T08:54:00.300Z",
+      "at": "2026-10-22T04:08:26.102Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2438143,
+      "bytes": 2438260,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3960,11 +4063,14 @@
     },
     "hover-15": {
       "id": "hover-15",
-      "at": "2026-10-21T08:26:15.304Z",
+      "at": "2026-10-22T04:08:39.126Z",
       "kind": "vite",
+      "fixes": [
+        "restored 9 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4053158,
+      "bytes": 7880681,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3975,11 +4081,14 @@
     },
     "hover-13": {
       "id": "hover-13",
-      "at": "2026-10-21T08:26:07.091Z",
+      "at": "2026-10-22T04:08:26.499Z",
       "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 145802,
+      "bytes": 285303,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -3990,14 +4099,14 @@
     },
     "hover-16": {
       "id": "hover-16",
-      "at": "2026-10-21T08:54:01.304Z",
+      "at": "2026-10-22T04:08:39.287Z",
       "kind": "vite",
       "fixes": [
         "restored 16 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8163687,
+      "bytes": 8163771,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4008,11 +4117,12 @@
     },
     "hover-14": {
       "id": "hover-14",
-      "at": "2026-10-21T08:26:11.723Z",
+      "at": "2026-10-22T04:08:33.818Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 701967,
+      "bytes": 701503,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4023,11 +4133,14 @@
     },
     "hover-17": {
       "id": "hover-17",
-      "at": "2026-10-21T08:26:33.549Z",
+      "at": "2026-10-22T04:08:51.313Z",
       "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1000016,
+      "bytes": 1342832,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4076,14 +4189,14 @@
     },
     "hover-20": {
       "id": "hover-20",
-      "at": "2026-10-21T08:54:10.908Z",
+      "at": "2026-10-22T04:08:54.092Z",
       "kind": "vite",
       "fixes": [
         "restored 19 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2018697,
+      "bytes": 2018619,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4094,11 +4207,14 @@
     },
     "hover-21": {
       "id": "hover-21",
-      "at": "2026-10-21T08:26:55.664Z",
+      "at": "2026-10-22T04:08:57.061Z",
       "kind": "vite",
+      "fixes": [
+        "restored 3 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 6313176,
+      "bytes": 12522047,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4109,14 +4225,14 @@
     },
     "text-1": {
       "id": "text-1",
-      "at": "2026-10-21T08:54:13.726Z",
+      "at": "2026-10-22T04:09:02.227Z",
       "kind": "vite",
       "fixes": [
         "restored 6 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 181929,
+      "bytes": 181956,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4127,11 +4243,12 @@
     },
     "text-3": {
       "id": "text-3",
-      "at": "2026-10-21T08:27:02.664Z",
+      "at": "2026-10-22T04:09:06.712Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 136836,
+      "bytes": 136610,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4142,14 +4259,14 @@
     },
     "text-4": {
       "id": "text-4",
-      "at": "2026-10-21T08:54:16.244Z",
+      "at": "2026-10-22T04:09:08.152Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 5141,
+      "bytes": 5180,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4160,11 +4277,14 @@
     },
     "text-2": {
       "id": "text-2",
-      "at": "2026-10-21T08:27:00.931Z",
+      "at": "2026-10-22T04:09:05.956Z",
       "kind": "vite",
+      "fixes": [
+        "restored 5 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 1481694,
+      "bytes": 1664288,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4208,11 +4328,12 @@
     },
     "text-7": {
       "id": "text-7",
-      "at": "2026-10-21T08:27:19.170Z",
+      "at": "2026-10-22T04:09:13.694Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 118988,
+      "bytes": 119494,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4256,14 +4377,14 @@
     },
     "text-10": {
       "id": "text-10",
-      "at": "2026-10-21T08:54:26.069Z",
+      "at": "2026-10-22T04:09:16.331Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 7053,
+      "bytes": 7072,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4274,14 +4395,14 @@
     },
     "text-11": {
       "id": "text-11",
-      "at": "2026-10-21T08:54:28.821Z",
+      "at": "2026-10-22T04:09:19.810Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8625,
+      "bytes": 8755,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4292,14 +4413,14 @@
     },
     "text-14": {
       "id": "text-14",
-      "at": "2026-10-21T08:54:31.338Z",
+      "at": "2026-10-22T04:09:25.088Z",
       "kind": "vite",
       "fixes": [
         "restored 11 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1030253,
+      "bytes": 1030324,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4310,11 +4431,14 @@
     },
     "text-13": {
       "id": "text-13",
-      "at": "2026-10-21T08:27:33.447Z",
+      "at": "2026-10-22T04:09:21.220Z",
       "kind": "vite",
+      "fixes": [
+        "restored 7 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 8823279,
+      "bytes": 17469984,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4325,11 +4449,12 @@
     },
     "text-16": {
       "id": "text-16",
-      "at": "2026-10-21T08:27:46.790Z",
+      "at": "2026-10-22T04:09:27.060Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 5547,
+      "bytes": 5508,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4425,11 +4550,14 @@
     },
     "3d-2": {
       "id": "3d-2",
-      "at": "2026-10-21T08:28:39.368Z",
+      "at": "2026-10-22T04:09:28.530Z",
       "kind": "vite",
+      "fixes": [
+        "restored 1 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": false,
-      "bytes": 1961095,
+      "bytes": 3085916,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -4460,11 +4588,14 @@
     },
     "3d-3": {
       "id": "3d-3",
-      "at": "2026-10-21T08:28:57.213Z",
+      "at": "2026-10-22T04:09:32.517Z",
       "kind": "vite",
+      "fixes": [
+        "restored 24 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 6226858,
+      "bytes": 11054777,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4475,14 +4606,14 @@
     },
     "3d-4": {
       "id": "3d-4",
-      "at": "2026-10-21T08:54:33.816Z",
+      "at": "2026-10-22T04:09:34.226Z",
       "kind": "vite",
       "fixes": [
         "restored 1 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 952345,
+      "bytes": 951998,
       "status": "warn",
       "blank": false,
       "errors": [
@@ -4497,14 +4628,15 @@
     },
     "3d-7": {
       "id": "3d-7",
-      "at": "2026-10-21T08:54:56.650Z",
+      "at": "2026-10-22T04:10:13.865Z",
       "kind": "vite",
       "fixes": [
+        "loaded 1 script(s) as modules: they use import/export but were plain <script> tags",
         "restored 78 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 13859425,
+      "bytes": 13859485,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4515,14 +4647,14 @@
     },
     "3d-6": {
       "id": "3d-6",
-      "at": "2026-10-21T08:54:39.726Z",
+      "at": "2026-10-22T04:09:35.444Z",
       "kind": "vite",
       "fixes": [
         "restored 6 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2905644,
+      "bytes": 2905969,
       "status": "warn",
       "blank": false,
       "errors": [
@@ -4531,22 +4663,22 @@
       "external": [],
       "failed": [
         "404 /3d-6/videos/fruits_trail_squared-transcode.mp4",
-        "404 /3d-6/videos/KinectCube_1350-transcode.mp4",
-        "404 /3d-6/videos/infinte-grid_squared-transcode.mp4"
+        "404 /3d-6/videos/infinte-grid_squared-transcode.mp4",
+        "404 /3d-6/videos/KinectCube_1350-transcode.mp4"
       ],
       "navError": null,
       "stage": "verify"
     },
     "3d-10": {
       "id": "3d-10",
-      "at": "2026-10-21T08:55:09.655Z",
+      "at": "2026-10-22T04:10:19.570Z",
       "kind": "vite",
       "fixes": [
         "restored 10 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1382814,
+      "bytes": 1382695,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4557,11 +4689,14 @@
     },
     "3d-11": {
       "id": "3d-11",
-      "at": "2026-10-21T08:30:18.867Z",
+      "at": "2026-10-22T04:10:20.769Z",
       "kind": "vite",
+      "fixes": [
+        "restored 2 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 14150692,
+      "bytes": 26529416,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4679,14 +4814,14 @@
     },
     "3d-17": {
       "id": "3d-17",
-      "at": "2026-10-21T08:56:27.011Z",
+      "at": "2026-10-22T04:10:22.300Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1876978,
+      "bytes": 1876854,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4697,11 +4832,14 @@
     },
     "3d-18": {
       "id": "3d-18",
-      "at": "2026-10-21T08:32:40.029Z",
+      "at": "2026-10-22T04:10:22.895Z",
       "kind": "vite",
+      "fixes": [
+        "restored 20 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 7733476,
+      "bytes": 15459756,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4712,14 +4850,14 @@
     },
     "3d-19": {
       "id": "3d-19",
-      "at": "2026-10-21T08:56:35.538Z",
+      "at": "2026-10-22T04:10:26.452Z",
       "kind": "vite",
       "fixes": [
         "restored 4 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1873603,
+      "bytes": 1873637,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4730,14 +4868,14 @@
     },
     "3d-20": {
       "id": "3d-20",
-      "at": "2026-10-21T08:56:44.249Z",
+      "at": "2026-10-22T04:10:30.542Z",
       "kind": "vite",
       "fixes": [
         "restored 11 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 112806983,
+      "bytes": 112806650,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4748,11 +4886,12 @@
     },
     "3d-22": {
       "id": "3d-22",
-      "at": "2026-10-21T08:32:54.410Z",
+      "at": "2026-10-22T04:10:30.993Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 18299,
+      "bytes": 18181,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4812,7 +4951,7 @@
     },
     "svg-3": {
       "id": "svg-3",
-      "at": "2026-10-21T08:38:48.965Z",
+      "at": "2026-10-22T04:10:42.802Z",
       "kind": "vite",
       "fixes": [
         "installed undeclared dependency: ev-emitter",
@@ -4820,7 +4959,7 @@
       ],
       "obfuscatedFiles": 14,
       "obfuscated": true,
-      "bytes": 7539252,
+      "bytes": 7539530,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4831,11 +4970,14 @@
     },
     "3d-23": {
       "id": "3d-23",
-      "at": "2026-10-21T08:33:00.377Z",
+      "at": "2026-10-22T04:10:38.015Z",
       "kind": "vite",
+      "fixes": [
+        "restored 12 file(s) the original build left out"
+      ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 2651228,
+      "bytes": 4910455,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4846,14 +4988,14 @@
     },
     "svg-6": {
       "id": "svg-6",
-      "at": "2026-10-21T08:57:36.911Z",
+      "at": "2026-10-22T04:11:24.701Z",
       "kind": "vite",
       "fixes": [
         "restored 2 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 47930,
+      "bytes": 47839,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4864,14 +5006,14 @@
     },
     "svg-4": {
       "id": "svg-4",
-      "at": "2026-10-21T08:57:25.574Z",
+      "at": "2026-10-22T04:11:22.209Z",
       "kind": "vite",
       "fixes": [
         "restored 11 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 1854910,
+      "bytes": 1854816,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4902,14 +5044,14 @@
     },
     "svg-7": {
       "id": "svg-7",
-      "at": "2026-10-21T08:57:46.877Z",
+      "at": "2026-10-22T04:11:26.116Z",
       "kind": "vite",
       "fixes": [
         "restored 7 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 4221982,
+      "bytes": 4222122,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4920,20 +5062,19 @@
     },
     "3d-15": {
       "id": "3d-15",
-      "at": "2026-10-21T08:55:22.776Z",
+      "at": "2026-10-22T03:59:27.059Z",
       "kind": "cra",
+      "fixes": [
+        "restored base.css (the page looks for it at css/base.css, the project keeps it at src/base.css)"
+      ],
       "obfuscatedFiles": 4,
       "obfuscated": true,
-      "bytes": 3237023,
-      "status": "warn",
+      "bytes": 3236957,
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Refused to apply style from 'http://127.0.0.1:3199/3d-15/css/base.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
-      ],
+      "errors": [],
       "external": [],
-      "failed": [
-        "ERR /3d-15/css/base.css"
-      ],
+      "failed": [],
       "navError": null,
       "stage": "verify"
     },
@@ -4954,17 +5095,18 @@
     },
     "svg-8": {
       "id": "svg-8",
-      "at": "2026-10-21T08:57:53.755Z",
+      "at": "2026-10-22T03:56:00.393Z",
       "kind": "static",
+      "fixes": [
+        "patched js/demo1.js: the page has no .content--related footer, which crashed the loop before any scroll watcher was created"
+      ],
       "obfuscatedFiles": 5,
       "obfuscated": false,
-      "bytes": 596441,
+      "bytes": 596015,
       "note": "obfuscation broke this demo; serving minified build",
-      "status": "warn",
+      "status": "pass",
       "blank": false,
-      "errors": [
-        "Cannot read properties of null (reading 'nodeName')"
-      ],
+      "errors": [],
       "external": [],
       "failed": [],
       "navError": null,
@@ -4972,14 +5114,14 @@
     },
     "svg-10": {
       "id": "svg-10",
-      "at": "2026-10-21T08:57:55.700Z",
+      "at": "2026-10-22T04:11:32.131Z",
       "kind": "vite",
       "fixes": [
         "restored 5 file(s) the original build left out"
       ],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 473351,
+      "bytes": 473235,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4990,11 +5132,12 @@
     },
     "svg-11": {
       "id": "svg-11",
-      "at": "2026-10-21T08:33:38.679Z",
+      "at": "2026-10-22T04:11:33.819Z",
       "kind": "vite",
+      "fixes": [],
       "obfuscatedFiles": 1,
       "obfuscated": true,
-      "bytes": 102183,
+      "bytes": 102336,
       "status": "pass",
       "blank": false,
       "errors": [],

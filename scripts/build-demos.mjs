@@ -221,27 +221,37 @@ async function patchNextConfig(root, id) {
  */
 async function fixAssetPaths(root, id, fixes) {
   const pub = path.join(root, "public");
-  const dirs = (await fs.readdir(pub, { withFileTypes: true }).catch(() => [])).filter((e) => e.isDirectory()).map((e) => e.name);
-  if (!dirs.length) return;
-  const re = new RegExp(`(["'\`])/(${dirs.map((d) => d.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})/([^"'\`]+)\\1`, "g");
+  const entries = await fs.readdir(pub, { withFileTypes: true }).catch(() => []);
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const targets = [
+    ...entries.filter((e) => e.isDirectory()).map((e) => `${esc(e.name)}/[^"'\`)\\s]+`),
+    ...entries.filter((e) => e.isFile() && !/^index\.html?$/i.test(e.name)).map((e) => esc(e.name)),
+  ];
+  if (!targets.length) return;
+  // Quoted string literals in JS and quoted url("…") in CSS. Imports stay untouched: the bundler
+  // resolves "/x" against public/ itself, and a prefixed path would no longer resolve.
+  const re = new RegExp(`(["'\`])/(${targets.join("|")})\\1`, "g");
   let prefixed = 0;
   for (const f of await walk(root)) {
-    if (!/\.(m?[jt]sx?)$/.test(f) || /[\\/](out|\.next|public|__kq_dist)[\\/]/.test(f) || /\.config\./.test(f)) continue;
+    if (!/\.(m?[jt]sx?|css|scss)$/.test(f) || /[\\/](out|dist|build|\.next|public|__kq_dist)[\\/]/.test(f) || /\.config\./.test(f)) continue;
     const src = await fs.readFile(f, "utf8");
     let changed = false;
-    const next = await replaceAsync(src, re, async (all, q, dir, rest) => {
-      let file = rest;
-      if (!(await exists(path.join(pub, dir, rest))) && /\.(otf|ttf|woff2?)$/i.test(rest)) {
-        const family = path.basename(rest).split(/[-_.]/)[0];
+    const next = await replaceAsync(src, re, async (m) => {
+      const [all, q, rel] = m;
+      if (/(\bfrom|\bimport|import\(|require\()\s*$/.test(m.input.slice(Math.max(0, m.index - 12), m.index))) return all;
+      let file = rel;
+      if (!(await exists(path.join(pub, rel))) && /\.(otf|ttf|woff2?)$/i.test(rel)) {
+        const dir = path.dirname(rel);
+        const family = path.basename(rel).split(/[-_.]/)[0];
         const alt = (await fs.readdir(path.join(pub, dir), { recursive: true }).catch(() => [])).find((x) => path.basename(x).startsWith(family) && /\.(otf|ttf|woff2?)$/i.test(x));
         if (alt) {
-          file = alt.split(path.sep).join("/");
-          fixes.add(`font ${path.basename(rest)} is missing from the project; used ${path.basename(alt)}`);
+          file = `${dir}/${alt.split(path.sep).join("/")}`;
+          fixes.add(`font ${path.basename(rel)} is missing from the project; used ${path.basename(alt)}`);
         }
       }
       changed = true;
       prefixed++;
-      return `${q}/${id}/${dir}/${file}${q}`;
+      return `${q}/${id}/${file}${q}`;
     });
     if (changed) await fs.writeFile(f, next);
   }
@@ -252,7 +262,7 @@ async function replaceAsync(str, re, fn) {
   const parts = [];
   let last = 0;
   for (const m of str.matchAll(re)) {
-    parts.push(str.slice(last, m.index), await fn(...m));
+    parts.push(str.slice(last, m.index), await fn(m));
     last = m.index + m[0].length;
   }
   parts.push(str.slice(last));
@@ -269,7 +279,7 @@ async function findOutput(root, prefer = []) {
 
 const IMPORTS_BARE_G = /(?:^|[\s;])import\s(?:[^;]*?\sfrom\s*)?["']((?![./]|https?:|data:)[^"']+)["']/gm;
 const IMPORTS_SHADER = /from\s*["'][^"']+\.(glsl|vert|frag|vs|fs)["']/;
-const USES_IMPORT = /(^|[\s;])(import\s*[\w{*"']|export\s)/m;
+const USES_IMPORT = /(^|[\s;}])(import(?:\s*[{*"']|\s+[\w$])|export(?:\s*[{*]|\s+(?:default|const|let|var|function|class|async)\b))/m;
 const localScripts = (html) => [...html.matchAll(/<script\b([^>]*)\bsrc=["'](?!https?:|\/\/)([^"']+)["'][^>]*>/gi)].map((m) => ({ attrs: m[1], src: m[2], tag: m[0] }));
 const pkgName = (spec) => (spec.startsWith("@") ? spec.split("/").slice(0, 2).join("/") : spec.split("/")[0]);
 
@@ -297,6 +307,29 @@ async function needsBundler(root) {
     if (USES_IMPORT.test(await fs.readFile(path.join(root, s.src.split("?")[0]), "utf8").catch(() => ""))) return true;
   }
   return false;
+}
+
+/**
+ * A plain <script src> whose file uses import/export never ran (the browser rejects it) and Vite won't
+ * bundle it. Marking it as a module before the build lets Vite resolve its npm and extension-less imports.
+ */
+async function moduleizeScripts(root, fixes) {
+  const STATEMENT = /^\s*(import\s*[\w{*"'$]|export\s*[{*]|export\s+(default|const|let|var|function|class|async)\b)/m;
+  let n = 0;
+  for (const f of (await walk(root)).filter((x) => /\.html?$/i.test(x) && !/[\\/](dist|build|out|public|__kq_dist)[\\/]/.test(x))) {
+    let html = await fs.readFile(f, "utf8");
+    const orig = html;
+    for (const s of localScripts(html)) {
+      if (/type=/.test(s.attrs)) continue;
+      const code = await fs.readFile(path.join(path.dirname(f), s.src.split("?")[0]), "utf8").catch(() => "");
+      if (STATEMENT.test(code)) {
+        html = html.replace(s.tag, s.tag.replace("<script", '<script type="module"'));
+        n++;
+      }
+    }
+    if (html !== orig) await fs.writeFile(f, html);
+  }
+  if (n) fixes.add(`loaded ${n} script(s) as modules: they use import/export but were plain <script> tags`);
 }
 
 /** `class="a"id="b"` breaks Vite's HTML parser; browsers tolerate it, so the originals "worked". */
@@ -460,7 +493,11 @@ async function buildFromSource(id, root, hasPkg, log, forceKind) {
     if (!(await needsBundler(root))) return done({ kind, out: root });
     kind = "vite-adhoc";
     if (!pkg) {
-      const deps = Object.fromEntries((await bareImports(root)).map((d) => [d, "latest"]));
+      // No package.json means no recorded versions; libraries whose latest major broke old demo
+      // code get their legacy major instead of "latest".
+      const LEGACY = { "locomotive-scroll": "^4.1.4" };
+      const deps = Object.fromEntries((await bareImports(root)).map((d) => [d, LEGACY[d] ?? "latest"]));
+      for (const d of Object.keys(deps)) if (LEGACY[d]) fixes.add(`used ${d}@${LEGACY[d]}: the demo is written for that API`);
       pkg = { name: id, private: true, type: "module", dependencies: deps };
       await fs.writeFile(path.join(root, "package.json"), JSON.stringify(pkg, null, 2));
       if (Object.keys(deps).length) fixes.add(`created package.json for npm imports: ${Object.keys(deps).join(", ")}`);
@@ -518,6 +555,8 @@ async function buildFromSource(id, root, hasPkg, log, forceKind) {
       return done(res.ok ? { kind, out: path.join(root, "out"), basePathed: true } : { kind, error: tail(res.out) });
     case "vite": {
       await repairHtml(root, fixes);
+      await moduleizeScripts(root, fixes);
+      await fixAssetPaths(root, id, fixes);
       res = await withMissingDeps(root, log, fixes, () => sh(bin(root, "vite"), ["build", ...viteArgs], { cwd: root, log }));
       if (!res.ok) return done({ kind, error: tail(res.out) });
       const srcHtml = (await walk(root)).filter((f) => /index\.html$/.test(f) && !f.includes("__kq_dist")).sort((a, b) => a.length - b.length)[0];
@@ -737,6 +776,9 @@ async function verify(id) {
   });
   page.on("requestfailed", (r) => {
     const u = new URL(r.url());
+    // Aborted fetches (cancelled route prefetches, superseded requests, media probes) aren't failures.
+    // Stylesheets/scripts blocked for a bad MIME type also show up as ERR_ABORTED, so those still count.
+    if (/ERR_ABORTED/.test(r.failure()?.errorText ?? "") && ["fetch", "xhr", "media", "other"].includes(r.resourceType())) return;
     if (u.port === String(PORT) && !/favicon/.test(u.pathname)) failed.push(`ERR ${u.pathname}`);
   });
 
@@ -786,6 +828,170 @@ async function verify(id) {
   return { status, blank, errors: [...new Set(own)].slice(0, 5), external: [...new Set(external)].slice(0, 3), failed: [...new Set(failed)].slice(0, 8), navError };
 }
 
+// ---------------------------------------------------------------- repairs
+
+const PATCHES = JSON.parse(await fs.readFile(path.join(ROOT, "scripts", "demo-patches.json"), "utf8").catch(() => "{}"));
+
+/** Hand-written fixes for bugs in specific original projects (scripts/demo-patches.json). */
+async function applyPatches(id, root, fixes) {
+  for (const p of PATCHES[id] ?? []) {
+    const file = path.join(root, p.file);
+    const src = await fs.readFile(file, "utf8").catch(() => null);
+    if (src?.includes(p.find)) {
+      await fs.writeFile(file, src.replace(p.find, p.replace));
+      fixes.push(`patched ${p.file}: ${p.why}`);
+    } else fixes.push(`patch for ${p.file} no longer matches the source (not applied)`);
+  }
+}
+
+/** Typos in third-party CDN hosts that make a whole library fail to load. */
+async function fixCdnTypos(dir, fixes) {
+  for (const f of (await walk(dir, 0)).filter((x) => /\.html?$/i.test(x))) {
+    const html = await fs.readFile(f, "utf8");
+    let fixed = html.replace(/\/\/unpkg\.co\//g, "//unpkg.com/");
+    if (fixed !== html) fixes.push("fixed a typo in a CDN address (unpkg.co -> unpkg.com)");
+
+    // GreenSock's CodePen-only trial builds of its bonus plugins (2020-era) break against current GSAP;
+    // since 3.13 the same plugins ship free in the official package.
+    const before = fixed;
+    fixed = fixed.replace(/https:\/\/assets\.codepen\.io\/16327\/([A-Za-z0-9]+?)3?\.min\.js/g, "https://unpkg.com/gsap@3/dist/$1.min.js");
+    if (fixed !== before) {
+      // CustomBounce/CustomWiggle build on CustomEase, so it has to load first.
+      const tag = (name) => fixed.match(new RegExp(`<script[^>]*gsap@3/dist/${name}\\.min\\.js[^>]*>\\s*</script>`, "i"));
+      const ease = tag("CustomEase");
+      const dependents = ["CustomBounce", "CustomWiggle"].map(tag).filter(Boolean).sort((a, b) => a.index - b.index);
+      if (ease && dependents.length && dependents[0].index < ease.index) {
+        fixed = fixed.replace(ease[0], "");
+        fixed = fixed.replace(dependents[0][0], ease[0] + dependents[0][0]);
+      }
+      fixes.push("swapped CodePen trial GSAP plugins for the official free builds");
+    }
+    if (fixed !== html) await fs.writeFile(f, fixed);
+  }
+}
+
+// Well-known libraries demos use as globals or vendor files without shipping them.
+const VENDOR = {
+  Lenis: "lenis/dist/lenis.min.js",
+  SplitType: "split-type/umd/index.min.js",
+  gsap: "gsap/dist/gsap.min.js",
+  ScrollTrigger: "gsap/dist/ScrollTrigger.min.js",
+  imagesLoaded: "imagesloaded/imagesloaded.pkgd.min.js",
+};
+const VENDOR_FILES = {
+  "lenis.min.js": VENDOR.Lenis,
+  "lenis.js": VENDOR.Lenis,
+  "gsap.min.js": VENDOR.gsap,
+  "ScrollTrigger.min.js": VENDOR.ScrollTrigger,
+  "imagesloaded.pkgd.min.js": VENDOR.imagesLoaded,
+  "split-type.min.js": VENDOR.SplitType,
+};
+const VENDOR_DIR = path.join(CACHE, "vendor");
+let vendorReady;
+function vendorFile(rel) {
+  vendorReady ??= (async () => {
+    if (!(await exists(path.join(VENDOR_DIR, "node_modules", "lenis")))) {
+      await fs.mkdir(VENDOR_DIR, { recursive: true });
+      await sh("npm", ["install", "--prefix", VENDOR_DIR, "--ignore-scripts", "--no-audit", "--no-fund", "lenis", "gsap", "split-type", "imagesloaded"], {
+        cwd: VENDOR_DIR,
+        log: path.join(LOGS, "_vendor.log"),
+      });
+    }
+  })();
+  return vendorReady.then(() => path.join(VENDOR_DIR, "node_modules", rel));
+}
+
+const SCRIPT_TAG = /<script\b([^>]*)\bsrc=["'](?!https?:|\/\/)([^"'?#]+)[^"']*["']([^>]*)>/gi;
+
+/**
+ * One repair round driven by what headless Chrome reported: copy files that 404 but exist elsewhere
+ * in the project, restore well-known vendor libraries, and fix module/classic script mismatches.
+ * Edits are applied to both the published and the minified-only copy.
+ */
+async function repairRuntime(id, v, srcRoot, fixes) {
+  const dirs = [path.join(DEMOS_DIR, id), path.join(RAW, id)];
+  const raw = dirs[1];
+  let changed = false;
+  const putFile = async (from, rel) => {
+    for (const d of dirs) {
+      const to = path.join(d, rel);
+      if (!to.startsWith(d + path.sep)) return;
+      await fs.mkdir(path.dirname(to), { recursive: true });
+      await fs.copyFile(from, to);
+    }
+    changed = true;
+  };
+
+  // 1) Missing files.
+  const srcFiles = srcRoot ? (await walk(srcRoot, 0)).filter((f) => !/[\\/](__kq_dist|node_modules)[\\/]/.test(f)) : [];
+  for (const f of v.failed ?? []) {
+    const m = f.match(/^(?:404|ERR) \/([^/]+)\/(.+[^/])$/);
+    if (!m || m[1] !== id) continue;
+    const rel = decodeURIComponent(m[2]);
+    const base = path.basename(rel);
+    if (VENDOR_FILES[base]) {
+      await putFile(await vendorFile(VENDOR_FILES[base]), rel);
+      fixes.push(`restored missing library ${base} from npm`);
+      continue;
+    }
+    const hits = srcFiles.filter((s) => path.basename(s) === base);
+    if (hits.length === 1) {
+      await putFile(hits[0], rel);
+      fixes.push(`restored ${base} (the page looks for it at ${rel}, the project keeps it at ${path.relative(srcRoot, hits[0])})`);
+    }
+  }
+
+  // 2) Globals the page uses but never loads.
+  const pages = (await fs.readdir(raw).catch(() => [])).filter((f) => /\.html?$/i.test(f));
+  for (const e of v.errors ?? []) {
+    const name = e.match(/^(?:ReferenceError: )?(\w+) is not defined/)?.[1];
+    if (!name || !VENDOR[name]) continue;
+    const file = path.basename(VENDOR[name]);
+    await putFile(await vendorFile(VENDOR[name]), `kq-vendor/${file}`);
+    for (const d of dirs)
+      for (const p of pages) {
+        const fp = path.join(d, p);
+        const html = await fs.readFile(fp, "utf8");
+        if (html.includes(`kq-vendor/${file}`)) continue;
+        const at = html.search(/<script\b/i);
+        const tag = `<script src="kq-vendor/${file}"></script>`;
+        await fs.writeFile(fp, at >= 0 ? html.slice(0, at) + tag + html.slice(at) : html.replace(/<\/body>/i, `${tag}</body>`));
+      }
+    changed = true;
+    fixes.push(`added ${name}, which the page uses but never loads`);
+  }
+
+  // 3) Script type mismatches.
+  const wantsModule = (v.errors ?? []).some((e) => /Cannot use import statement outside a module|Unexpected token 'export'/.test(e));
+  const parcelInModule = (v.errors ?? []).some((e) => /parcelRequire is not defined/.test(e));
+  if (wantsModule || parcelInModule) {
+    for (const p of pages) {
+      const rawHtml = await fs.readFile(path.join(raw, p), "utf8");
+      const edits = [];
+      for (const m of rawHtml.matchAll(SCRIPT_TAG)) {
+        const [tag, before, src, after] = m;
+        const attrs = before + after;
+        const code = await fs.readFile(path.join(raw, src.replace(/^\.?\//, "")), "utf8").catch(() => "");
+        if (wantsModule && !/type=/.test(attrs) && USES_IMPORT.test(code)) edits.push([tag, tag.replace(/<script\b/i, '<script type="module"')]);
+        if (parcelInModule && /type=["']module["']/.test(attrs) && /parcelRequire\s*=/.test(code)) edits.push([tag, tag.replace(/\s*type=["']module["']/, " defer")]);
+      }
+      if (!edits.length) continue;
+      for (const d of dirs) {
+        let html = await fs.readFile(path.join(d, p), "utf8");
+        for (const [from, to] of edits) html = html.replace(from, to);
+        await fs.writeFile(path.join(d, p), html);
+      }
+      changed = true;
+      fixes.push(
+        wantsModule
+          ? `loaded ${edits.length} script(s) as modules: they use import/export but were plain <script> tags`
+          : `loaded a Parcel bundle as a classic script: it was marked as a module, where its globals are illegal`,
+      );
+    }
+  }
+  return changed;
+}
+
 // ---------------------------------------------------------------- main
 
 async function processOne(c) {
@@ -793,6 +999,7 @@ async function processOne(c) {
   const log = path.join(LOGS, `${id}.log`);
   const prev = report.demos[id];
   const entry = { id, at: new Date().toISOString() };
+  let srcRoot = null;
 
   if (!VERIFY_ONLY) {
     await fs.writeFile(log, `# ${id}\n`);
@@ -806,9 +1013,13 @@ async function processOne(c) {
     const found = collection ? { root: collection.top, hasPkg: false } : await findRoot(work);
     if (!found) return { ...entry, status: "fail", stage: "detect", error: "no index.html or package.json in zip" };
 
+    const patched = [];
+    if (!collection) await applyPatches(id, found.root, patched);
+    srcRoot = found.root;
+
     const built = collection ? await buildCollection(id, c.title, collection) : await buildProject(id, found.root, found.hasPkg, log);
     entry.kind = built.kind;
-    if (built.fixes?.length) entry.fixes = built.fixes;
+    if (patched.length || built.fixes?.length) entry.fixes = [...patched, ...(built.fixes ?? [])];
     if (built.error || !built.out) return { ...entry, status: "fail", stage: "build", error: built.error ?? "build produced no index.html" };
 
     // Keep a minified-only copy so we can fall back if obfuscation breaks the demo.
@@ -819,6 +1030,7 @@ async function processOne(c) {
     await copyClean(built.out, raw, { skipSource: built.out === found.root && built.kind !== "static" });
     if (found.entry && !(await exists(path.join(raw, "index.html")))) await fs.copyFile(path.join(raw, found.entry), path.join(raw, "index.html"));
     entry.fixes ??= [];
+    await fixCdnTypos(raw, entry.fixes);
     await shrinkMedia(raw, entry.fixes);
     await fs.cp(raw, dest, { recursive: true });
     await protect(raw, { obfuscate: false });
@@ -833,6 +1045,12 @@ async function processOne(c) {
   }
 
   let v = await verify(id);
+  // Repair what the browser reported, up to two rounds (a fix can reveal the next problem).
+  for (let round = 0; round < 2 && v.status !== "pass" && (await exists(path.join(RAW, id))); round++) {
+    entry.fixes ??= [];
+    if (!(await repairRuntime(id, v, srcRoot, entry.fixes))) break;
+    v = await verify(id);
+  }
   if (v.status !== "pass" && entry.obfuscated && (await exists(path.join(RAW, id)))) {
     // Try the minified-only build; keep whichever behaves better.
     const dest = path.join(DEMOS_DIR, id);
@@ -853,6 +1071,7 @@ async function processOne(c) {
       await fs.rename(backup, dest);
     }
   }
+  if (entry.fixes) entry.fixes = [...new Set(entry.fixes)];
   return { ...entry, ...v, stage: "verify" };
 }
 
