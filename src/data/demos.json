@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T04:13:12.382Z",
+  "generatedAt": "2026-10-24T05:17:26.665Z",
   "demos": {
     "grid-2": {
       "id": "grid-2",
@@ -1766,14 +1766,15 @@
     },
     "mouse-21": {
       "id": "mouse-21",
-      "at": "2026-10-22T03:29:21.297Z",
+      "at": "2026-10-24T05:13:50.923Z",
       "kind": "next",
       "fixes": [
-        "prefixed 1 hard-coded asset path(s) with the demo's base path"
+        "prefixed 1 hard-coded asset path(s) with the demo's base path",
+        "served 1 GitHub-hosted asset link(s) from jsDelivr instead of githack (faster, no redirect)"
       ],
       "obfuscatedFiles": 9,
       "obfuscated": false,
-      "bytes": 5441890,
+      "bytes": 5462099,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -4663,8 +4664,8 @@
       "external": [],
       "failed": [
         "404 /3d-6/videos/fruits_trail_squared-transcode.mp4",
-        "404 /3d-6/videos/infinte-grid_squared-transcode.mp4",
-        "404 /3d-6/videos/KinectCube_1350-transcode.mp4"
+        "404 /3d-6/videos/KinectCube_1350-transcode.mp4",
+        "404 /3d-6/videos/infinte-grid_squared-transcode.mp4"
       ],
       "navError": null,
       "stage": "verify"
@@ -4707,14 +4708,15 @@
     },
     "3d-9": {
       "id": "3d-9",
-      "at": "2026-10-21T08:55:06.105Z",
+      "at": "2026-10-24T05:13:50.925Z",
       "kind": "cra",
       "fixes": [
-        "installed undeclared dependency: ajv"
+        "installed undeclared dependency: ajv",
+        "served 1 GitHub-hosted asset link(s) from jsDelivr instead of githack (faster, no redirect)"
       ],
       "obfuscatedFiles": 0,
       "obfuscated": false,
-      "bytes": 5583428,
+      "bytes": 5588518,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -4775,14 +4777,15 @@
     },
     "3d-12": {
       "id": "3d-12",
-      "at": "2026-10-22T03:33:37.170Z",
+      "at": "2026-10-24T05:15:02.800Z",
       "kind": "next",
       "fixes": [
-        "prefixed 52 hard-coded asset path(s) with the demo's base path"
+        "prefixed 54 hard-coded asset path(s) with the demo's base path",
+        "served 3 GitHub-hosted asset link(s) from jsDelivr instead of githack (faster, no redirect)"
       ],
       "obfuscatedFiles": 14,
       "obfuscated": false,
-      "bytes": 15337245,
+      "bytes": 15368421,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -4794,15 +4797,16 @@
     },
     "3d-8": {
       "id": "3d-8",
-      "at": "2026-10-22T03:31:06.656Z",
+      "at": "2026-10-24T05:13:50.925Z",
       "kind": "next",
       "fixes": [
         "font PPNeueMontreal-Bold.otf is missing from the project; used PPNeueMontreal-Regular.ttf",
-        "prefixed 2 hard-coded asset path(s) with the demo's base path"
+        "prefixed 2 hard-coded asset path(s) with the demo's base path",
+        "served 1 GitHub-hosted asset link(s) from jsDelivr instead of githack (faster, no redirect)"
       ],
       "obfuscatedFiles": 16,
       "obfuscated": false,
-      "bytes": 2888870,
+      "bytes": 2906141,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,
@@ -5062,14 +5066,14 @@
     },
     "3d-15": {
       "id": "3d-15",
-      "at": "2026-10-22T03:59:27.059Z",
+      "at": "2026-10-24T05:15:28.242Z",
       "kind": "cra",
       "fixes": [
         "restored base.css (the page looks for it at css/base.css, the project keeps it at src/base.css)"
       ],
       "obfuscatedFiles": 4,
       "obfuscated": true,
-      "bytes": 3236957,
+      "bytes": 3242198,
       "status": "pass",
       "blank": false,
       "errors": [],
@@ -5293,14 +5297,15 @@
     },
     "physics-10": {
       "id": "physics-10",
-      "at": "2026-10-22T03:33:37.171Z",
+      "at": "2026-10-24T05:16:05.114Z",
       "kind": "next",
       "fixes": [
-        "prefixed 1 hard-coded asset path(s) with the demo's base path"
+        "prefixed 1 hard-coded asset path(s) with the demo's base path",
+        "served 1 GitHub-hosted asset link(s) from jsDelivr instead of githack (faster, no redirect)"
       ],
       "obfuscatedFiles": 9,
       "obfuscated": false,
-      "bytes": 13760259,
+      "bytes": 13781004,
       "note": "obfuscation broke this demo; serving minified build",
       "status": "pass",
       "blank": false,

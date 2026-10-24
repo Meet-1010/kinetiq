@@ -8,14 +8,18 @@ import {
   Gem,
   Monitor,
   RotateCw,
+  SlidersHorizontal,
   Smartphone,
   Tablet,
 } from "lucide-react";
-import { useState, useSyncExternalStore } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
+import { decodeState } from "@/lib/customize";
 import { useAccess } from "./access-provider";
+import { CustomizeLayer } from "./customize-panel";
 import { Logomark } from "./icons";
 
 const noopSubscribe = () => () => {};
+const readShared = () => location.hash.match(/[#&]c=([\w-]+)/)?.[1] ?? "";
 
 const SIZES = [
   { key: "desktop", label: "Desktop", icon: Monitor, width: "100%" },
@@ -46,6 +50,15 @@ export function LiveFrame({
     () => false,
   );
   const width = SIZES.find((s) => s.key === size)!.width;
+  const frame = useRef<HTMLIFrameElement>(null);
+  // A shared link (#c=…) opens with its customizations applied and the panel showing.
+  const shared = useSyncExternalStore(noopSubscribe, readShared, () => "");
+  const [panelOpen, setPanelOpen] = useState<boolean | null>(null);
+  const open = panelOpen ?? !!shared;
+  const reload = () => {
+    setLoaded(false);
+    setNonce((n) => n + 1);
+  };
 
   return (
     <div className="fixed inset-0 z-[60] flex flex-col bg-bg">
@@ -90,10 +103,15 @@ export function LiveFrame({
           ))}
         </div>
         <button
-          onClick={() => {
-            setLoaded(false);
-            setNonce((n) => n + 1);
-          }}
+          onClick={() => setPanelOpen(!open)}
+          aria-pressed={open}
+          className={`flex h-9 items-center gap-2 rounded-full px-3 text-[13px] transition ${open ? "bg-accent/15 text-accent ring-1 ring-accent/50" : "pill text-text-2 hover:text-text"}`}
+        >
+          <SlidersHorizontal className="size-4" />
+          <span className="hidden sm:inline">Customize</span>
+        </button>
+        <button
+          onClick={reload}
           className="pill grid size-9 place-items-center rounded-full text-text-2 hover:text-text"
           aria-label="Reload demo"
           title="Reload"
@@ -129,31 +147,48 @@ export function LiveFrame({
         )}
       </div>
 
-      <div className="relative flex flex-1 justify-center overflow-hidden bg-[#070605] p-0 md:p-3">
-        {!loaded && (
-          <div className="absolute inset-0 grid place-items-center">
-            <div className="flex flex-col items-center gap-4">
-              <Logomark className="size-12 animate-pulse" />
-              <p className="font-mono text-[12px] text-muted">
-                Loading live demo…
-              </p>
+      <div className="relative flex min-h-0 flex-1">
+        <div className="relative flex flex-1 justify-center overflow-hidden bg-[#070605] p-0 md:p-3">
+          {!loaded && (
+            <div className="absolute inset-0 grid place-items-center">
+              <div className="flex flex-col items-center gap-4">
+                <Logomark className="size-12 animate-pulse" />
+                <p className="font-mono text-[12px] text-muted">
+                  Loading live demo…
+                </p>
+              </div>
             </div>
-          </div>
-        )}
-        {/* Mount-gated: an iframe in the server HTML can finish loading before hydration attaches
+          )}
+          {/* Mount-gated: an iframe in the server HTML can finish loading before hydration attaches
             onLoad, which would leave it hidden forever. */}
+          {mounted && (
+            <iframe
+              ref={frame}
+              key={nonce}
+              src={url}
+              title={`${title} live demo`}
+              onLoad={() => setLoaded(true)}
+              // The demo runs on its own origin; these permissions apply to that origin only.
+              sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-popups allow-forms"
+              allow="fullscreen; autoplay; accelerometer; gyroscope; clipboard-write"
+              referrerPolicy="no-referrer"
+              className={`h-full max-w-full border-0 bg-white transition-[width,opacity] duration-500 md:rounded-[14px] md:ring-1 md:ring-line ${loaded ? "opacity-100" : "opacity-0"}`}
+              style={{ width }}
+            />
+          )}
+        </div>
         {mounted && (
-          <iframe
-            key={nonce}
-            src={url}
-            title={`${title} live demo`}
-            onLoad={() => setLoaded(true)}
-            // The demo runs on its own origin; these permissions apply to that origin only.
-            sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-popups allow-forms"
-            allow="fullscreen; autoplay; accelerometer; gyroscope; clipboard-write"
-            referrerPolicy="no-referrer"
-            className={`h-full max-w-full border-0 bg-white transition-[width,opacity] duration-500 md:rounded-[14px] md:ring-1 md:ring-line ${loaded ? "opacity-100" : "opacity-0"}`}
-            style={{ width }}
+          <CustomizeLayer
+            id={id}
+            title={title}
+            demoOrigin={new URL(url).origin}
+            frame={frame}
+            frameKey={nonce}
+            loaded={loaded}
+            open={open}
+            initial={decodeState(shared)}
+            onClose={() => setPanelOpen(false)}
+            onReload={reload}
           />
         )}
       </div>
